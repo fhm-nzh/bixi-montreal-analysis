@@ -1,11 +1,17 @@
 # BIXI Montreal 2024 — Bike Share Analysis
 
-**[Live dashboard →](https://fhm-nzh.github.io/bixi-montreal-analysis/)** ·  **[Power BI build guide →](powerbi/BUILD_GUIDE.md)**
+[![CI](https://github.com/fhm-nzh/bixi-montreal-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/fhm-nzh/bixi-montreal-analysis/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](pyproject.toml)
+
+**[Live dashboard →](https://fhm-nzh.github.io/bixi-montreal-analysis/)** ·
+**[Mirror on Vercel →](https://bixi-montreal-analysis.vercel.app)** ·
+**[Power BI build guide →](powerbi/BUILD_GUIDE.md)**
 
 End-to-end analysis of **12.97 million cleaned bike-share trips** (13.28M raw records)
-from Montreal's BIXI network across the full 2024 season — from a chunked pandas
-pipeline over the raw open-data export, through to an interactive web dashboard and
-a Power BI-ready star-schema dataset.
+from Montreal's BIXI network across the full 2024 season — from a tested, chunked
+pandas pipeline over the raw open-data export, through to an interactive web
+dashboard and a Power BI-ready star-schema dataset.
 
 ![Trips by hour of day](images/trips_by_hour.png)
 
@@ -13,9 +19,10 @@ a Power BI-ready star-schema dataset.
 
 | | |
 |---|---|
-| 🔗 **Live dashboard** | Interactive Plotly dashboard with month filtering, KPI tiles, and data tables — [fhm-nzh.github.io/bixi-montreal-analysis](https://fhm-nzh.github.io/bixi-montreal-analysis/) |
+| 🔗 **Live dashboard** | Interactive Plotly dashboard with month filtering, KPI tiles, and data tables — deployed to both [GitHub Pages](https://fhm-nzh.github.io/bixi-montreal-analysis/) and [Vercel](https://bixi-montreal-analysis.vercel.app) |
 | 📊 **Power BI** | Star-schema CSVs + DAX measures + a step-by-step build guide in [`powerbi/`](powerbi/) |
-| 🐍 **Data pipeline** | [`src/build_dataset.py`](src/build_dataset.py) — chunked cleaning & aggregation of the 13M-row raw export |
+| 🐍 **Data pipeline** | [`src/build_dataset.py`](src/build_dataset.py) — chunked, unit-tested cleaning & aggregation of the 13M-row raw export |
+| ✅ **Tests & CI** | [`tests/`](tests/) (pytest) + [`.github/workflows/ci.yml`](.github/workflows/ci.yml) — lint and test run on every push, across two Python versions |
 | 📓 **Notebook** | [`notebooks/bixi_analysis.ipynb`](notebooks/bixi_analysis.ipynb) — original exploratory analysis, 6 charts |
 
 ## Key findings
@@ -45,6 +52,44 @@ a Power BI-ready star-schema dataset.
 > shortest). The finding above reflects the verified numbers in
 > [`data/processed/duration_by_borough.csv`](data/processed/duration_by_borough.csv).
 
+## Architecture
+
+```mermaid
+flowchart LR
+    A["Raw export\n13.3M rows / 2.4GB\n(BIXI Open Data)"] -->|"chunked read\npandas"| B["src/build_dataset.py"]
+    B -->|"clean_chunk()\n1–180 min filter"| C["summarize_chunk()\n6 partial aggregates"]
+    C -->|"weighted_regroup()\ncorrect cross-chunk averaging"| D["data/processed/*.csv\n(small, committed)"]
+    D --> E["docs/data.js\nJSON bundle"]
+    D --> F["powerbi/data/*.csv\nstar schema"]
+    E --> G["docs/index.html\nPlotly dashboard"]
+    G -->|deploy| H1["GitHub Pages"]
+    G -->|deploy| H2["Vercel"]
+    F --> I["Power BI Desktop\n+ measures.dax"]
+    B -.->|"pytest"| T["tests/test_build_dataset.py"]
+    T -.->|"on every push"| CI["GitHub Actions CI"]
+```
+
+The pipeline is intentionally decoupled from both consumers: `build_dataset.py`
+knows nothing about Plotly or Power BI, it just produces small, correct, tested
+CSVs — the dashboard and the BI report are two independent, swappable views onto
+the same processed data.
+
+## Testing & CI
+
+```bash
+pytest tests/ -v      # 6 tests: cleaning filter, weighted re-aggregation, end-to-end run
+ruff check src/ tests/  # lint
+```
+
+`weighted_regroup` — the function that recombines per-chunk averages — is the
+easiest place for a chunked pipeline to silently produce a *wrong but plausible*
+number (a naive mean-of-means under/over-weights chunks of different sizes). It's
+covered by a test that checks the result against directly aggregating the raw
+per-trip durations, not just against itself. CI ([`.github/workflows/ci.yml`](.github/workflows/ci.yml))
+runs lint + tests on Python 3.10 and 3.12 on every push, plus a job that parses
+`docs/data.js` and checks its shape so a broken dashboard deploy fails loudly
+instead of shipping a blank page.
+
 ## Dashboard
 
 The live dashboard ([source](docs/index.html)) is a single self-contained HTML page —
@@ -57,6 +102,8 @@ no backend, just Plotly.js reading a small pre-aggregated JSON bundle. It includ
 - Average trip duration by borough (all 25 boroughs, sequential color scale)
 - Sortable data tables for accessibility / non-chart reference
 - Light and dark mode (follows system preference)
+- A visible error state (not a blank page) if the data bundle ever fails to load
+- Open Graph / Twitter Card previews for sharing the link
 
 ## Power BI
 
@@ -71,22 +118,30 @@ and publishing.
 
 ```
 bixi-montreal-analysis/
-├── docs/                    # live dashboard (GitHub Pages source)
+├── .github/workflows/ci.yml # lint + test on every push (2 Python versions)
+├── docs/                     # live dashboard (GitHub Pages / Vercel source)
 │   ├── index.html
-│   └── data.js              # pre-aggregated data bundle, generated from data/processed/
+│   ├── data.js               # pre-aggregated data bundle, generated from data/processed/
+│   └── og-image.png          # social preview card
 ├── src/
-│   └── build_dataset.py     # chunked cleaning + aggregation pipeline (13M rows -> small CSVs)
+│   └── build_dataset.py      # chunked cleaning + aggregation pipeline (13M rows -> small CSVs)
+├── tests/
+│   └── test_build_dataset.py # pytest — cleaning filter, weighted re-aggregation, end-to-end
 ├── data/
-│   ├── raw/                 # raw BIXI export (gitignored — see data/raw/README.md)
-│   └── processed/           # aggregated output of build_dataset.py (committed, small)
+│   ├── raw/                  # raw BIXI export (gitignored — see data/raw/README.md)
+│   └── processed/            # aggregated output of build_dataset.py (committed, small)
 ├── powerbi/
-│   ├── data/                # star-schema CSVs for Power BI import
-│   ├── measures.dax         # DAX measures, ready to paste
+│   ├── data/                 # star-schema CSVs for Power BI import
+│   ├── measures.dax          # DAX measures, ready to paste
 │   └── BUILD_GUIDE.md
 ├── notebooks/
-│   └── bixi_analysis.ipynb  # original exploratory analysis
-├── images/                  # static chart exports from the notebook
-└── requirements.txt
+│   └── bixi_analysis.ipynb   # original exploratory analysis
+├── images/                   # static chart exports from the notebook
+├── vercel.json / .vercelignore
+├── pyproject.toml            # ruff + pytest config
+├── Makefile
+├── requirements.txt / requirements-dev.txt
+└── LICENSE
 ```
 
 ## Reproducing this
@@ -95,14 +150,20 @@ bixi-montreal-analysis/
 # 1. Get the raw data (see data/raw/README.md for the direct link)
 #    unzip it, place "DonneesOuvertes (2).csv" in data/raw/
 
-# 2. Install dependencies
-pip install -r requirements.txt
+# 2. Install dependencies (add -dev for pytest/ruff)
+pip install -r requirements-dev.txt
 
 # 3. Run the pipeline — cleans + aggregates the 13M-row export into data/processed/
 python src/build_dataset.py --raw "data/raw/DonneesOuvertes (2).csv"
+# — or —
+make pipeline
 
-# 4. Open the dashboard directly (no server needed)
-open docs/index.html
+# 4. Run the test suite / lint
+make test
+make lint
+
+# 5. Open the dashboard directly (no server needed)
+make dashboard
 
 # — or explore interactively —
 jupyter notebook notebooks/bixi_analysis.ipynb
@@ -111,10 +172,31 @@ jupyter notebook notebooks/bixi_analysis.ipynb
 ## Tools used
 
 - **Python** — pandas (chunked processing of a 2.4GB / 13.3M-row CSV), matplotlib, seaborn
+- **pytest + ruff** — unit tests and linting, enforced in CI
+- **GitHub Actions** — CI (lint, test, dashboard-data validation) on every push
 - **Plotly.js** — interactive web dashboard
 - **Power BI** — DAX measures, star-schema modeling
-- **GitHub Pages** — dashboard hosting
+- **GitHub Pages & Vercel** — dashboard hosting
+
+## What this project demonstrates
+
+- Handling data at a scale that doesn't fit a naive `pd.read_csv()` approach
+  (chunked processing of a 2.4GB file) without losing statistical correctness
+  (the weighted re-aggregation problem, tested explicitly).
+- Treating a data pipeline as software: pure, typed, testable functions;
+  a real test suite; CI; linting — not just a notebook that "ran fine once."
+- Shipping the same underlying analysis to three different audiences (a live
+  interactive dashboard, a BI tool, a notebook) from one source of truth.
+- Catching and correcting a wrong claim in the original analysis by re-deriving
+  it from the data rather than taking a prior finding on faith.
+- End-to-end ownership: sourcing the data, building the pipeline, designing the
+  dashboard, and deploying it — twice, to two different platforms.
 
 ## Data source
 
 [BIXI Montreal Open Data](https://bixi.com/en/open-data/) — Creative Commons Attribution License.
+
+## License
+
+Code in this repository is [MIT licensed](LICENSE). The underlying trip data
+remains under BIXI's Creative Commons Attribution license.

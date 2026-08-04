@@ -4,7 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BIXI Montreal 2024 — Bike Share Analysis</title>
-<meta name="description" content="Interactive analysis of 13 million BIXI bike-share trips in Montreal, 2024.">
+<meta name="description" content="Interactive analysis of 12.97 million BIXI bike-share trips in Montreal, 2024 — hourly, seasonal, and geographic patterns from a chunked pandas pipeline.">
+
+<!-- Open Graph / Twitter Card: controls the preview card when this link is shared -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="BIXI Montreal 2024 — Bike Share Analysis">
+<meta property="og:description" content="Interactive analysis of 12.97 million BIXI bike-share trips in Montreal, 2024 — hourly, seasonal, and geographic patterns from a chunked pandas pipeline.">
+<meta property="og:url" content="https://fhm-nzh.github.io/bixi-montreal-analysis/">
+<meta property="og:image" content="https://fhm-nzh.github.io/bixi-montreal-analysis/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BIXI Montreal 2024 — Bike Share Analysis">
+<meta name="twitter:description" content="Interactive analysis of 12.97 million BIXI bike-share trips in Montreal, 2024.">
+<meta name="twitter:image" content="https://fhm-nzh.github.io/bixi-montreal-analysis/og-image.png">
+
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a19" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%B2%3C/text%3E%3C/svg%3E">
+
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
 <script src="data.js"></script>
 <style>
@@ -147,6 +165,19 @@
   .table-wrap { overflow-x: auto; }
 
   footer { margin-top: 40px; color: var(--text-muted); font-size: 0.8rem; text-align: center; }
+
+  .error-banner {
+    background: color-mix(in srgb, #d03b3b 10%, var(--surface-1));
+    border: 1px solid color-mix(in srgb, #d03b3b 35%, var(--border));
+    color: var(--text-primary);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+  .error-banner strong { display: block; color: #d03b3b; margin-bottom: 2px; }
+  .error-banner a { color: var(--series-1); }
   footer a { color: var(--text-secondary); }
 </style>
 </head>
@@ -167,6 +198,13 @@
       <a href="https://github.com/fhm-nzh/bixi-montreal-analysis/blob/main/powerbi/BUILD_GUIDE.md" target="_blank" rel="noopener">Power BI version ↗</a>
     </div>
   </header>
+
+  <div id="errorBanner" class="error-banner" hidden role="alert">
+    <strong>This dashboard couldn't load its data.</strong>
+    <span id="errorBannerDetail"></span>
+    The full source and processed data are always available on
+    <a href="https://github.com/fhm-nzh/bixi-montreal-analysis" target="_blank" rel="noopener">GitHub</a>.
+  </div>
 
   <div class="kpi-row" id="kpiRow"></div>
 
@@ -227,6 +265,8 @@
 </div>
 
 <script>
+try {
+
 const isDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
 const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
@@ -411,6 +451,15 @@ document.getElementById('tabRow').addEventListener('click', (e) => {
   renderTable(btn.dataset.tab);
 });
 renderTable('stations');
+
+} catch (err) {
+  console.error('Dashboard failed to render:', err);
+  const banner = document.getElementById('errorBanner');
+  document.getElementById('errorBannerDetail').textContent = ' (' + err.message + ') ';
+  banner.hidden = false;
+  // hide whatever partially rendered so the page doesn't look broken instead of erroring clearly
+  document.querySelectorAll('.kpi-row, .filter-row, .grid, section.tables').forEach(el => { el.style.display = 'none'; });
+}
 </script>
 </body>
 </html>

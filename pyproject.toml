@@ -1,0 +1,16 @@
+[project]
+name = "bixi-montreal-analysis"
+version = "1.0.0"
+description = "End-to-end analysis of 13M BIXI Montreal bike-share trips: pipeline, live dashboard, Power BI report."
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = ["E501"]  # long lines: pandas method chains read better unwrapped
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
