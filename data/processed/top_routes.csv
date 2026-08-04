@@ -1,0 +1,501 @@
+start_station,end_station,trip_count,avg_duration_min
+Parc Jean-Drapeau (Chemin Macdonald),Parc Jean-Drapeau (Chemin Macdonald),11784,37.64237274694501
+Métro Mont-Royal (Utilités publiques / Rivard),Marquette / du Mont-Royal,5057,6.911540392854788
+Marquette / du Mont-Royal,Métro Mont-Royal (Utilités publiques / Rivard),4710,6.584370820948337
+Métro Pie-IX (Pierre-de-Coubertin / Desjardins),Desjardins / Ontario,4593,4.550450660425285
+Berri / Cherrier,Émile-Duployé / Sherbrooke,4466,5.774179635020152
+Métro Joliette  (Hochelaga / Joliette),Aylwin / Ontario,4217,3.992621306616078
+Ste-Catherine / St-Laurent,Ste-Catherine / St-Laurent,3694,21.451838165493594
+Desjardins / Ontario,Métro Pie-IX (Pierre-de-Coubertin / Desjardins),3660,4.860843369763206
+Dorion / Ontario,Métro Papineau (Dorion / De Maisonneuve),3535,4.915534497878359
+du Mont-Royal / Clark,Métro Mont-Royal (Utilités publiques / Rivard),3527,5.221921118041773
+Aylwin / Ontario,Métro Joliette  (Hochelaga / Joliette),3350,3.789344870646766
+de la Commune / Place Jacques-Cartier,de la Commune / Place Jacques-Cartier,3326,33.274684951894166
+Place du Canada (Peel / des Canadiens-de-Montréal),Peel / Ottawa,3183,4.757594062205467
+Métro Sherbrooke (de Rigaud / Berri),des Pins / St-Laurent,3154,5.171954243288945
+Parc Jean-Drapeau (Chemin Macdonald),Casino de Montréal,3127,15.264707744376931
+Métro Papineau (Dorion / De Maisonneuve),Dorion / Ontario,3021,5.69901827761227
+du Canal / McLaughlin,du Canal / McLaughlin,3017,32.80856958347144
+Métro Joliette  (Hochelaga / Joliette),Place Valois (Valois / Ontario),2911,4.632604671934043
+Émile-Duployé / Sherbrooke,Berri / Cherrier,2824,5.07239205618508
+Métro Mont-Royal (Utilités publiques / Rivard),Marie-Anne / Papineau,2733,6.567013245517746
+Métro Charlevoix (Charlevoix / Centre),Bourgeoys / Favard,2721,6.881746061496998
+Marquette / du Mont-Royal,Marquette / du Mont-Royal,2710,17.603714206642064
+Ste-Catherine / Union,Ste-Catherine / Union,2688,19.58472457217262
+Casino de Montréal,Parc Jean-Drapeau (Chemin Macdonald),2677,16.529889223010834
+Métro Lucien-L'Allier (Lucien l'Allier / Argyle),de la Montagne / Notre-Dame,2667,4.343990669916261
+Métro Mont-Royal (Utilités publiques / Rivard),Cartier / Marie-Anne,2639,8.047932247063281
+Cartier / Marie-Anne,Métro Mont-Royal (Utilités publiques / Rivard),2550,7.863180607843137
+Métro Charlevoix (Charlevoix / Centre),Shearer / Centre,2535,4.346863543721236
+Métro Pie-IX (Pierre-de-Coubertin / Desjardins),Letourneux / Ste-Catherine,2535,7.454090624589086
+Shearer / Centre,Métro Charlevoix (Charlevoix / Centre),2533,4.367594953283327
+Métro Lucien-L'Allier (Lucien l'Allier / Argyle),Ottawa / du Séminaire,2531,5.378045192940866
+Grand Boulevard / Sherbrooke,Métro Vendôme (de Marlowe / de Maisonneuve),2507,7.540952147320835
+Métro Mont-Royal (Utilités publiques / Rivard),Parthenais / du Mont-Royal,2502,9.203765680788702
+de Maisonneuve / Fullum,Métro Papineau (Dorion / De Maisonneuve),2484,4.1665123389694045
+de la Commune / St-Sulpice,de la Commune / St-Sulpice,2474,35.19497438022096
+Métro Mont-Royal (Utilités publiques / Rivard),du Mont-Royal / Clark,2471,6.560246229596655
+Métro Mont-Royal (Utilités publiques / Rivard),Métro Mont-Royal (Utilités publiques / Rivard),2465,18.47486208248817
+Métro Pie-IX (Pierre-de-Coubertin / Desjardins),Marché Maisonneuve,2447,6.119734021250511
+des Pins / St-Laurent,Métro Sherbrooke (de Rigaud / Berri),2437,4.6138441116126385
+Guy / Sainte-Catherine,Guy / Sainte-Catherine,2409,18.012289269406395
+Bourgeoys / Favard,Métro Charlevoix (Charlevoix / Centre),2388,6.301597354829704
+Métro Atwater (Atwater / Ste-Catherine),Métro Atwater (Atwater / Ste-Catherine),2332,19.29716585191538
+Métro Mont-Royal (Utilités publiques / Rivard),St-Dominique / Rachel,2302,5.566861395887634
+de la Commune / King,de la Commune / Place Jacques-Cartier,2210,12.903217428355958
+Berri / Laurier,Laurier / de Brébeuf,2210,3.135054155354449
+Métro Mont-Royal (Utilités publiques / Rivard),Messier / du Mont-Royal,2202,9.731250052982137
+Laurier / St-Denis,Laurier / de Brébeuf,2187,3.957593552812072
+de Lanaudière / du Mont-Royal,Métro Mont-Royal (Utilités publiques / Rivard),2167,5.814382487309644
+Marie-Anne / Papineau,Métro Mont-Royal (Utilités publiques / Rivard),2152,6.632684192998761
+Parthenais / du Mont-Royal,Métro Mont-Royal (Utilités publiques / Rivard),2144,8.775071183146766
+Métro Vendôme (de Marlowe / de Maisonneuve),Grand Boulevard / Sherbrooke,2140,8.990227157320872
+Métro Pie-IX (Pierre-de-Coubertin / Desjardins),Bennett / Ste-Catherine,2129,8.235030992641303
+Laurier / St-Denis,St-Dominique / Laurier,2105,3.330855003958828
+Métro Papineau (Dorion / De Maisonneuve),de Maisonneuve / Fullum,2099,4.059657432110528
+Métro Mont-Royal (Utilités publiques / Rivard),du Parc-Lafontaine / Rachel,2096,6.027399626272264
+Clark / Prince-Arthur,Aylmer / Prince-Arthur,2083,4.0381090014402305
+Métro Mont-Royal (Utilités publiques / Rivard),Marie-Anne / de la Roche,2083,4.183059545527285
+Marie-Anne / de la Roche,Métro Mont-Royal (Utilités publiques / Rivard),2082,3.9036841658661543
+Laurier / de Brébeuf,Laurier / St-Denis,2072,4.627428008365508
+Métro Viau (Pierre-de-Coubertin / Viau),Ste-Catherine / St-Clément,2055,7.014600243309003
+Wellington / 3e avenue,Wellington / Gordon,2051,4.47632301316431
+Émile-Duployé / Sherbrooke,Marquette / du Mont-Royal,2032,5.476913164370079
+Letourneux / Ste-Catherine,Métro Pie-IX (Pierre-de-Coubertin / Desjardins),2013,8.025916815697963
+Marquette / du Mont-Royal,Boyer / du Mont-Royal,2008,4.741309130146083
+Ryde / Charlevoix,Métro Charlevoix (Charlevoix / Centre),2007,3.00077285334662
+Métro Mont-Royal (Utilités publiques / Rivard),de Lanaudière / du Mont-Royal,2007,6.065088888888889
+Métro Mont-Royal (Utilités publiques / Rivard),Fullum / Marie-Anne,2004,9.989471665003325
+Métro Papineau (Dorion / De Maisonneuve),St-André / Ste-Catherine,2000,6.705527041666667
+Parc Jean-Drapeau (Chemin Macdonald),Parc Plage,1995,20.853014937343357
+Place Valois (Valois / Ontario),Métro Joliette  (Hochelaga / Joliette),1982,4.606620013454423
+Métro Villa-Maria (de Monkland / Décarie),de Hampton / de Monkland,1978,5.136027485675767
+St-André / Ste-Catherine,Métro Papineau (Dorion / De Maisonneuve),1978,6.885047775530839
+Peel / Ottawa,Place du Canada (Peel / des Canadiens-de-Montréal),1964,6.017276782077393
+Beatty / de Verdun,Métro Verdun (Willibrord / de Verdun),1962,5.296722697927285
+Métro Joliette  (Hochelaga / Joliette),Valois / Ste-Catherine,1944,6.384377914951989
+Marché Maisonneuve,Métro Pie-IX (Pierre-de-Coubertin / Desjardins),1938,6.156920966632266
+Métro Mont-Royal (Utilités publiques / Rivard),Chabot / du Mont-Royal,1917,8.57849009737437
+Bennett / Ste-Catherine,Pierre-de-Coubertin / Aird,1915,7.4425861357702345
+Parc Plage,Parc Jean-Drapeau (Chemin Macdonald),1914,19.950417807384188
+de Grosbois / Duchesneau,Métro Honoré-Beaugrand (Sherbrooke / Honoré-Beaugrand),1910,7.271022870855148
+Smith / Peel,de la Commune / Place Jacques-Cartier,1890,13.538977045855379
+Place du Canada (Peel / des Canadiens-de-Montréal),Smith / Peel,1886,6.6536048427006005
+Laurier / St-Denis,Jeanne-Mance / Laurier,1878,5.647837273695421
+Marquette / du Mont-Royal,Émile-Duployé / Sherbrooke,1876,5.465730845771144
+Métro Mont-Royal (Utilités publiques / Rivard),de Brébeuf / du Mont-Royal,1871,5.525041662212721
+Métro Charlevoix (Charlevoix / Centre),Fortune / Wellington,1862,6.554623711063373
+Messier / du Mont-Royal,Métro Mont-Royal (Utilités publiques / Rivard),1860,9.390378915770608
+de la Commune / St-Sulpice,de la Commune / Place Jacques-Cartier,1854,27.819348094210717
+Place du Commerce,Elgar / de l'Île-des-Sœurs,1854,10.747125791082343
+du Mont-Royal / Clark,Clark / Rachel,1846,2.9771302184904296
+des Pins / St-Laurent,des Pins / Hutchison,1845,3.931478410117434
+Wellington / Gordon,Wellington / 3e avenue,1842,5.981882328990228
+Métro Mont-Royal (Utilités publiques / Rivard),Berri / Rachel,1840,4.239118460144927
+Métro Verdun (Willibrord / de Verdun),Beatty / de Verdun,1833,5.763613002364067
+Place du Canada (Peel / des Canadiens-de-Montréal),Peel / Notre-Dame,1832,3.2386787299854443
+Boyer / du Mont-Royal,Marquette / du Mont-Royal,1830,4.856169280510018
+Aylwin / Ontario,Jeanne-d'Arc / Ontario,1828,5.337946635667396
+La Ronde,Parc Jean-Drapeau (Chemin Macdonald),1826,14.72644208652793
+Métro Mont-Royal (Utilités publiques / Rivard),de Lanaudière / Marie-Anne,1820,5.479708956043956
+Elgar / de l'Île-des-Sœurs,Place du Commerce,1813,9.795625997425997
+Métro Joliette  (Hochelaga / Joliette),Jeanne-d'Arc / Ontario,1807,5.645893202361187
+Parc Jean-Drapeau (Chemin Macdonald),La Ronde,1790,14.89945810055866
+Pierre-de-Coubertin / Aird,Bennett / Ste-Catherine,1786,7.933470931317657
+Laurier / de Brébeuf,Berri / Laurier,1779,3.579164633689339
+de Brébeuf / du Mont-Royal,Métro Mont-Royal (Utilités publiques / Rivard),1773,5.196027260763302
+15e avenue / Laurier,Métro Joliette  (Hochelaga / Joliette),1769,7.265724006029772
+de la Côte St-Antoine / Royal,Métro Vendôme (de Marlowe / de Maisonneuve),1768,7.200088961161387
+Fortune / Wellington,Métro Charlevoix (Charlevoix / Centre),1754,5.633097500950209
+Jeanne-d'Arc / Ontario,Aylwin / Ontario,1751,5.273743974871501
+Métro Atwater (Atwater / Ste-Catherine),Ste-Catherine / St-Mathieu,1749,6.491659043262817
+Métro Atwater (Atwater / Ste-Catherine),Métro Peel (de Maisonneuve / Stanley),1742,10.398763318025258
+Smith / Peel,de la Commune / St-Sulpice,1740,9.510956235632182
+Bennett / Ste-Catherine,Métro Pie-IX (Pierre-de-Coubertin / Desjardins),1730,8.862272475915221
+Chabot / du Mont-Royal,Métro Mont-Royal (Utilités publiques / Rivard),1727,7.94433909476935
+Métro Crémazie (Crémazie / Lajeunesse),Complexe sportif Claude-Robillard (Émile-Journault),1721,5.636293898895991
+Métro Jarry (Lajeunesse / Jarry),Rousselot / Jarry,1714,5.822405571761959
+Métro Papineau (Dorion / De Maisonneuve),Alexandre-DeSève / Ontario,1710,5.604622514619884
+Clark / St-Viateur,du Mont-Royal / Clark,1709,5.3094990735322805
+du Mont-Royal / Clark,Clark / St-Viateur,1693,5.6788199350265804
+du Mont-Royal / Augustin-Frigon,Métro Préfontaine (Préfontaine / Hochelaga),1689,6.391202595223999
+Mackay / de Maisonneuve,Métro Atwater (Atwater / Ste-Catherine),1688,7.74796429699842
+Émile-Duployé / Sherbrooke,Métro Papineau (Dorion / De Maisonneuve),1685,6.741091849653809
+de la Commune / St-Sulpice,Smith / Peel,1679,10.323928340281913
+Parc Jeanne-Mance (du Mont-Royal / du Parc),Métro Mont-Royal (Utilités publiques / Rivard),1674,6.78378664874552
+Bassin olympique (Chemin du Chenal le Moyne),Parc Jean-Drapeau (Chemin Macdonald),1669,14.238851487916918
+de Kent / de la Côte-des-Neiges,Métro Plamondon (de Kent / Victoria),1669,5.940328570001998
+Métro Pie-IX (Pierre-de-Coubertin / Desjardins),Marché Maisonneuve (Ontario / Morgan),1664,5.752572165464743
+Clark / Prince-Arthur,University / Milton,1654,5.103766072148328
+Garnier / du Mont-Royal,Métro Mont-Royal (Utilités publiques / Rivard),1638,5.587724857549858
+Métro Peel (de Maisonneuve / Stanley),Métro Atwater (Atwater / Ste-Catherine),1634,10.27367174622603
+de Lanaudière / Marie-Anne,Métro Mont-Royal (Utilités publiques / Rivard),1634,5.145870777233782
+Métro Plamondon (de Kent / Victoria),de Kent / de la Côte-des-Neiges,1631,6.502046208869814
+Métro Mont-Royal (Utilités publiques / Rivard),Garnier / du Mont-Royal,1628,6.0289341932841936
+Métro Sauvé (Berri / Sauvé),Tolhurst / Fleury,1617,7.774869099154813
+Clark / Rachel,du Mont-Royal / Clark,1615,3.3144625386996904
+Crescent / de Maisonneuve,Crescent / de Maisonneuve,1609,17.238365081831365
+Laurier / St-Denis,Maguire / St-Laurent,1607,4.305097459033395
+St-Dominique / Laurier,Laurier / St-Denis,1599,2.9876462997706903
+Métro Viau (Pierre-de-Coubertin / Viau),Ontario / Ville-Marie,1596,5.631768274853801
+de la Commune / Place Jacques-Cartier,Smith / Peel,1594,12.261453262233374
+de la Commune / King,de la Commune / King,1593,31.441066541117387
+Prince-Arthur / du Parc,Clark / Prince-Arthur,1586,3.5953571248423706
+Métro Université de Montréal (Édouard-Montpetit / Louis-Collin),Édouard-Montpetit / de Stirling,1583,3.4084147715308486
+Benny / Sherbrooke,Métro Vendôme (de Marlowe / de Maisonneuve),1580,9.023821824894515
+Métro Vendôme (de Marlowe / de Maisonneuve),Parc Georges St-Pierre (Oxford / Upper Lachine),1579,5.893570920413764
+Jeanne-Mance / Laurier,Laurier / St-Denis,1577,4.828077879940816
+University / Milton,Clark / Prince-Arthur,1576,5.262684919627749
+Métro Angrignon (Lamont / des Trinitaires),Cégep André-Laurendeau (Lapierre),1575,10.084721354497354
+Parc Jean-Drapeau (Chemin Macdonald),Bassin olympique (Chemin du Chenal le Moyne),1569,11.010037146802635
+Rousselot / Jarry,Métro Jarry (Lajeunesse / Jarry),1563,5.8748441671998295
+Métro Honoré-Beaugrand (Sherbrooke / Honoré-Beaugrand),de Grosbois / Duchesneau,1555,8.149870257234726
+Smith / Peel,Smith / Peel,1552,31.04971025558419
+Laurier / St-Denis,Clark / Laurier,1552,4.733509847508591
+Prince-Arthur / du Parc,McTavish / Sherbrooke,1548,6.441011057278209
+Chomedey / de Maisonneuve,Métro Peel (de Maisonneuve / Stanley),1543,8.191092417368761
+Parc Jeanne-Mance (monument sir George-Étienne-Cartier),Parc Jeanne-Mance (monument sir George-Étienne-Cartier),1541,34.98609066623405
+Métro Mont-Royal (Utilités publiques / Rivard),de Bordeaux / du Mont-Royal,1541,8.108827547047373
+Fullum / Marie-Anne,Métro Mont-Royal (Utilités publiques / Rivard),1538,9.793848872995232
+Métro Atwater (Atwater / Ste-Catherine),Ste-Catherine / Towers,1537,4.585920245066147
+Lajeunesse / Villeray,Métro Jarry (Lajeunesse / Jarry),1537,2.6717786380394712
+Parc Georges St-Pierre (Oxford / Upper Lachine),Métro Vendôme (de Marlowe / de Maisonneuve),1528,4.863394131762653
+Aylmer / Prince-Arthur,Clark / Prince-Arthur,1528,4.17342602530541
+Métro Vendôme (de Marlowe / de Maisonneuve),de la Côte St-Antoine / Royal,1523,8.356665637995185
+de Bordeaux / du Mont-Royal,Métro Mont-Royal (Utilités publiques / Rivard),1518,7.890190887132192
+Métro Atwater (Atwater / Ste-Catherine),Melville / de Maisonneuve,1517,8.53529430894309
+Clark / Laurier,du Mont-Royal / Clark,1514,4.016348117569352
+de la Commune / Berri,de la Commune / Berri,1510,31.84250630242826
+Berri / Laurier,de Lanaudière / Laurier,1507,3.7217593784560936
+Marquette / Laurier,Berri / Laurier,1506,4.842184495351925
+Métro Villa-Maria (de Monkland / Décarie),Harvard / de Monkland,1504,3.455986524822695
+St-Dominique / Rachel,Métro Mont-Royal (Utilités publiques / Rivard),1495,5.146698450390189
+Alexandre-DeSève / Ontario,Métro Papineau (Dorion / De Maisonneuve),1492,4.823564868185881
+Lincoln / St-Mathieu,Métro Atwater (Atwater / Ste-Catherine),1491,5.389223082942097
+Tolhurst / Fleury,Métro Sauvé (Berri / Sauvé),1489,7.658143037832998
+Berri / Cherrier,Calixa-Lavallée / Sherbrooke,1486,4.38322163526245
+Marcil / Sherbrooke,Métro Vendôme (de Marlowe / de Maisonneuve),1485,5.631376083052749
+Marché Maisonneuve (Ontario / Morgan),Métro Pie-IX (Pierre-de-Coubertin / Desjardins),1485,5.961236475869809
+Métro Peel (de Maisonneuve / Stanley),Chomedey / de Maisonneuve,1484,8.324020619946092
+Parc Maisonneuve (Viau / Sherbrooke),Parc Maisonneuve (Viau / Sherbrooke),1484,28.98125950134771
+Métro Villa-Maria (de Monkland / Décarie),Parc Benny (Benny / de Monkland),1484,7.429750864779874
+Métro Jarry (Lajeunesse / Jarry),Parc Villeray (Christophe-Colomb / Jarry),1483,4.58173086086761
+Métro Peel (de Maisonneuve / Stanley),Peel / Ottawa,1482,7.504229127305443
+des Pins / St-Laurent,McTavish / Sherbrooke,1476,9.762525135501356
+de la Montagne / Notre-Dame,de la Montagne / Notre-Dame,1472,22.710012126358695
+Métro Charlevoix (Charlevoix / Centre),Ryde / Charlevoix,1470,3.3398493764172335
+Berlioz / de l'Île des Soeurs,Place du Commerce,1469,11.129373179033356
+Métro Sherbrooke (de Rigaud / Berri),St-Dominique / Napoléon,1466,5.79552460209186
+Berri / Cherrier,de Bordeaux / Sherbrooke,1463,7.844750843016633
+Clark / Prince-Arthur,McTavish / Sherbrooke,1463,8.235634723171565
+de Maisonneuve / Wood,Melville / de Maisonneuve,1447,5.764361368348307
+Ste-Catherine / St-Clément,Métro Viau (Pierre-de-Coubertin / Viau),1447,7.658660193503801
+Métro Vendôme (de Marlowe / de Maisonneuve),Benny / Sherbrooke,1446,11.044749642692485
+Ontario / Sicard,Pierre-de-Coubertin / Aird,1446,5.347089615029968
+Cégep André-Laurendeau (Lapierre),Métro Angrignon (Lamont / des Trinitaires),1442,9.484123647711511
+Place du Commerce,Berlioz / de l'Île des Soeurs,1441,11.732719893592412
+Basile-Routhier / Chabanel,Métro Crémazie (Crémazie / Lajeunesse),1439,4.699130762103312
+Calixa-Lavallée / Sherbrooke,Berri / Cherrier,1439,4.005648621728052
+Smith / Peel,Richmond / des Bassins,1431,6.343433717679944
+Berri / Laurier,Marquette / Laurier,1424,4.5725019194756555
+Gary-Carter / St-Laurent,Gary-Carter / St-Laurent,1411,24.885379258209305
+Clark / Prince-Arthur,Prince-Arthur / du Parc,1405,3.4868152075919334
+HEC (Decelles / Jean-Brillant),Édouard-Montpetit / de Stirling,1404,5.990492450142451
+Métro de l'Église (Ross / de l'Église),de l'Église / Bannantyne,1402,4.638694638611508
+Richmond / des Bassins,Smith / Peel,1402,6.437516951973372
+Melville / de Maisonneuve,Métro Atwater (Atwater / Ste-Catherine),1399,8.357547557779366
+Laurier / St-Denis,Casgrain / Maguire,1397,4.016364256740635
+des Pins / St-Laurent,des Pins / St-Laurent,1389,18.143092380609552
+des Pins / Hutchison,des Pins / St-Laurent,1388,3.8645136767531225
+McTavish / Sherbrooke,des Pins / St-Laurent,1387,10.520671581350637
+Métro Place Saint-Henri (St-Ferdinand / St-Jacques),St-Rémi / Ste-Émilie,1383,7.271002603036876
+Ste-Catherine / St-Mathieu,Métro Atwater (Atwater / Ste-Catherine),1381,7.08257811972001
+Métro Frontenac (Ontario / du Havre),Fullum / de Rouen,1379,4.941204653130288
+du Mont-Royal / Clark,des Pins / St-Laurent,1375,7.311679454545454
+de la Commune / King,Smith / Peel,1374,7.828327850557981
+du Mont-Royal / Clark,Clark / Laurier,1373,4.250489366351056
+Métro Beaubien (de Chateaubriand / Beaubien),St-Dominique / St-Zotique,1371,5.392526598589837
+Métro Crémazie (Crémazie / Lajeunesse),Basile-Routhier / Chabanel,1369,4.820757280253226
+Laurier / St-Denis,St-Urbain / Laurier,1369,5.224476247869491
+Fullum / de Rouen,Métro Frontenac (Ontario / du Havre),1366,4.379491654465593
+Berri / Laurier,Fabre / Laurier,1365,4.488913565323566
+Métro Mont-Royal (Utilités publiques / Rivard),Coloniale / Duluth,1363,6.761462631450232
+Rivard / du Mont-Royal,Rivard / du Mont-Royal,1362,22.641731436612826
+Métro Vendôme (de Marlowe / de Maisonneuve),U. Concordia - Campus Loyola (Sherbrooke / West Broadway),1362,14.661100611845328
+Léa-Roback / Sir-Georges-Etienne-Cartier,Léa-Roback / Sir-Georges-Etienne-Cartier,1360,29.701938651960784
+Smith / Peel,de la Commune / King,1356,6.993571140609635
+Berri / Cherrier,Gauthier / de Lorimier,1353,9.459321643261887
+Métro Vendôme (de Marlowe / de Maisonneuve),Marcil / Sherbrooke,1345,6.6376753655514245
+Métro Charlevoix (Charlevoix / Centre),Augustin-Cantin / Shearer,1343,4.7443790891039965
+Cartier / Dandurand,Métro Rosemont (de St-Vallier / Rosemont),1339,6.305852987303958
+Aylmer / Prince-Arthur,Prince-Arthur / du Parc,1338,3.0800335201793723
+St-Hubert / de Maisonneuve (sud),Métro Papineau (Dorion / De Maisonneuve),1335,7.267126916354558
+McTavish / Sherbrooke,Prince-Arthur / du Parc,1334,7.067478248375812
+University / Milton,Prince-Arthur / du Parc,1334,3.8257015492253874
+St-André / Ste-Catherine,de la Porte de Québec / St-André,1332,5.2937253003002995
+Métro Atwater (Atwater / Ste-Catherine),Mackay / de Maisonneuve,1329,8.025799322799097
+Ontario / Ville-Marie,Métro Viau (Pierre-de-Coubertin / Viau),1328,6.238322289156627
+Métro Parc  (Hutchison / Ogilvy),Ball / Bloomfield,1328,6.111834136546185
+Métro Mont-Royal (Utilités publiques / Rivard),Rachel / de Brébeuf,1326,6.826815673705379
+Quai de la navette fluviale,Parc Jean-Drapeau (Chemin Macdonald),1326,29.876979801407742
+University / Milton,des Pins / St-Laurent,1323,7.110360745779794
+Métro Peel (de Maisonneuve / Stanley),Peel / Notre-Dame,1319,6.167628632802628
+Métro Crémazie (Crémazie / Lajeunesse),Chabanel / du Parc,1318,10.722899494183105
+Berri / Laurier,Laurier / de Bordeaux,1318,6.231172900859889
+Frontenac / Ste-Catherine,Métro Frontenac (Ontario / du Havre),1318,4.1830143651997975
+Métro Papineau (Dorion / De Maisonneuve),St-Hubert / de Maisonneuve (sud),1315,7.5882441444866915
+Marquette / du Mont-Royal,Marquette / Laurier,1314,4.1892874429223745
+Ste-Catherine / St-Mathieu,Joseph-Manseau / René-Levesque,1311,4.380402250190695
+Métro Crémazie (Crémazie / Lajeunesse),Émile-Journault / de Châteaubriand,1311,4.0694888126112385
+Laurier / St-Denis,Clark / St-Viateur,1309,6.001448866819455
+Park Row O / Sherbrooke,Métro Vendôme (de Marlowe / de Maisonneuve),1307,11.2710675337924
+de la Commune / Berri,de la Commune / King,1304,12.951181377811862
+Métro Viau ( Pierre-de-Coubertin / Viau),Ste-Catherine / St-Clément,1299,7.36130164228894
+Roy / St-André,des Pins / St-Laurent,1299,5.3597022838080575
+des Pins / St-Laurent,Roy / St-André,1297,5.816689167309176
+Clark / Laurier,Laurier / St-Denis,1296,3.6720631558641976
+de Chambly / Rachel,Métro Joliette  (Hochelaga / Joliette),1292,3.6051435758513937
+McTavish / Sherbrooke,Milton / du Parc,1291,6.002071456235476
+Métro Jarry (Lajeunesse / Jarry),Lajeunesse / Villeray,1281,3.3251346734322142
+Métro Mont-Royal (Utilités publiques / Rivard),de l'Hôtel-de-Ville / Rachel,1280,4.965658515625
+Berri / Gilford,Gilford / Papineau,1278,5.090837245696401
+du Parc-Lafontaine / Rachel,Métro Mont-Royal (Utilités publiques / Rivard),1277,5.831126468285043
+Marquette / du Mont-Royal,Laurier / de Brébeuf,1277,6.075957282693813
+Montcalm / Ontario,Métro Beaudry (Beaudry / Ste-Catherine),1276,3.1452030564263325
+Aylmer / Prince-Arthur,McTavish / Sherbrooke,1272,4.850675773060797
+du Mont-Royal / Clark,du Mont-Royal / Clark,1271,14.822583779176503
+16e avenue / St-Joseph,Métro Joliette  (Hochelaga / Joliette),1271,5.853294204038815
+Métro Vendôme (de Marlowe / de Maisonneuve),Victoria / de Maisonneuve,1269,3.9835925925925926
+Édouard-Montpetit / de Stirling,Wilderton  / Van Horne,1266,4.937748959978936
+Métro Beaudry (Beaudry / Ste-Catherine),Montcalm / Ontario,1265,3.669887312252964
+Parc St-Paul (Le Caron / Marc-Sauvalle),Métro Jolicoeur (de Sève / Drake),1263,4.348758194774347
+Métro Mont-Royal (Utilités publiques / Rivard),Duluth  / St-Denis,1262,5.382430546751189
+Métro Place Saint-Henri (Charlebois / Saint-Ferdinand),St-Rémi / Ste-Émilie,1262,6.1850668119387215
+Laurier / de Brébeuf,St-Hubert / Laurier,1260,3.6387503835978836
+Métro Vendôme (de Marlowe / de Maisonneuve),Park Row O / Sherbrooke,1259,12.147871061689171
+Jeanne-d'Arc / Ontario,Métro Joliette  (Hochelaga / Joliette),1254,6.215697939925571
+Métro Mont-Royal (Utilités publiques / Rivard),Marquette / Rachel,1254,8.029228083466242
+St-Patrick / Thomas-Keefer,St-Patrick / Thomas-Keefer,1250,29.655515466666664
+Chomedey / de Maisonneuve,Mackay / de Maisonneuve,1245,6.024844805890227
+Métro Papineau (Dorion / De Maisonneuve),Métro Papineau (Dorion / De Maisonneuve),1244,20.3382014335477
+de la Commune / Place Jacques-Cartier,de la Commune / King,1243,17.375817068919282
+des Pins / St-Laurent,University / Milton,1240,6.81907934139785
+de Lanaudière / Laurier,Berri / Laurier,1238,4.017513099084545
+Rosemont / Viau,Rosemont / Viau,1236,31.845785935814455
+de Mentana / du Mont-Royal,Marquette / du Mont-Royal,1234,5.2930403160453805
+Richmond / des Bassins,Richmond / des Bassins,1233,28.81719787780481
+Chomedey / de Maisonneuve,Melville / de Maisonneuve,1226,9.665431158238173
+Canning / Notre-Dame,Métro Lionel-Groulx (St-Jacques / Atwater),1225,5.0081191020408165
+Bourget / St-Jacques,Métro Lionel-Groulx (St-Jacques / Atwater),1223,2.7936049468520032
+Milton / du Parc,McTavish / Sherbrooke,1222,5.3988902755046375
+St-Hubert / Laurier,Laurier / de Brébeuf,1216,3.141165583881579
+University / Prince-Arthur,Prince-Arthur / du Parc,1214,3.229117298187809
+Métro Lucien-L'Allier (Lucien l'Allier / Argyle),du Séminaire / de la Montagne,1211,5.156250289017342
+Smith / Peel,Place du Canada (Peel / des Canadiens-de-Montréal),1210,7.979434958677686
+Métro Peel (de Maisonneuve / Stanley),Métro Peel (de Maisonneuve / Stanley),1208,19.34642233719647
+McTavish / Sherbrooke,Aylmer / Prince-Arthur,1207,5.168918434134217
+des Pins / St-Laurent,du Mont-Royal / Clark,1204,7.070317012735327
+Laurier / St-Denis,du Mont-Royal / Clark,1204,7.598210022148393
+Métro Jolicoeur (de Sève / Drake),Beurling / Godin,1204,6.6077603543743075
+Ste-Catherine / St-Laurent,St-André / Ste-Catherine,1203,7.543112136325853
+Pierre-de-Coubertin / Aird,Ontario / Sicard,1201,5.690506744379683
+Métro Atwater (Atwater / Ste-Catherine),Métro Lionel-Groulx (St-Jacques / Atwater),1201,8.845497904524008
+Métro Snowdon (Circle / Queen-Mary),Parc de la Confédération (Fielding / West Hill),1200,10.234454708333333
+Parc Villeray (Christophe-Colomb / Jarry),Métro Jarry (Lajeunesse / Jarry),1199,5.33852661940506
+Parc J.-Arthur-Champagne (de Chambly / du Mont-Royal),Métro Joliette  (Hochelaga / Joliette),1198,4.63369887312187
+de la Commune / King,de la Commune / Berri,1197,12.074425480367585
+Gilford / Papineau,Berri / Gilford,1197,5.021962141464773
+Clark / Prince-Arthur,Milton / Durocher,1193,4.682260603520536
+St-Dominique / du Mont-Royal,Métro Mont-Royal (Utilités publiques / Rivard),1186,4.4857978499156825
+Métro Frontenac (Ontario / du Havre),Aylwin / Ontario,1184,7.920274099099099
+Wellington / de l'Église,Wellington / 3e avenue,1180,6.827490197740112
+Dubois / Eadie,Métro Jolicoeur (de Sève / Drake),1179,4.4968161718970885
+Aylwin / Ontario,Métro Frontenac (Ontario / du Havre),1179,7.565864814814815
+Aylwin / Ontario,Place Valois (Valois / Ontario),1175,4.242112113475177
+Métro Vendôme (de Marlowe / de Maisonneuve),Métro Atwater (Atwater / Ste-Catherine),1173,12.362787880079567
+Peel / Ottawa,de la Montagne / Notre-Dame,1172,5.561157423208192
+Ste-Catherine / St-Laurent,Ste-Catherine / Sanguinet,1171,8.667019570167946
+Mackay / de Maisonneuve,Chomedey / de Maisonneuve,1171,6.177045516652434
+Melville / de Maisonneuve,Chomedey / de Maisonneuve,1170,9.001849643874644
+Métro Honoré-Beaugrand (Sherbrooke / Honoré-Beaugrand),Liébert / Hochelaga,1170,5.944543660968661
+Ball / Bloomfield,Métro Parc  (Hutchison / Ogilvy),1170,5.936199458689459
+de la Commune / King,de la Commune / St-Sulpice,1169,10.959660792700314
+Complexe sportif Claude-Robillard (Émile-Journault),Métro Crémazie (Crémazie / Lajeunesse),1163,5.7037528948122675
+Métro Sauvé (Berri / Sauvé),Clark / Fleury,1157,6.390354134255258
+St-Dominique / St-Zotique,Métro Beaubien (de Chateaubriand / Beaubien),1157,5.184476735811005
+St-Urbain / Laurier,Laurier / St-Denis,1157,3.925734557764333
+Regina / de Verdun,Métro Lasalle (de Rushbrooke / Caisse),1154,3.922794670710572
+Berri / Cherrier,St-Hubert / Duluth,1153,3.6688381757733453
+Place du Commerce,Place du Commerce,1152,45.97251892361111
+Guy / Sainte-Catherine,Métro Atwater (Atwater / Ste-Catherine),1147,8.715371955826795
+Milton / Durocher,Clark / Prince-Arthur,1145,4.501523129548763
+Léa-Roback / Sir-Georges-Etienne-Cartier,St-Patrick / Thomas-Keefer,1145,11.272558340611353
+Métro Bonaventure (de la Gauchetière / de la Cathédrale),Peel / Ottawa,1144,4.993659965034965
+Augustin-Cantin / Shearer,Métro Charlevoix (Charlevoix / Centre),1143,4.517161650627005
+Métro Atwater (Atwater / Ste-Catherine),Métro Vendôme (de Marlowe / de Maisonneuve),1143,12.657256226305046
+Prince-Arthur / du Parc,des Pins / St-Laurent,1142,5.394820986573263
+Valois / Ste-Catherine,Métro Joliette  (Hochelaga / Joliette),1141,6.616154776511832
+Métro Pie-IX (Pierre-de-Coubertin / Desjardins),Jeanne-d'Arc / Ontario,1140,6.904862792397661
+Jacques-Casault / Christophe-Colomb,Métro Crémazie (Crémazie / Lajeunesse),1137,5.426022002345353
+Métro Peel (de Maisonneuve / Stanley),Mackay / de Maisonneuve,1136,5.340761869131455
+St-Jacques / McGill,de la Commune / King,1135,5.425771086637298
+de la Commune / King,Charles-Biddle / Atwater,1133,18.966121579876436
+de la Montagne / Notre-Dame,Peel / Ottawa,1131,6.559690598290598
+Métro Rosemont (de St-Vallier / Rosemont),Cartier / Dandurand,1131,6.306172369584439
+Métro Villa-Maria (de Monkland / Décarie),Grand Boulevard / de Terrebonne,1131,7.393601812555262
+de la Commune / St-Sulpice,de la Commune / King,1127,19.27745313516711
+Laurier / de Brébeuf,Laurier / de Bordeaux,1124,4.053433066429419
+Joseph-Manseau / René-Levesque,Guy / Sainte-Catherine,1123,4.083527634312852
+Place Valois (Valois / Ontario),Aylwin / Ontario,1123,5.1172661175422975
+Métro Côte-des-Neiges (Jean-Brillant / de la Côte-des-Neiges),Édouard-Montpetit / de Stirling,1123,8.157976209557733
+Métro Jolicoeur (de Sève / Drake),Parc St-Paul (Le Caron / Marc-Sauvalle),1122,5.298240359477124
+de la Montagne / Notre-Dame,Ottawa / du Séminaire,1122,4.331559358288771
+Métro Lasalle (de Rushbrooke / Caisse),Regina / de Verdun,1119,4.540221015787906
+Milton / Durocher,Prince-Arthur / du Parc,1117,3.6223801253357206
+McTavish / Sherbrooke,Clark / Prince-Arthur,1117,8.288698313936138
+Aylmer / Sherbrooke,Aylmer / Prince-Arthur,1116,2.7316983422939067
+Métro Crémazie (Crémazie / Lajeunesse),Jacques-Casault / Christophe-Colomb,1116,7.81411557646356
+de la Commune / Berri,de la Commune / Place Jacques-Cartier,1115,19.043428834080718
+Émile-Journault / de Châteaubriand,Métro Crémazie (Crémazie / Lajeunesse),1114,4.360928366247756
+Métro Viau ( Pierre-de-Coubertin / Viau),Ontario / Ville-Marie,1114,6.0830802812687015
+Métro Sherbrooke (de Rigaud / Berri),Émile-Duployé / Sherbrooke,1112,7.200005410671463
+Smith / Peel,Marché Atwater,1111,14.33631590159016
+Maguire / St-Laurent,Laurier / St-Denis,1110,4.1871008408408406
+Prince-Arthur / du Parc,Prince-Arthur / du Parc,1110,15.999429684684685
+Guizot / St-Laurent,Métro Jarry (Lajeunesse / Jarry),1110,5.152206576576577
+de Brébeuf / du Mont-Royal,Marquette / du Mont-Royal,1109,4.548692290351668
+Métro Sherbrooke (de Rigaud / Berri),Prince-Arthur / du Parc,1109,7.671122858431019
+Métro Jarry (Lajeunesse / Jarry),Guizot / St-Laurent,1108,5.168466004813478
+de la Commune / St-Sulpice,de la Commune / Berri,1107,14.80660519421861
+Melville / de Maisonneuve,de Maisonneuve / Wood,1106,5.634309885473177
+Métro Atwater (Atwater / Ste-Catherine),Lincoln / St-Mathieu,1106,5.882408936106088
+Laurier / de Bordeaux,Berri / Laurier,1106,6.411601295961423
+Guy / Sainte-Catherine,Guy / Notre-Dame,1102,6.009594933454325
+St-Rémi / Ste-Émilie,Métro Place Saint-Henri (St-Ferdinand / St-Jacques),1097,7.396036903676694
+Laurier / de Brébeuf,Marquette / du Mont-Royal,1097,5.913122364023093
+Place du Canada (Peel / des Canadiens-de-Montréal),Murray / Wellington,1096,6.67800355839416
+de la Commune / King,Marché Atwater,1096,20.09857770681265
+Métro Frontenac (Ontario / du Havre),Frontenac / Ste-Catherine,1096,4.506376186131387
+de la Montagne / Notre-Dame,Richmond / des Bassins,1092,6.146632402319903
+Parc Jean-Drapeau (Chemin Macdonald),Quai de la navette fluviale,1091,29.49377346471127
+Métro Verdun (Willibrord / de Verdun),LaSalle / Godin,1091,8.665543858845096
+La Fontaine / Alexandre-de-Sève,Métro Papineau (Dorion / De Maisonneuve),1090,3.7140778134556576
+Métro Atwater (Atwater / Ste-Catherine),Guy / Sainte-Catherine,1088,8.157498161764707
+du Mont-Royal / Clark,Clark / Prince-Arthur,1086,6.7392395794966236
+Berri / Laurier,Cartier / Masson,1085,6.192763456221199
+Joseph-Manseau / René-Levesque,Métro Atwater (Atwater / Ste-Catherine),1083,5.48154678362573
+Laurier / St-Denis,Jeanne-Mance / St-Viateur,1083,7.801271452754694
+Wilderton  / Van Horne,Édouard-Montpetit / de Stirling,1081,5.953413876040703
+Métro Vendôme (de Marlowe / de Maisonneuve),Melville / de Maisonneuve,1081,7.249152096823928
+Clark / Rachel,Métro Mont-Royal (Utilités publiques / Rivard),1078,5.560611008039579
+Laurier / St-Denis,de L'Esplanade  / Fairmount,1078,6.381422526283241
+Peel / Ottawa,Peel / Ottawa,1077,22.155615660786136
+de la Cathédrale / Saint-Antoine,Peel / Ottawa,1074,4.028473603351955
+Hochelaga / Chapleau,Métro Frontenac (Ontario / du Havre),1073,3.5392126747437094
+Guy / Sainte-Catherine,Ottawa / William,1073,6.916769338303822
+Édouard-Montpetit / de Stirling,Métro Côte-des-Neiges (Jean-Brillant / de la Côte-des-Neiges),1071,8.485210675381262
+Clark / Fleury,Métro Sauvé (Berri / Sauvé),1071,6.187966370992841
+de la Commune / King,Léa-Roback / Sir-Georges-Etienne-Cartier,1069,23.0163782195198
+Prince-Arthur / du Parc,Aylmer / Prince-Arthur,1069,3.023072419706891
+Marquette / Laurier,Laurier / St-Denis,1066,5.63285351782364
+Ste-Catherine / Towers,Métro Atwater (Atwater / Ste-Catherine),1065,6.738239718309859
+de Gaspé / Beaubien,Métro Beaubien (de Chateaubriand / Beaubien),1065,3.634186447574335
+Marquette / du Mont-Royal,Marquette / Rachel,1064,3.567728743734336
+Métro Mont-Royal (Utilités publiques / Rivard),Boyer / du Mont-Royal,1064,5.3219834899749365
+Fabre / Laurier,Berri / Laurier,1063,4.652620398243964
+Fabre / St-Zotique,Métro Beaubien (de Chateaubriand / Beaubien),1061,5.969539428212378
+Émile-Duployé / Sherbrooke,Berri / Rachel,1059,8.107139187913125
+McKenna / Édouard-Montpetit,Édouard-Montpetit / de Stirling,1059,4.033677494491659
+Marquette / Rachel,Marquette / du Mont-Royal,1058,3.918268147448015
+Métro Atwater (Atwater / Ste-Catherine),Atwater / Greene,1057,8.513246215704825
+de Hampton / de Monkland,Métro Villa-Maria (de Monkland / Décarie),1055,5.394566050552923
+Boyer / du Mont-Royal,Métro Mont-Royal (Utilités publiques / Rivard),1053,5.405279170623616
+Casino de Montréal,Casino de Montréal,1053,32.88328061095283
+St-Dominique / Laurier,Laurier / de Brébeuf,1051,6.229245765937203
+Wellington / Gordon,Wellington / Gordon,1050,23.243798444444447
+Métro Université de Montréal (Édouard-Montpetit / Louis-Collin),Wilderton  / Van Horne,1048,6.11653606870229
+Ste-Catherine / St-Clément,Métro Viau ( Pierre-de-Coubertin / Viau),1048,7.856137340966922
+de Brébeuf / du Mont-Royal,de Brébeuf / du Mont-Royal,1047,18.95649282075772
+Wellington / 3e avenue,Wellington / de l'Église,1047,7.016509567016874
+Édouard-Montpetit / de Stirling,HEC (Decelles / Jean-Brillant),1043,6.833297714924896
+Métro Verdun (Willibrord/ de Verdun),Beatty / de Verdun,1043,5.1759782837967405
+Métro Parc  (Hutchison / Ogilvy),d'Outremont / Ogilvy,1043,3.9809886225631193
+Chomedey / de Maisonneuve,de Maisonneuve / Mansfield (sud),1042,9.254510380678184
+Beatty / de Verdun,Métro Verdun (Willibrord/ de Verdun),1042,5.338198096609085
+Prince-Arthur / du Parc,Milton / Durocher,1041,4.22434521293628
+Melville / de Maisonneuve,Métro Vendôme (de Marlowe / de Maisonneuve),1041,6.56143730387448
+Métro Papineau (Dorion / De Maisonneuve),Fullum / Ste-Catherine,1038,4.437171579961464
+Métro Angrignon (Lamont / des Trinitaires),Métro Angrignon (Lamont / des Trinitaires),1038,33.87511207450225
+de l'Hôtel-de-Ville / Rachel,Métro Mont-Royal (Utilités publiques / Rivard),1036,4.724333671171171
+U. Concordia - Campus Loyola (Sherbrooke / West Broadway),Métro Vendôme (de Marlowe / de Maisonneuve),1035,14.229947198067633
+de la Commune / St-Sulpice,Charles-Biddle / Atwater,1034,24.580405415860735
+de Melrose / Sherbrooke,Métro Vendôme (de Marlowe / de Maisonneuve),1032,6.266469056847545
+Casgrain / Maguire,Laurier / St-Denis,1031,3.813901002263175
+Mackay / de Maisonneuve,Métro Peel (de Maisonneuve / Stanley),1030,5.605351779935275
+Métro Mont-Royal (Utilités publiques / Rivard),des Érables / Rachel,1026,11.064395955165693
+Clark / Prince-Arthur,Milton / du Parc,1026,4.130225389863548
+Ste-Catherine / St-Laurent,St-Denis / Ste-Catherine,1025,9.829231756097562
+Dorion / Ontario,Métro Frontenac (Ontario / du Havre),1025,5.615836715447154
+Métro Beaubien (de Chateaubriand / Beaubien),Fabre / St-Zotique,1024,5.828748421223958
+Jeanne-Mance / Laurier,du Mont-Royal / Clark,1022,5.162420401174169
+Métro Préfontaine (Préfontaine / Hochelaga),Ste-Catherine / Dézéry,1022,6.86166722113503
+Émile-Duployé / Sherbrooke,Métro Sherbrooke (de Rigaud / Berri),1018,6.245681794368042
+Métro Sherbrooke (de Rigaud / Berri),Sewell / Roy,1018,5.7947529142108705
+Crescent / de Maisonneuve,Métro Atwater (Atwater / Ste-Catherine),1014,8.511208316896779
+Métro Beaubien (de Chateaubriand / Beaubien),St-Zotique / Clark,1013,6.332131918394209
+Milton / University,Prince-Arthur / du Parc,1013,4.51828451793353
+St-Rémi / Ste-Émilie,Métro Place Saint-Henri (Charlebois / Saint-Ferdinand),1011,6.578258638311902
+Métro Pie-IX (Pierre-de-Coubertin / Desjardins),Ontario / Sicard,1009,6.965174859596961
+Clark / St-Viateur,Clark / Laurier,1009,3.058081004294681
+Hamel / Sauriol,Métro Sauvé (Berri / Sauvé),1009,8.666651073670302
+Richmond / des Bassins,Marché Atwater,1008,11.09726240079365
+Métro Mont-Royal (Utilités publiques / Rivard),St-Dominique / du Mont-Royal,1008,5.2962975694444445
+Peel / Ottawa,de la Commune / Place Jacques-Cartier,1005,15.29419728026534
+St-Hubert / Duluth,Berri / Cherrier,1005,3.095670199004975
+Laurier / St-Denis,Waverly / St-Viateur,1005,6.902827164179104
+de la Commune / Place Jacques-Cartier,de la Commune / Berri,1001,14.668244971694971
+Marquette / du Mont-Royal,Messier / du Mont-Royal,1000,5.352752000000001
+Métro Jarry (Lajeunesse / Jarry),Leman / de Chateaubriand,999,3.7699562228895562
+d'Outremont / Ogilvy,Métro Parc  (Hutchison / Ogilvy),998,3.784166148964596
+Ste-Catherine / St-Mathieu,Ste-Catherine / St-Mathieu,997,16.160829304580407
+Métro Beaudry (Beaudry / Ste-Catherine),Métro Papineau (Dorion / De Maisonneuve),997,5.7790944834503515
+Métro Lucien-L'Allier (Lucien l'Allier / Argyle),Guy / Notre-Dame,996,4.673780120481927
+Victoria / de Maisonneuve,Métro Vendôme (de Marlowe / de Maisonneuve),996,4.4721184906291835
+Smith / Peel,Charles-Biddle / Atwater,995,13.330072328308209
+Métro Place Saint-Henri (St-Ferdinand / St-Jacques),de la Côte St-Paul / St-Ambroise,995,8.631422529313234
+de la Commune / King,Richmond / des Bassins,994,10.587335278336688
+de Maisonneuve / Greene,Melville / de Maisonneuve,994,5.644288715627096
+Argyle / de Verdun,Métro Verdun (Willibrord/ de Verdun),994,3.9598224010731053
+Édouard-Montpetit / de Stirling,Métro Université de Montréal (Édouard-Montpetit / Louis-Collin),993,3.9100542296072507
+Duluth  / St-Denis,des Pins / St-Laurent,992,4.926476545698924
+Métro Mont-Royal (Utilités publiques / Rivard),Clark / Rachel,991,6.785994635048772
+Marquette / Laurier,St-Hubert / Laurier,991,4.656418163471241
+Clark / Prince-Arthur,du Mont-Royal / Clark,990,7.181573636363637
+Métro Vendôme (de Marlowe / de Maisonneuve),de Melrose / Sherbrooke,989,7.705679120323559
+Ste-Catherine / Towers,Métro Peel (de Maisonneuve / Stanley),988,8.027397182861
+Métro Lionel-Groulx (St-Jacques / Atwater),Bourget / St-Jacques,987,3.7521944951030055
+Jeanne-d'Arc / Ontario,Métro Pie-IX (Pierre-de-Coubertin / Desjardins),985,7.355548646362099
+du Mont-Royal / Clark,Coloniale / Duluth,984,5.335948289295393
+des Pins / St-Laurent,Aylmer / Prince-Arthur,982,5.751966259334691
+des Pins / St-Laurent,Prince-Arthur / du Parc,981,5.483000305810398
+Métro Mont-Royal (Utilités publiques / Rivard),Calixa-Lavallée / Rachel,979,7.83325900578822
+Duluth  / St-Denis,Métro Sherbrooke (de Rigaud / Berri),979,4.966942117807286
+Berri / Rachel,Métro Mont-Royal (Utilités publiques / Rivard),979,5.350843173306095
+Berri / Cherrier,Roy / St-André,978,3.772301670074983
+Charles-Biddle / Atwater,Smith / Peel,977,12.482936983964516
+Place Valois (Valois / Ontario),Valois / Ste-Catherine,976,4.079666461748634
+Melville / de Maisonneuve,de Maisonneuve / Greene,974,5.690547672826831
+de Monkland / Girouard,de Hampton / de Monkland,973,5.591793627954779
+Duluth / de l'Esplanade,University / Milton,972,6.197242901234567
+Ontario / Ville-Marie,Métro Viau ( Pierre-de-Coubertin / Viau),971,6.268052729145211
+Prince-Arthur / du Parc,University / Milton,970,3.616945824742268
+de l'Église / Bannantyne,Métro de l'Église (Ross / de l'Église),970,5.26563352233677
+Métro Papineau (Dorion / De Maisonneuve),La Fontaine / Alexandre-de-Sève,969,4.739487358101135
+Fullum / Ste-Catherine,Métro Papineau (Dorion / De Maisonneuve),968,4.839614325068871
+Pierre-de-Coubertin / Aird,Métro Pie-IX (Pierre-de-Coubertin / Desjardins),968,6.009592785812672
+Clark / St-Viateur,Laurier / St-Denis,968,5.046271212121211
+Smith / Peel,de la Commune / Berri,968,13.23347116046832
+Coloniale / Duluth,Métro Mont-Royal (Utilités publiques / Rivard),968,6.694923347107438
+Liébert / Hochelaga,Métro Honoré-Beaugrand (Sherbrooke / Honoré-Beaugrand),965,6.652635077720207
+Métro Papineau (Dorion / De Maisonneuve),Frontenac / Ste-Catherine,965,6.6447204490500855
+Métro Radisson (Sherbrooke / des Groseilliers),Bélanger / des Galeries d'Anjou,963,9.483240290758047

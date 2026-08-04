@@ -1,0 +1,70 @@
+// BIXI Montreal 2024 — DAX measures
+// Paste these into Power BI Desktop: Model view > right-click a table (e.g. Fact_DailyStation)
+// > "New measure", then replace the formula bar content with each block below.
+// (Each `MeasureName = ...` line is one measure. Create a dedicated "_Measures" table
+// first — see BUILD_GUIDE.md step 4 — and add all of them there so they aren't tied
+// to any one fact table.)
+
+// ---------- Core volume & duration ----------
+
+Total Trips =
+SUM ( Fact_DailyStation[trip_count] )
+
+Total Trips (Hourly Check) =
+SUM ( Fact_Hourly[trip_count] )
+// Sanity-check measure: should equal [Total Trips] with no filters applied,
+// since both fact tables are cleaned+aggregated from the same source rows.
+
+Avg Trip Duration (min) =
+DIVIDE (
+    SUMX ( Fact_DailyStation, Fact_DailyStation[trip_count] * Fact_DailyStation[avg_duration_min] ),
+    SUM ( Fact_DailyStation[trip_count] ),
+    BLANK ()
+)
+// Weighted average — never average the avg_duration_min column directly,
+// since each row already represents a different number of trips.
+
+Avg Trip Duration Hourly (min) =
+DIVIDE (
+    SUMX ( Fact_Hourly, Fact_Hourly[trip_count] * Fact_Hourly[avg_duration_min] ),
+    SUM ( Fact_Hourly[trip_count] ),
+    BLANK ()
+)
+
+// ---------- Share / ranking ----------
+
+% of Total Trips =
+DIVIDE ( [Total Trips], CALCULATE ( [Total Trips], ALL ( Dim_Station ), ALL ( Dim_Date ) ) )
+
+Station Rank =
+RANKX ( ALL ( Dim_Station[station] ), [Total Trips], , DESC )
+
+// ---------- Calendar-driven (via Dim_Date) ----------
+
+Weekend Trips =
+CALCULATE ( SUM ( Fact_DailyStation[trip_count] ), Dim_Date[is_weekend] = TRUE )
+
+Weekday Trips =
+CALCULATE ( SUM ( Fact_DailyStation[trip_count] ), Dim_Date[is_weekend] = FALSE )
+
+Weekend Share =
+DIVIDE ( [Weekend Trips], [Weekend Trips] + [Weekday Trips] )
+
+// ---------- Routes (uses the inactive Dim_Station <-> Fact_Routes[end_station] relationship) ----------
+// Fact_Routes only holds the top 500 routes by volume, not the full route universe —
+// use it for "most popular routes" visuals, not for total-trip totals.
+
+Route Trips =
+SUM ( Fact_Routes[trip_count] )
+
+Trips Ending At Station =
+CALCULATE (
+    SUM ( Fact_Routes[trip_count] ),
+    USERELATIONSHIP ( Dim_Station[station], Fact_Routes[end_station] )
+)
+
+// ---------- Data-quality context (type these as a manual table — see BUILD_GUIDE.md step 2b) ----------
+
+Raw Trips (2024) = 13275326
+Removed as Outliers = 301180
+Removed % = DIVIDE ( [Removed as Outliers], [Raw Trips (2024)] )

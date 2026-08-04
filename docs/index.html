@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BIXI Montreal 2024 — Bike Share Analysis</title>
+<meta name="description" content="Interactive analysis of 13 million BIXI bike-share trips in Montreal, 2024.">
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<script src="data.js"></script>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page-plane:      #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --card-shadow:    0 1px 2px rgba(11,11,11,0.06);
+    --series-1:       #2a78d6;
+    --series-2:       #eb6834;
+    --series-3:       #1baf7a;
+    --series-4:       #eda100;
+    --seq-100: #cde2fb; --seq-200: #9ec5f4; --seq-300: #6da7ec;
+    --seq-400: #3987e5; --seq-450: #2a78d6; --seq-500: #256abf;
+    --seq-550: #1c5cab; --seq-600: #184f95; --seq-650: #104281; --seq-700: #0d366b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --page-plane:     #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --card-shadow:    0 1px 2px rgba(0,0,0,0.4);
+      --series-1:       #3987e5;
+      --series-2:       #d95926;
+      --series-3:       #199e70;
+      --series-4:       #c98500;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page-plane:     #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --card-shadow:    0 1px 2px rgba(0,0,0,0.4);
+    --series-1:       #3987e5;
+    --series-2:       #d95926;
+    --series-3:       #199e70;
+    --series-4:       #c98500;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--page-plane);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  body { padding: 24px 20px 64px; }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+
+  header.hero { margin-bottom: 28px; }
+  header.hero h1 { font-size: 1.6rem; font-weight: 700; margin: 0 0 6px; }
+  header.hero p { margin: 0; color: var(--text-secondary); font-size: 0.95rem; max-width: 720px; line-height: 1.5; }
+  header.hero .meta-links { margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.85rem; }
+  header.hero .meta-links a { color: var(--series-1); text-decoration: none; }
+  header.hero .meta-links a:hover { text-decoration: underline; }
+
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .kpi-tile {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: var(--card-shadow);
+  }
+  .kpi-tile .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 6px; }
+  .kpi-tile .value { font-size: 1.5rem; font-weight: 650; line-height: 1.1; }
+  .kpi-tile .sub { font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px; }
+
+  .filter-row {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    margin-bottom: 18px; padding: 10px 14px;
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
+  }
+  .filter-row label { font-size: 0.82rem; color: var(--text-secondary); }
+  .filter-row select {
+    font: inherit; font-size: 0.86rem;
+    background: var(--page-plane); color: var(--text-primary);
+    border: 1px solid var(--border); border-radius: 6px; padding: 5px 10px;
+  }
+  .filter-row .hint { font-size: 0.78rem; color: var(--text-muted); margin-left: auto; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .grid .full { grid-column: 1 / -1; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 16px 8px;
+    box-shadow: var(--card-shadow);
+  }
+  .card h2 { font-size: 0.95rem; font-weight: 650; margin: 0 0 2px; }
+  .card .card-sub { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 4px; }
+  .plot { width: 100%; height: 320px; }
+  .plot.tall { height: 620px; }
+
+  section.tables { margin-top: 32px; }
+  section.tables h2 { font-size: 1.05rem; margin-bottom: 4px; }
+  section.tables > p { color: var(--text-secondary); font-size: 0.85rem; margin-top: 0; }
+  .tab-row { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tab-btn {
+    font: inherit; font-size: 0.82rem; padding: 6px 12px;
+    border: 1px solid var(--border); background: var(--surface-1); color: var(--text-secondary);
+    border-radius: 999px; cursor: pointer;
+  }
+  .tab-btn[aria-selected="true"] { background: var(--series-1); color: #fff; border-color: var(--series-1); }
+  table { width: 100%; border-collapse: collapse; background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; font-size: 0.85rem; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--gridline); }
+  th { color: var(--text-muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tbody tr:last-child td { border-bottom: none; }
+  .table-wrap { overflow-x: auto; }
+
+  footer { margin-top: 40px; color: var(--text-muted); font-size: 0.8rem; text-align: center; }
+  footer a { color: var(--text-secondary); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>BIXI Montreal 2024 — Bike Share Analysis</h1>
+    <p>
+      An analysis of <strong>12.97 million</strong> cleaned bike-share trips (13.28M raw, 2.27% removed as
+      data-quality outliers) from Montreal's BIXI network across the 2024 season. Explore usage patterns by
+      hour, day, month, station, and borough below — filter by month to see how the rhythm of the city changes
+      with the seasons.
+    </p>
+    <div class="meta-links">
+      <a href="https://github.com/fhm-nzh/bixi-montreal-analysis" target="_blank" rel="noopener">Source code &amp; pipeline on GitHub ↗</a>
+      <a href="https://bixi.com/en/open-data/" target="_blank" rel="noopener">BIXI Open Data ↗</a>
+      <a href="../powerbi/BUILD_GUIDE.md" target="_blank" rel="noopener">Power BI version ↗</a>
+    </div>
+  </header>
+
+  <div class="kpi-row" id="kpiRow"></div>
+
+  <div class="filter-row">
+    <label for="monthFilter">Month</label>
+    <select id="monthFilter"></select>
+    <span class="hint">Filters the hour-of-day and day-of-week charts below</span>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Trips by hour of day</h2>
+      <div class="card-sub">Peak usage is in the evening, not the morning commute</div>
+      <div id="chartHour" class="plot"></div>
+    </div>
+    <div class="card">
+      <h2>Trips by day of week</h2>
+      <div class="card-sub">Friday is busiest; weekday/weekend gap is modest</div>
+      <div id="chartDow" class="plot"></div>
+    </div>
+    <div class="card full">
+      <h2>Trips by month</h2>
+      <div class="card-sub">Montreal winters shut the network down almost completely</div>
+      <div id="chartMonth" class="plot"></div>
+    </div>
+    <div class="card">
+      <h2>Top 10 busiest start stations</h2>
+      <div class="card-sub">Metro-adjacent stations dominate — last-mile transit use</div>
+      <div id="chartStations" class="plot"></div>
+    </div>
+    <div class="card">
+      <h2>Top 10 most popular routes</h2>
+      <div class="card-sub">Short loops around the Plateau, plus one recreational outlier</div>
+      <div id="chartRoutes" class="plot"></div>
+    </div>
+    <div class="card full">
+      <h2>Average trip duration by borough</h2>
+      <div class="card-sub">Peripheral/leisure boroughs run long; the dense core runs short (last-mile trips)</div>
+      <div id="chartBorough" class="plot tall"></div>
+    </div>
+  </div>
+
+  <section class="tables">
+    <h2>Data tables</h2>
+    <p>The same figures behind the charts above, for reference or screen readers.</p>
+    <div class="tab-row" id="tabRow">
+      <button class="tab-btn" data-tab="stations" aria-selected="true">Top stations</button>
+      <button class="tab-btn" data-tab="routes">Top routes</button>
+      <button class="tab-btn" data-tab="borough">Borough duration</button>
+    </div>
+    <div class="table-wrap" id="tableHost"></div>
+  </section>
+
+  <footer>
+    Built with Python (pandas) + Plotly.js · Data: BIXI Montreal Open Data, Creative Commons Attribution ·
+    <a href="https://github.com/fhm-nzh/bixi-montreal-analysis" target="_blank" rel="noopener">View full source</a>
+  </footer>
+</div>
+
+<script>
+const isDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+function baseLayout(extra) {
+  extra = extra || {};
+  const defaults = {
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    font: { family: 'system-ui, -apple-system, "Segoe UI", sans-serif', color: cssVar('--text-secondary'), size: 12 },
+    margin: { l: 50, r: 16, t: 8, b: 40 },
+    xaxis: { gridcolor: cssVar('--gridline'), zerolinecolor: cssVar('--baseline'), tickfont: { color: cssVar('--text-muted') }, rangemode: 'tozero' },
+    yaxis: { gridcolor: cssVar('--gridline'), zerolinecolor: cssVar('--baseline'), tickfont: { color: cssVar('--text-muted') }, rangemode: 'tozero' },
+    showlegend: false,
+    hoverlabel: { bgcolor: cssVar('--surface-1'), bordercolor: cssVar('--border'), font: { color: cssVar('--text-primary') } },
+  };
+  const out = Object.assign({}, defaults, extra);
+  out.xaxis = Object.assign({}, defaults.xaxis, extra.xaxis || {});
+  out.yaxis = Object.assign({}, defaults.yaxis, extra.yaxis || {});
+  out.margin = Object.assign({}, defaults.margin, extra.margin || {});
+  return out;
+}
+const cfg = { displayModeBar: false, responsive: true };
+const fmt = (n) => n.toLocaleString('en-US');
+const fmt1 = (n) => n.toLocaleString('en-US', { maximumFractionDigits: 1 });
+
+// ---------- KPI tiles ----------
+const kpi = BIXI_DATA.kpi;
+const kpiHtml = `
+  <div class="kpi-tile"><div class="label">Total trips (cleaned)</div><div class="value">${fmt1(kpi.total_trips/1e6)}M</div><div class="sub">${kpi.removed_pct}% removed as outliers</div></div>
+  <div class="kpi-tile"><div class="label">Avg trip duration</div><div class="value">${kpi.avg_duration_min} min</div><div class="sub">across all boroughs</div></div>
+  <div class="kpi-tile"><div class="label">Busiest station</div><div class="value" style="font-size:1.05rem">${kpi.busiest_station.split(' (')[0]}</div><div class="sub">${fmt(kpi.busiest_station_trips)} trips</div></div>
+  <div class="kpi-tile"><div class="label">Peak hour</div><div class="value">${kpi.peak_hour}:00</div><div class="sub">${fmt(kpi.peak_hour_trips)} trips</div></div>
+  <div class="kpi-tile"><div class="label">Busiest month</div><div class="value">${kpi.busiest_month}</div><div class="sub">${fmt(kpi.busiest_month_trips)} trips</div></div>
+`;
+document.getElementById('kpiRow').innerHTML = kpiHtml;
+
+// ---------- Month filter ----------
+const monthNames = ['All months','January','February','March','April','May','June','July','August','September','October','November','December'];
+const monthSel = document.getElementById('monthFilter');
+monthNames.forEach((m, i) => {
+  const opt = document.createElement('option');
+  opt.value = i; opt.textContent = m;
+  monthSel.appendChild(opt);
+});
+
+const DAY_ORDER = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+const DAY_SHORT = { Monday:'Mon', Tuesday:'Tue', Wednesday:'Wed', Thursday:'Thu', Friday:'Fri', Saturday:'Sat', Sunday:'Sun' };
+
+function renderHourChart(month) {
+  const rows = month === 0
+    ? BIXI_DATA.hour
+    : BIXI_DATA.month_hour.filter(r => r.month === month);
+  const byHour = new Array(24).fill(0);
+  rows.forEach(r => byHour[r.hour] = r.trip_count);
+  Plotly.react('chartHour', [{
+    x: [...Array(24).keys()].map(h => `${h}:00`),
+    y: byHour,
+    type: 'bar',
+    marker: { color: cssVar('--series-1') },
+    hovertemplate: '%{x}<br>%{y:,} trips<extra></extra>',
+  }], baseLayout({ yaxis: { title: 'Trips', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } } }), cfg);
+}
+
+function renderDowChart(month) {
+  const totals = {};
+  DAY_ORDER.forEach(d => totals[d] = 0);
+  if (month === 0) {
+    BIXI_DATA.dow.forEach(r => totals[r.day_of_week] = r.trip_count);
+  } else {
+    BIXI_DATA.month_dow.filter(r => r.month === month).forEach(r => totals[r.day_of_week] = r.trip_count);
+  }
+  Plotly.react('chartDow', [{
+    x: DAY_ORDER.map(d => DAY_SHORT[d]),
+    y: DAY_ORDER.map(d => totals[d]),
+    type: 'bar',
+    marker: { color: cssVar('--series-3') },
+    hovertemplate: '%{x}<br>%{y:,} trips<extra></extra>',
+  }], baseLayout({ yaxis: { title: 'Trips', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } } }), cfg);
+}
+
+monthSel.addEventListener('change', () => {
+  const m = parseInt(monthSel.value, 10);
+  renderHourChart(m);
+  renderDowChart(m);
+});
+
+// ---------- Static charts ----------
+function renderMonthChart() {
+  const rows = BIXI_DATA.month;
+  Plotly.react('chartMonth', [{
+    x: rows.map(r => r.month_name.slice(0,3)),
+    y: rows.map(r => r.trip_count),
+    type: 'bar',
+    marker: { color: cssVar('--series-2') },
+    hovertemplate: '%{x}<br>%{y:,} trips<extra></extra>',
+  }], baseLayout({ yaxis: { title: 'Trips', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } }, margin: { l: 55, r: 16, t: 8, b: 32 } }), cfg);
+}
+
+function renderStationsChart() {
+  const rows = [...BIXI_DATA.stations].sort((a,b) => a.trip_count - b.trip_count);
+  Plotly.react('chartStations', [{
+    y: rows.map(r => r.station.split(' (')[0]),
+    x: rows.map(r => r.trip_count),
+    type: 'bar', orientation: 'h',
+    marker: { color: cssVar('--series-1') },
+    hovertemplate: '%{y}<br>%{x:,} trips<extra></extra>',
+  }], baseLayout({ margin: { l: 190, r: 40, t: 8, b: 32 }, xaxis: { title: 'Trips', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } } }), cfg);
+}
+
+function renderRoutesChart() {
+  const rows = [...BIXI_DATA.routes].sort((a,b) => a.trip_count - b.trip_count);
+  const label = r => `${r.start_station.split(' (')[0]} → ${r.end_station.split(' (')[0]}`;
+  Plotly.react('chartRoutes', [{
+    y: rows.map(label),
+    x: rows.map(r => r.trip_count),
+    type: 'bar', orientation: 'h',
+    marker: { color: cssVar('--series-4') },
+    hovertemplate: '%{y}<br>%{x:,} trips<extra></extra>',
+  }], baseLayout({ margin: { l: 210, r: 40, t: 8, b: 32 }, xaxis: { title: 'Trips', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } } }), cfg);
+}
+
+function renderBoroughChart() {
+  const rows = [...BIXI_DATA.borough].sort((a,b) => a.avg_duration_min - b.avg_duration_min);
+  const seq = [cssVar('--seq-200'), cssVar('--seq-300'), cssVar('--seq-400'), cssVar('--seq-450'), cssVar('--seq-500'), cssVar('--seq-550'), cssVar('--seq-600'), cssVar('--seq-650')];
+  const maxDur = Math.max(...rows.map(r => r.avg_duration_min));
+  const colors = rows.map(r => seq[Math.min(seq.length - 1, Math.floor((r.avg_duration_min / maxDur) * (seq.length - 1)))]);
+  Plotly.react('chartBorough', [{
+    y: rows.map(r => r.borough),
+    x: rows.map(r => r.avg_duration_min),
+    type: 'bar', orientation: 'h',
+    marker: { color: colors },
+    hovertemplate: '%{y}<br>%{x:.1f} min avg<extra></extra>',
+  }], baseLayout({ margin: { l: 230, r: 40, t: 8, b: 32 }, xaxis: { title: 'Avg duration (min)', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } } }), cfg);
+}
+
+renderHourChart(0);
+renderDowChart(0);
+renderMonthChart();
+renderStationsChart();
+renderRoutesChart();
+renderBoroughChart();
+
+// re-render on theme change so Plotly picks up new CSS var colors
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  const m = parseInt(monthSel.value, 10);
+  renderHourChart(m); renderDowChart(m); renderMonthChart();
+  renderStationsChart(); renderRoutesChart(); renderBoroughChart();
+});
+
+// ---------- Data tables ----------
+const tableDefs = {
+  stations: {
+    cols: ['Station', 'Borough', 'Trips'],
+    rows: () => [...BIXI_DATA.stations].sort((a,b)=>b.trip_count-a.trip_count).map(r => [r.station, r.borough, fmt(r.trip_count)]),
+    numCols: [2],
+  },
+  routes: {
+    cols: ['Start station', 'End station', 'Trips', 'Avg duration (min)'],
+    rows: () => [...BIXI_DATA.routes].sort((a,b)=>b.trip_count-a.trip_count).map(r => [r.start_station, r.end_station, fmt(r.trip_count), fmt1(r.avg_duration_min)]),
+    numCols: [2,3],
+  },
+  borough: {
+    cols: ['Borough', 'Trips', 'Avg duration (min)'],
+    rows: () => [...BIXI_DATA.borough].sort((a,b)=>b.avg_duration_min-a.avg_duration_min).map(r => [r.borough, fmt(r.trip_count), fmt1(r.avg_duration_min)]),
+    numCols: [1,2],
+  },
+};
+
+function renderTable(key) {
+  const def = tableDefs[key];
+  const rows = def.rows();
+  const thead = `<tr>${def.cols.map((c,i) => `<th class="${def.numCols.includes(i)?'num':''}">${c}</th>`).join('')}</tr>`;
+  const tbody = rows.map(r => `<tr>${r.map((v,i) => `<td class="${def.numCols.includes(i)?'num':''}">${v}</td>`).join('')}</tr>`).join('');
+  document.getElementById('tableHost').innerHTML = `<table><thead>${thead}</thead><tbody>${tbody}</tbody></table>`;
+}
+
+document.getElementById('tabRow').addEventListener('click', (e) => {
+  const btn = e.target.closest('.tab-btn');
+  if (!btn) return;
+  document.querySelectorAll('.tab-btn').forEach(b => b.setAttribute('aria-selected', 'false'));
+  btn.setAttribute('aria-selected', 'true');
+  renderTable(btn.dataset.tab);
+});
+renderTable('stations');
+</script>
+</body>
+</html>

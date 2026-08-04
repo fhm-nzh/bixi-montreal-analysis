@@ -1,0 +1,1132 @@
+station,borough,trip_count
+Métro Mont-Royal (Utilités publiques / Rivard),Le Plateau-Mont-Royal,116104
+du Mont-Royal / Clark,Le Plateau-Mont-Royal,105878
+Laurier / St-Denis,Le Plateau-Mont-Royal,82777
+des Pins / St-Laurent,Le Plateau-Mont-Royal,77952
+Marquette / du Mont-Royal,Le Plateau-Mont-Royal,77830
+Métro Atwater (Atwater / Ste-Catherine),Ville-Marie,65944
+Métro Peel (de Maisonneuve / Stanley),Ville-Marie,64063
+Laurier / de Brébeuf,Le Plateau-Mont-Royal,61837
+Émile-Duployé / Sherbrooke,Le Plateau-Mont-Royal,59316
+Métro Papineau (Dorion / De Maisonneuve),Ville-Marie,58057
+Métro Sherbrooke (de Rigaud / Berri),Le Plateau-Mont-Royal,56661
+Berri / Rachel,Le Plateau-Mont-Royal,55729
+Prince-Arthur / du Parc,Le Plateau-Mont-Royal,53853
+Boyer / du Mont-Royal,Le Plateau-Mont-Royal,53704
+Clark / Prince-Arthur,Le Plateau-Mont-Royal,53060
+McTavish / Sherbrooke,Ville-Marie,53011
+Berri / Cherrier,Le Plateau-Mont-Royal,52133
+de la Commune / Place Jacques-Cartier,Ville-Marie,51663
+Smith / Peel,Le Sud-Ouest,50159
+de la Commune / King,Ville-Marie,49607
+Duluth  / St-Denis,Le Plateau-Mont-Royal,47842
+Métro Beaubien (de Chateaubriand / Beaubien),Rosemont - La Petite-Patrie,47608
+Parc Jeanne-Mance (monument sir George-Étienne-Cartier),Le Plateau-Mont-Royal,47028
+Guy / Sainte-Catherine,Ville-Marie,46272
+Ste-Catherine / Union,Ville-Marie,45747
+Parc Jeanne-Mance (du Mont-Royal / du Parc),Le Plateau-Mont-Royal,45375
+Coloniale / Duluth,Le Plateau-Mont-Royal,45214
+Clark / Rachel,Le Plateau-Mont-Royal,45202
+Mackay / de Maisonneuve,Ville-Marie,44986
+Clark / Laurier,Le Plateau-Mont-Royal,44293
+Ste-Catherine / St-Laurent,Ville-Marie,44194
+St-Dominique / Laurier,Le Plateau-Mont-Royal,43771
+de la Commune / St-Sulpice,Ville-Marie,43655
+Boyer / Beaubien,Rosemont - La Petite-Patrie,43591
+St-Dominique / Rachel,Le Plateau-Mont-Royal,43509
+du Parc-Lafontaine / Rachel,Le Plateau-Mont-Royal,41597
+Peel / Ottawa,Le Sud-Ouest,41036
+Duluth / de l'Esplanade,Le Plateau-Mont-Royal,41004
+Parc Jean-Drapeau (Chemin Macdonald),Ville-Marie,40345
+Roy / St-André,Le Plateau-Mont-Royal,39542
+Square St-Louis (du Square St-Louis / Laval),Le Plateau-Mont-Royal,38865
+St-Dominique / St-Zotique,Rosemont - La Petite-Patrie,38814
+Gilford / St-Denis,Le Plateau-Mont-Royal,38808
+Ste-Catherine / St-Mathieu,Ville-Marie,38763
+St-André / Ste-Catherine,Ville-Marie,38268
+Jeanne-Mance / Laurier,Le Plateau-Mont-Royal,38223
+Jeanne-Mance / St-Viateur,Le Plateau-Mont-Royal,38150
+Métro Vendôme (de Marlowe / de Maisonneuve),Côte-des-Neiges - Notre-Dame-de-Grâce,37861
+Roy / St-Denis,Le Plateau-Mont-Royal,37842
+de Brébeuf / du Mont-Royal,Le Plateau-Mont-Royal,37841
+Aylmer / Prince-Arthur,Le Plateau-Mont-Royal,37625
+Milton / du Parc,Le Plateau-Mont-Royal,37451
+Dorion / Ontario,Ville-Marie,37420
+Marmier / St-Denis,Rosemont - La Petite-Patrie,36541
+de la Montagne / Notre-Dame,Le Sud-Ouest,36315
+Aylwin / Ontario,Mercier - Hochelaga-Maisonneuve,36272
+Chomedey / de Maisonneuve,Ville-Marie,35903
+de la Commune / Berri,Ville-Marie,35710
+Clark / St-Viateur,Le Plateau-Mont-Royal,35522
+Drolet / Marie-Anne,Le Plateau-Mont-Royal,35338
+St-Dominique / Napoléon,Le Plateau-Mont-Royal,34595
+de Lanaudière / du Mont-Royal,Le Plateau-Mont-Royal,34416
+Métro Jarry (Lajeunesse / Jarry),Villeray—Saint-Michel—Parc-Extension,34345
+Bernard / Jeanne-Mance,Le Plateau-Mont-Royal,34292
+Ste-Catherine / Towers,Ville-Marie,33906
+Métro St-Laurent (de Maisonneuve / St-Laurent),Ville-Marie,33836
+Richmond / des Bassins,Le Sud-Ouest,33561
+Boyer / St-Zotique,Rosemont - La Petite-Patrie,33333
+Crescent / de Maisonneuve,Ville-Marie,33213
+Milton / St-Laurent,Le Plateau-Mont-Royal,32948
+Milton / Durocher,Le Plateau-Mont-Royal,32756
+Messier / du Mont-Royal,Le Plateau-Mont-Royal,32686
+Léa-Roback / Sir-Georges-Etienne-Cartier,Le Sud-Ouest,32370
+Parthenais / du Mont-Royal,Le Plateau-Mont-Royal,31965
+Boyer / Rosemont,Rosemont - La Petite-Patrie,31961
+des Pins / Hutchison,Le Plateau-Mont-Royal,31937
+Mansfield / Ste-Catherine,Ville-Marie,31895
+St-Dominique / du Mont-Royal,Le Plateau-Mont-Royal,31882
+St-Hubert / Duluth,Le Plateau-Mont-Royal,31612
+Métro Pie-IX (Pierre-de-Coubertin / Desjardins),Mercier - Hochelaga-Maisonneuve,31069
+Métro Frontenac (Ontario / du Havre),Ville-Marie,31056
+Rachel / de Brébeuf,Le Plateau-Mont-Royal,30602
+Laval / Duluth,Le Plateau-Mont-Royal,30567
+St-Hubert / de Maisonneuve (sud),Ville-Marie,30105
+Berri / Laurier,Le Plateau-Mont-Royal,29920
+Peel / Notre-Dame,Ville-Marie,29912
+Calixa-Lavallée / Rachel,Le Plateau-Mont-Royal,29690
+Gary-Carter / St-Laurent,Villeray—Saint-Michel—Parc-Extension,29668
+Waverly / St-Viateur,Le Plateau-Mont-Royal,29581
+Masson / Molson,Rosemont - La Petite-Patrie,29523
+de Mentana / du Mont-Royal,Le Plateau-Mont-Royal,29379
+de l'Hôtel-de-Ville / Rachel,Le Plateau-Mont-Royal,29378
+University / Milton,Le Plateau-Mont-Royal,29369
+Cartier / Marie-Anne,Le Plateau-Mont-Royal,29167
+Métro Lionel-Groulx (St-Jacques / Atwater),Le Sud-Ouest,28997
+de l'Esplanade / du Mont-Royal,Le Plateau-Mont-Royal,28847
+Vallières / St-Laurent,Le Plateau-Mont-Royal,28809
+Montcalm / Ontario,Ville-Marie,28578
+Calixa-Lavallée / Sherbrooke,Le Plateau-Mont-Royal,28472
+Square Viger (Berri / Viger),Ville-Marie,28411
+Métro Joliette  (Hochelaga / Joliette),Mercier - Hochelaga-Maisonneuve,28395
+Villeneuve / St-Dominique,Le Plateau-Mont-Royal,28323
+Place du Canada (Peel / des Canadiens-de-Montréal),Ville-Marie,28246
+Chabot / du Mont-Royal,Le Plateau-Mont-Royal,28231
+St-Grégoire / Christophe-Colomb,Le Plateau-Mont-Royal,28152
+St-Dominique / de Bellechasse,Rosemont - La Petite-Patrie,28101
+André-Laurendeau / Rachel,Rosemont - La Petite-Patrie,28017
+St-Urbain / Laurier,Le Plateau-Mont-Royal,28011
+Sherbrooke / Jeanne-d'Arc,Rosemont - La Petite-Patrie,27975
+Gauthier / de Lorimier,Le Plateau-Mont-Royal,27919
+Jeanne-Mance / Sherbrooke,Le Plateau-Mont-Royal,27913
+St-Hubert / Laurier,Le Plateau-Mont-Royal,27903
+Jeanne-Mance / René-Lévesque,Ville-Marie,27819
+St-Denis / Ste-Catherine,Ville-Marie,27745
+Fullum / Marie-Anne,Le Plateau-Mont-Royal,27742
+Marquette / Laurier,Le Plateau-Mont-Royal,27726
+Ottawa / du Séminaire,Le Sud-Ouest,27675
+Métro Rosemont (de St-Vallier / Rosemont),Rosemont - La Petite-Patrie,27441
+Maguire / St-Laurent,Le Plateau-Mont-Royal,27350
+Roy / Saint-Laurent,Le Plateau-Mont-Royal,27268
+Drummond / des-Canadiens-de-Montréal,Ville-Marie,27231
+Laurier / de Bordeaux,Le Plateau-Mont-Royal,27137
+Marché Jean-Talon (Casgrain / Shamrock),Rosemont - La Petite-Patrie,27027
+Métro Place-des-Arts (du Président-Kennedy / Jeanne-Mance),Ville-Marie,26892
+Métro Beaudry (Beaudry / Ste-Catherine),Ville-Marie,26847
+Lincoln / St-Mathieu,Ville-Marie,26825
+St-Alexandre / Ste-Catherine,Ville-Marie,26238
+St-Patrick / Thomas-Keefer,Le Sud-Ouest,26217
+du Parc-La Fontaine / Duluth,Le Plateau-Mont-Royal,26149
+Complexe Desjardins (St-Urbain / René-Lévesque),Ville-Marie,26095
+de Gaspé / Beaubien,Rosemont - La Petite-Patrie,26048
+Alexandre-DeSève / Ontario,Ville-Marie,26039
+de Maisonneuve / Mansfield (sud-est),Ville-Marie,26010
+Parc Père-Marquette (Chambord / Rosemont),Rosemont - La Petite-Patrie,25943
+Marie-Anne / Papineau,Le Plateau-Mont-Royal,25866
+de Lanaudière / Laurier,Le Plateau-Mont-Royal,25789
+Cathcart / McGill College,Ville-Marie,25699
+Berri / Gilford,Le Plateau-Mont-Royal,25630
+de Bellechasse / de St-Vallier,Rosemont - La Petite-Patrie,25623
+Métro Université de Montréal (Édouard-Montpetit / Louis-Collin),Côte-des-Neiges - Notre-Dame-de-Grâce,25554
+Métro Parc  (Hutchison / Ogilvy),Villeray—Saint-Michel—Parc-Extension,25443
+Bloomfield / Bernard,Outremont,25320
+Édouard-Montpetit / de Stirling,Côte-des-Neiges - Notre-Dame-de-Grâce,25230
+Aylmer / Sherbrooke,Le Plateau-Mont-Royal,25207
+St-Laurent / Pl. du Marché,Ville-Marie,25116
+Marie-Anne / St-Hubert,Le Plateau-Mont-Royal,25039
+Marché Atwater,Le Sud-Ouest,25021
+Milton / University,Le Plateau-Mont-Royal,25014
+des Érables / Rachel,Le Plateau-Mont-Royal,25006
+de Maisonneuve / Aylmer (ouest),Ville-Marie,24993
+Laval / du Mont-Royal,Le Plateau-Mont-Royal,24988
+de L'Esplanade  / Fairmount,Le Plateau-Mont-Royal,24670
+Bélanger / St-Denis,Rosemont - La Petite-Patrie,24547
+de Maisonneuve / Mansfield (sud),Ville-Marie,24518
+Marquette / Rachel,Le Plateau-Mont-Royal,24493
+Métro Côte-des-Neiges (Jean-Brillant / de la Côte-des-Neiges),Côte-des-Neiges - Notre-Dame-de-Grâce,24360
+de l'Esplanade / Villeneuve,Le Plateau-Mont-Royal,24310
+Marché Jean-Talon (Henri-Julien / Jean-Talon),Rosemont - La Petite-Patrie,24236
+10e avenue / Masson,Rosemont - La Petite-Patrie,24227
+Atateken / du Square Amherst,Ville-Marie,24225
+Hutchison / Prince-Arthur,Le Plateau-Mont-Royal,24151
+Gare d'autocars de Montréal (Berri / Ontario),Ville-Marie,24135
+Stanley / René-Lévesque,Ville-Marie,24069
+BAnQ (Berri),Ville-Marie,23997
+de Bordeaux / Sherbrooke,Ville-Marie,23993
+Parc Hilda-Ramacière (de Bullion / Prince-Arthur),Le Plateau-Mont-Royal,23887
+Métro Jean-Talon (Berri / Jean-Talon),Villeray—Saint-Michel—Parc-Extension,23787
+Métro Laurier (Berri / St-Joseph),Le Plateau-Mont-Royal,23724
+Parc du Pélican (1ere Ave / Masson),Rosemont - La Petite-Patrie,23722
+Murray / Wellington,Le Sud-Ouest,23619
+Mackay / Ste-Catherine,Ville-Marie,23536
+Durocher / Sherbrooke,Le Plateau-Mont-Royal,23524
+de Bleury / de Maisonneuve,Ville-Marie,23416
+5e avenue / Masson,Rosemont - La Petite-Patrie,23392
+St-Zotique / Clark,Rosemont - La Petite-Patrie,23355
+Villeneuve / du Parc,Le Plateau-Mont-Royal,23284
+Lajeunesse / Villeray,Villeray—Saint-Michel—Parc-Extension,23257
+Montcalm / de Maisonneuve,Ville-Marie,22981
+Drolet / Beaubien,Rosemont - La Petite-Patrie,22902
+Boyer / Bélanger,Rosemont - La Petite-Patrie,22728
+Henri-Julien / Laurier,Le Plateau-Mont-Royal,22635
+Métro Charlevoix (Charlevoix / Centre),Le Sud-Ouest,22524
+Union / Ste-Catherine,Ville-Marie,22447
+Fabre / Laurier,Le Plateau-Mont-Royal,22175
+Place des Festivals (du Président-Kennedy / de Bleury),Ville-Marie,22117
+Jeanne-d'Arc / Ontario,Mercier - Hochelaga-Maisonneuve,22056
+St-Cuthbert / Clark,Le Plateau-Mont-Royal,21978
+de l'Hôtel-de-Ville / Sherbrooke,Ville-Marie,21974
+University / Prince-Arthur,Ville-Marie,21830
+Marie-Anne / de la Roche,Le Plateau-Mont-Royal,21827
+de Bordeaux / Masson,Le Plateau-Mont-Royal,21763
+Ste-Catherine / Sanguinet,Ville-Marie,21727
+Clark / de l'Arcade,Le Plateau-Mont-Royal,21627
+Place Valois (Valois / Ontario),Mercier - Hochelaga-Maisonneuve,21540
+de Bordeaux / du Mont-Royal,Le Plateau-Mont-Royal,21363
+Rivard / du Mont-Royal,Le Plateau-Mont-Royal,21358
+Waverly / Bernard,Le Plateau-Mont-Royal,21286
+St-Jacques / McGill,Ville-Marie,21279
+Ste-Émilie / Sir-Georges-Etienne-Cartier,Le Sud-Ouest,21260
+Cartier / Masson,Le Plateau-Mont-Royal,21243
+Charles-Biddle / Atwater,Le Sud-Ouest,21173
+Drummond / Sherbrooke,Ville-Marie,21063
+Garnier / du Mont-Royal,Le Plateau-Mont-Royal,21050
+Métro Lucien-L'Allier (Lucien l'Allier / Argyle),Ville-Marie,20928
+Sanguinet / de Maisonneuve,Ville-Marie,20838
+Beaudry / Sherbrooke,Ville-Marie,20661
+Dézéry / Ontario,Mercier - Hochelaga-Maisonneuve,20638
+St-Rémi / Ste-Émilie,Le Sud-Ouest,20593
+CÉGEP du Vieux-Montréal (Ontario / de l'Hôtel-de-Ville),Ville-Marie,20584
+de Mentana / Marie-Anne,Le Plateau-Mont-Royal,20572
+du Mont-Royal / Augustin-Frigon,Rosemont - La Petite-Patrie,20540
+Fullum / Terrasse Mercure,Le Plateau-Mont-Royal,20468
+Plessis / Ontario,Ville-Marie,20293
+de Bordeaux / Rachel,Le Plateau-Mont-Royal,20249
+St-Dominique / St-Viateur,Le Plateau-Mont-Royal,20133
+Prince-Arthur / St-Urbain,Le Plateau-Mont-Royal,20104
+Joseph-Manseau / René-Levesque,Ville-Marie,20094
+Métro Lasalle (de Rushbrooke / Caisse),Verdun,20000
+Melville / de Maisonneuve,Westmount,19876
+Bishop / René-Lévesque,Ville-Marie,19793
+de Gaspé / St-Viateur,Le Plateau-Mont-Royal,19788
+de Maisonneuve / Greene,Westmount,19711
+Ste-Famille / des Pins,Le Plateau-Mont-Royal,19605
+Drummond / Ste-Catherine,Ville-Marie,19579
+du Parc-La Fontaine / Roy,Le Plateau-Mont-Royal,19502
+Métro de l'Église (Ross / de l'Église),Verdun,19491
+Sewell / Roy,Le Plateau-Mont-Royal,19301
+de la Roche / Bélanger,Rosemont - La Petite-Patrie,19238
+Métro Crémazie (Crémazie / Lajeunesse),Ahuntsic-Cartierville,19236
+Casgrain / Maguire,Le Plateau-Mont-Royal,19172
+Mackay / René-Lévesque,Ville-Marie,19125
+Ste-Catherine / Bishop,Ville-Marie,19029
+Pierre-de-Coubertin / Aird,Mercier - Hochelaga-Maisonneuve,18961
+de Maisonneuve / Fullum,Ville-Marie,18912
+Gilford / de Brébeuf,Le Plateau-Mont-Royal,18864
+des Érables / Laurier,Le Plateau-Mont-Royal,18825
+Chambord / Beaubien,Rosemont - La Petite-Patrie,18813
+St-Nicolas / Place d'Youville,Ville-Marie,18810
+de l'Hôtel-de-Ville / Villeneuve,Le Plateau-Mont-Royal,18659
+HEC (Decelles / Jean-Brillant),Côte-des-Neiges - Notre-Dame-de-Grâce,18621
+Henri-Julien / du Carmel,Le Plateau-Mont-Royal,18529
+Parc Maisonneuve (Viau / Sherbrooke),Rosemont - La Petite-Patrie,18524
+Turgeon / Notre-Dame,Le Sud-Ouest,18477
+1ère avenue / Rosemont,Rosemont - La Petite-Patrie,18428
+Mozart / St-Laurent,Rosemont - La Petite-Patrie,18362
+de Lanaudière / Marie-Anne,Le Plateau-Mont-Royal,18236
+Henri-Julien / de Castelnau,Villeray—Saint-Michel—Parc-Extension,18164
+Fullum / de Rouen,Ville-Marie,18017
+Clark / Evans,Ville-Marie,17985
+Omer-Lavallée / du Midway,Rosemont - La Petite-Patrie,17978
+Stanley / Sherbrooke,Ville-Marie,17955
+Métro Sauvé (Berri / Sauvé),Ahuntsic-Cartierville,17943
+St-André / Ontario,Ville-Marie,17909
+Métro Édouard-Montpetit (du Mont-Royal / Vincent-d'Indy),Outremont,17895
+de Lanaudière / Bélanger,Rosemont - La Petite-Patrie,17895
+René-Lévesque / Papineau,Ville-Marie,17863
+William / St-Henri,Ville-Marie,17846
+de l'Hôtel-de-Ville / Roy,Le Plateau-Mont-Royal,17842
+Métro de Castelnau (de Castelnau / St-Laurent),Villeray—Saint-Michel—Parc-Extension,17649
+Labadie / du Parc,Le Plateau-Mont-Royal,17636
+Garnier / St-Grégoire,Le Plateau-Mont-Royal,17588
+Molson / William-Tremblay,Rosemont - La Petite-Patrie,17542
+Wellington / Gordon,Verdun,17484
+Wilderton  / Van Horne,Côte-des-Neiges - Notre-Dame-de-Grâce,17436
+St-André / Rachel,Le Plateau-Mont-Royal,17394
+Faillon / St-Denis,Villeray—Saint-Michel—Parc-Extension,17330
+St-Hubert / de Maisonneuve (nord),Ville-Marie,17283
+Hotel-de-Ville / du Mont-Royal,Le Plateau-Mont-Royal,17205
+St-Cyril / Wiseman,Outremont,17069
+de l'Esplanade / Beaubien,Rosemont - La Petite-Patrie,17035
+Ste-Catherine / Dézéry,Mercier - Hochelaga-Maisonneuve,17022
+Ottawa / William,Le Sud-Ouest,16940
+de l'Esplanade / Rachel,Le Plateau-Mont-Royal,16857
+15e avenue / Laurier,Rosemont - La Petite-Patrie,16823
+de St-Vallier / St-Zotique,Rosemont - La Petite-Patrie,16813
+de Maisonneuve / Wood,Westmount,16803
+Richardson / Montmorency,Le Sud-Ouest,16783
+Drolet / St-Zotique,Rosemont - La Petite-Patrie,16743
+Émile-Duployé / Rachel,Le Plateau-Mont-Royal,16713
+Wellington / de l'Église,Verdun,16624
+Cartier / Dandurand,Rosemont - La Petite-Patrie,16571
+CHU Ste-Justine (de la Côte Ste-Catherine / Hudson),Côte-des-Neiges - Notre-Dame-de-Grâce,16562
+Fairmount / Hutchison,Le Plateau-Mont-Royal,16521
+McGill / Place d'Youville,Ville-Marie,16489
+Gilford / Papineau,Le Plateau-Mont-Royal,16437
+Duvernay / Charlevoix,Le Sud-Ouest,16384
+de Maisonneuve / Mansfield (nord),Ville-Marie,16243
+William / Robert-Bourassa,Le Sud-Ouest,16219
+de l'Hôtel-de-Ville / Ste-Catherine,Ville-Marie,16199
+de Gaspé / Fairmount,Le Plateau-Mont-Royal,16182
+des Bassins / du Séminaire,Le Sud-Ouest,16181
+Durocher / Bernard,Outremont,16159
+Bloomfield / Van Horne,Outremont,16135
+de Maisonneuve / Mackay,Ville-Marie,16019
+Métro Place-d'Armes (Viger / St-Urbain),Ville-Marie,16009
+St-Antoine / de la Montagne,Ville-Marie,15941
+St-Urbain / de la Gauchetière,Ville-Marie,15940
+Bourgeoys / Favard,Le Sud-Ouest,15739
+Victoria / de Maisonneuve,Westmount,15701
+Ste-Catherine / St-Denis,Ville-Marie,15652
+Fabre / St-Zotique,Rosemont - La Petite-Patrie,15651
+de Bordeaux / de Bellechasse,Rosemont - La Petite-Patrie,15599
+Gilford / des Érables,Le Plateau-Mont-Royal,15595
+Querbes / Laurier,Outremont,15587
+de Maisonneuve / de Bleury,Ville-Marie,15583
+Molson / Beaubien,Rosemont - La Petite-Patrie,15581
+Christophe-Colomb / St-Joseph,Le Plateau-Mont-Royal,15558
+St-André /  Cherrier,Le Plateau-Mont-Royal,15516
+Square-Victoria (Viger / du Square-Victoria),Ville-Marie,15457
+St-Antoine / Jean-Paul Riopelle,Ville-Marie,15421
+Campus MIL (Outremont / Thérèse-Lavoie Roux),Outremont,15385
+Bennett / Ste-Catherine,Mercier - Hochelaga-Maisonneuve,15308
+de Castelnau / Lajeunesse,Villeray—Saint-Michel—Parc-Extension,15289
+Parc Molson (d'Iberville / Beaubien),Rosemont - La Petite-Patrie,15286
+de Kent / de la Côte-des-Neiges,Côte-des-Neiges - Notre-Dame-de-Grâce,15253
+de la Côte St-Paul / St-Ambroise,Le Sud-Ouest,15148
+de Chambly / Rachel,Rosemont - La Petite-Patrie,15106
+du President-Kennedy / Union,Ville-Marie,15104
+Métro Place Saint-Henri (St-Ferdinand / St-Jacques),Le Sud-Ouest,14978
+Aylmer / Ste-Catherine,Ville-Marie,14977
+Wellington / 3e avenue,Verdun,14891
+St-André / Cherrier,Le Plateau-Mont-Royal,14835
+Cartier / Rosemont,Rosemont - La Petite-Patrie,14779
+St-Dominique / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,14771
+Parc Lalancette (de Rouen / Valois),Mercier - Hochelaga-Maisonneuve,14675
+Henri-Julien / du Mont-Royal,Le Plateau-Mont-Royal,14640
+Parc St-Patrick (St-Patrick / St-Columban),Le Sud-Ouest,14606
+Chambord / Gilford,Le Plateau-Mont-Royal,14568
+Messier / St-Joseph,Le Plateau-Mont-Royal,14544
+Bourbonnière / du Mont-Royal,Rosemont - La Petite-Patrie,14528
+La Fontaine / Alexandre-de-Sève,Ville-Marie,14513
+Maguire / Henri-Julien,Le Plateau-Mont-Royal,14485
+Bibliothèque et Complexe aquatique Rosemont (8e avenue / Rosemont),Rosemont - La Petite-Patrie,14471
+Desjardins / Ontario,Mercier - Hochelaga-Maisonneuve,14469
+de Bellechasse / de Lanaudière,Rosemont - La Petite-Patrie,14457
+Métro Villa-Maria (de Monkland / Décarie),Côte-des-Neiges - Notre-Dame-de-Grâce,14409
+Boyer / Everett,Villeray—Saint-Michel—Parc-Extension,14374
+Queen / Wellington,Ville-Marie,14348
+Fullum / Sherbrooke,Le Plateau-Mont-Royal,14233
+Augustin-Cantin / Shearer,Le Sud-Ouest,14229
+Notre-Dame / St-Martin,Le Sud-Ouest,14154
+Parthenais / Larivière,Ville-Marie,14144
+Fullum / Gilford,Le Plateau-Mont-Royal,14106
+Bishop / Ste-Catherine,Ville-Marie,14064
+Garnier / Beaubien,Rosemont - La Petite-Patrie,14061
+de Maisonneuve / Aylmer (est),Ville-Marie,14050
+Durocher / Beaumont,Villeray—Saint-Michel—Parc-Extension,14010
+Ropery / Augustin-Cantin,Le Sud-Ouest,14006
+Bercy / Rachel,Le Plateau-Mont-Royal,13866
+McGill / Wellington,Ville-Marie,13856
+Fullum / Ontario,Ville-Marie,13852
+Valois / Ste-Catherine,Mercier - Hochelaga-Maisonneuve,13808
+Parc Ludger-Duvernay (St-André / St-Hubert),Le Plateau-Mont-Royal,13751
+de Monkland / Girouard,Côte-des-Neiges - Notre-Dame-de-Grâce,13728
+Panet / Ste-Catherine,Ville-Marie,13698
+Logan / de Champlain,Ville-Marie,13684
+Gauthier / Parthenais,Le Plateau-Mont-Royal,13669
+Robert-Bourassa / René-Lévesque,Ville-Marie,13643
+Cartier / St-Joseph,Le Plateau-Mont-Royal,13588
+Tupper / du Fort,Ville-Marie,13556
+Chapleau / du Mont-Royal,Le Plateau-Mont-Royal,13544
+de la Cathédrale / René-Lévesque,Ville-Marie,13535
+Robert-Bourassa / St-Maurice,Ville-Marie,13487
+de Bullion / St-Joseph,Le Plateau-Mont-Royal,13476
+Alma / de Bellechasse,Rosemont - La Petite-Patrie,13415
+Louis-Hémon / Rosemont,Rosemont - La Petite-Patrie,13393
+Fabrik8 (Waverly / Jean-Talon),Villeray—Saint-Michel—Parc-Extension,13354
+Fullum / Ste-Catherine,Ville-Marie,13293
+de Léry / Sherbrooke,Mercier - Hochelaga-Maisonneuve,13249
+Métro Verdun (Willibrord / de Verdun),Verdun,13213
+Letourneux / Ste-Catherine,Mercier - Hochelaga-Maisonneuve,13210
+d'Orléans / Masson,Rosemont - La Petite-Patrie,13205
+Garnier / St-Joseph,Le Plateau-Mont-Royal,13129
+Marché Maisonneuve,Mercier - Hochelaga-Maisonneuve,13085
+Hélène-Baillargeon / St-Denis,Le Plateau-Mont-Royal,13068
+Fortune / Wellington,Le Sud-Ouest,13065
+de la Porte de Québec / St-André,Ville-Marie,13005
+Parc Villeray (Christophe-Colomb / Jarry),Villeray—Saint-Michel—Parc-Extension,12968
+du Rosaire / St-Hubert,Villeray—Saint-Michel—Parc-Extension,12916
+Hutchison / Beaubien,Rosemont - La Petite-Patrie,12893
+Shearer / Centre,Le Sud-Ouest,12866
+7e avenue / St-Joseph Rosemont,Rosemont - La Petite-Patrie,12694
+Ontario / Sicard,Mercier - Hochelaga-Maisonneuve,12669
+Ste-Famille / Sherbrooke,Le Plateau-Mont-Royal,12655
+Métro Bonaventure (de la Gauchetière / de la Cathédrale),Ville-Marie,12625
+Ste-Catherine / Drummond,Ville-Marie,12493
+St-Jacques / Gauvin,Ville-Marie,12484
+Metcalfe / de Maisonneuve,Ville-Marie,12428
+de Gaspé / Villeray,Villeray—Saint-Michel—Parc-Extension,12406
+de Rouen / Lespérance,Ville-Marie,12399
+Union / René-Lévesque,Ville-Marie,12395
+Dollard / Van Horne,Outremont,12383
+Métro Viau (Pierre-de-Coubertin / Viau),Mercier - Hochelaga-Maisonneuve,12380
+Marcil / Sherbrooke,Côte-des-Neiges - Notre-Dame-de-Grâce,12341
+Lincoln / du Fort,Ville-Marie,12261
+Ryde / Charlevoix,Le Sud-Ouest,12230
+des Récollets / McGill,Ville-Marie,12208
+Lanaudière / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,12197
+Clark / Ontario,Ville-Marie,12192
+Poupart / Ontario,Ville-Marie,12167
+Laval / Rachel,Le Plateau-Mont-Royal,12159
+de Gaspé / Dante,Rosemont - La Petite-Patrie,12145
+St-Hubert / René-Levesque,Ville-Marie,12131
+Hutchison / Van Horne,Le Plateau-Mont-Royal,12059
+University / des Pins,Ville-Marie,12008
+City Councillors / du President-Kennedy,Ville-Marie,11996
+St-Antoine / St-François-Xavier,Ville-Marie,11991
+St-Dominique / Bernard,Le Plateau-Mont-Royal,11961
+8e avenue / Dandurand,Rosemont - La Petite-Patrie,11892
+Parc du Pélican (2e avenue / St-Joseph),Rosemont - La Petite-Patrie,11859
+Drolet / Jarry,Villeray—Saint-Michel—Parc-Extension,11846
+Guizot / St-Denis,Villeray—Saint-Michel—Parc-Extension,11822
+Métro St-Michel (Shaughnessy / St-Michel),Villeray—Saint-Michel—Parc-Extension,11773
+St-Ambroise / Louis-Cyr,Le Sud-Ouest,11770
+des Érables / Beaubien,Rosemont - La Petite-Patrie,11709
+CHSLD Robert Cliche (de Bellechasse / 16e avenue),Rosemont - La Petite-Patrie,11683
+McKenna / Édouard-Montpetit,Côte-des-Neiges - Notre-Dame-de-Grâce,11596
+Garnier / Villeray,Villeray—Saint-Michel—Parc-Extension,11563
+Guy / Notre-Dame,Le Sud-Ouest,11542
+Beatty / de Verdun,Verdun,11541
+Métro Préfontaine (Préfontaine / Hochelaga),Mercier - Hochelaga-Maisonneuve,11509
+Louis-Hébert / de Bellechasse,Rosemont - La Petite-Patrie,11490
+de la Roche / de Bellechasse,Rosemont - La Petite-Patrie,11474
+Métro Acadie (de l'Acadie / Beaumont),Villeray—Saint-Michel—Parc-Extension,11470
+de Rouen / Hogan,Ville-Marie,11452
+Frontenac / Ste-Catherine,Ville-Marie,11414
+de Bordeaux / St-Zotique,Rosemont - La Petite-Patrie,11336
+Clark / de Liège,Villeray—Saint-Michel—Parc-Extension,11312
+St-Timothée / Ste-Catherine,Ville-Marie,11282
+de l'Hotel-de-Ville / Ontario,Ville-Marie,11240
+Calixa-Lavallée / Rachel 2,Le Plateau-Mont-Royal,11240
+16e avenue / St-Joseph,Rosemont - La Petite-Patrie,11190
+Métro Snowdon (Circle / Queen-Mary),Côte-des-Neiges - Notre-Dame-de-Grâce,11166
+Chabot / Beaubien,Rosemont - La Petite-Patrie,11144
+Drolet / Gounod,Villeray—Saint-Michel—Parc-Extension,11051
+Square Victoria (Viger / du Square-Victoria),Ville-Marie,10997
+Holt / Fullum,Rosemont - La Petite-Patrie,10972
+Wolfe / Robin,Ville-Marie,10948
+19e avenue / St-Zotique,Rosemont - La Petite-Patrie,10933
+Workman / Vinet,Le Sud-Ouest,10857
+Ontario / Ville-Marie,Mercier - Hochelaga-Maisonneuve,10822
+Dandurand / D'Iberville,Rosemont - La Petite-Patrie,10801
+Regina / de Verdun,Verdun,10798
+Cartier / Bélanger,Rosemont - La Petite-Patrie,10786
+Ste-Catherine / St-Clément,Mercier - Hochelaga-Maisonneuve,10773
+Collège de Rosemont (Beaubien / 15e avenue),Rosemont - La Petite-Patrie,10768
+U. Concordia - Campus Loyola (Sherbrooke / West Broadway),Côte-des-Neiges - Notre-Dame-de-Grâce,10766
+LaSalle / Godin,Verdun,10766
+Duke / Nazareth,Ville-Marie,10745
+des Érables / Dandurand,Rosemont - La Petite-Patrie,10744
+Place du Commerce,Verdun,10714
+Métro Henri-Bourassa (Henri-Bourassa / Millen),Ahuntsic-Cartierville,10652
+Mansfield / Sherbrooke,Ville-Marie,10644
+St-Dominique / Gounod,Villeray—Saint-Michel—Parc-Extension,10621
+du Canal / McLaughlin,Lachine,10603
+Jeanne-Mance / Beaubien,Rosemont - La Petite-Patrie,10537
+Parc St-Paul (Le Caron / Marc-Sauvalle),Le Sud-Ouest,10474
+Dollard / Bernard,Outremont,10458
+du Mont-Royal / de Brébeuf,Le Plateau-Mont-Royal,10411
+Jean Langlois / Fullum,Ville-Marie,10382
+Atwater / Sherbrooke,Ville-Marie,10377
+de la Montagne / Sherbrooke,Ville-Marie,10326
+Métro Jolicoeur (de Sève / Drake),Le Sud-Ouest,10323
+Lincoln / St-Marc,Ville-Marie,10306
+de Chateaubriand / Jarry,Villeray—Saint-Michel—Parc-Extension,10293
+St-Patrick / Briand,Le Sud-Ouest,10244
+Wolfe / de la Gauchetière,Ville-Marie,10206
+de Bordeaux / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,10193
+Métro Champ-de-Mars (Hôtel-de-Ville / Viger),Ville-Marie,10172
+Rivard / Mont-Royal,Le Plateau-Mont-Royal,10073
+de Gaspé / de Liège,Villeray—Saint-Michel—Parc-Extension,10054
+Parc Baldwin (Chapleau / Sherbrooke),Le Plateau-Mont-Royal,10052
+Gauthier / Papineau,Le Plateau-Mont-Royal,10022
+de la Gauchetière / Robert-Bourassa,Ville-Marie,10014
+Alexandre-DeSève / Ste-Catherine,Ville-Marie,10007
+Notre-Dame / St-Gabriel,Ville-Marie,9999
+Grand Boulevard / Sherbrooke,Côte-des-Neiges - Notre-Dame-de-Grâce,9998
+Métro Angrignon (Lamont / des Trinitaires),Le Sud-Ouest,9960
+Ball / Bloomfield,Villeray—Saint-Michel—Parc-Extension,9957
+de la Côte St-Antoine / Royal,Côte-des-Neiges - Notre-Dame-de-Grâce,9950
+Viger / Chenneville,Ville-Marie,9943
+Ernest-Gendreau / du Mont-Royal,Rosemont - La Petite-Patrie,9881
+Jacques-Casault / Christophe-Colomb,Ahuntsic-Cartierville,9867
+de St-Vallier / Rosemont,Rosemont - La Petite-Patrie,9838
+Parc Labelle (LaSalle / Henri-Duhamel),Verdun,9817
+du Séminaire / de la Montagne,Le Sud-Ouest,9786
+du Champ-de-Mars / Gosford,Ville-Marie,9777
+Lajeunesse / de Liège,Villeray—Saint-Michel—Parc-Extension,9760
+Métro Place Saint-Henri (Charlebois / Saint-Ferdinand),Le Sud-Ouest,9747
+St-Jacques / St-Laurent,Ville-Marie,9695
+Poupart / Logan,Ville-Marie,9666
+Chabot / Villeray,Villeray—Saint-Michel—Parc-Extension,9662
+Métro Honoré-Beaugrand (Sherbrooke / Honoré-Beaugrand),Mercier - Hochelaga-Maisonneuve,9615
+Pierce / Maisonneuve,Ville-Marie,9596
+5e avenue / Rosemont,Rosemont - La Petite-Patrie,9575
+Canning / Notre-Dame,Le Sud-Ouest,9565
+de la Côte-Ste-Catherine / Decelles,Côte-des-Neiges - Notre-Dame-de-Grâce,9516
+Ann / Wellington,Le Sud-Ouest,9515
+Mozart / Waverly,Rosemont - La Petite-Patrie,9505
+Jean-d’Estrées / Notre-Dame,Ville-Marie,9482
+Darling / Sherbrooke,Rosemont - La Petite-Patrie,9465
+Parc Atwater (Saint-Charles),Le Sud-Ouest,9447
+de l'Église / de Verdun,Verdun,9430
+Nicolet / Sherbrooke,Mercier - Hochelaga-Maisonneuve,9382
+du Havre / de Rouen,Ville-Marie,9346
+4e avenue / de Verdun,Verdun,9332
+Rosemont / Viau,Rosemont - La Petite-Patrie,9325
+de Soissons / de Darlington,Côte-des-Neiges - Notre-Dame-de-Grâce,9317
+Métro St-Laurent ( de Maisonneuve / St-Laurent),Ville-Marie,9306
+12e avenue / St-Zotique,Rosemont - La Petite-Patrie,9270
+Hôpital Général Juif (de la Côte-Ste-Catherine / Légaré),Côte-des-Neiges - Notre-Dame-de-Grâce,9163
+Leman / de Chateaubriand,Villeray—Saint-Michel—Parc-Extension,9139
+Cité des Arts du Cirque (Paul Boutet / des Regrattiers),Villeray—Saint-Michel—Parc-Extension,9134
+de la Gauchetière / St-Alexandre,Ville-Marie,9114
+Benny / Sherbrooke,Côte-des-Neiges - Notre-Dame-de-Grâce,9078
+Boyer / Jean-Talon,Rosemont - La Petite-Patrie,9050
+Waverly / Van Horne,Le Plateau-Mont-Royal,9033
+20e avenue / de Bellechasse,Rosemont - La Petite-Patrie,8951
+Natatorium (LaSalle / Rolland),Verdun,8912
+Chabanel / du Parc,Ahuntsic-Cartierville,8905
+Parc Hector-Toe-Blake (du Sussex / René-Lévesque),Ville-Marie,8870
+Basile-Routhier / Chabanel,Ahuntsic-Cartierville,8845
+Centre ÉPIC (St-Zotique / 40e avenue),Rosemont - La Petite-Patrie,8842
+Grey / Sherbrooke,Côte-des-Neiges - Notre-Dame-de-Grâce,8838
+Argyle / de Verdun,Verdun,8800
+Parc des Rapides (LaSalle / 6e avenue),LaSalle,8755
+Guizot / St-Laurent,Villeray—Saint-Michel—Parc-Extension,8677
+6e Avenue / Bélanger,Rosemont - La Petite-Patrie,8631
+de l'Église / Bannantyne,Verdun,8613
+Casino de Montréal,Ville-Marie,8607
+Louis-Hébert / St-Zotique,Rosemont - La Petite-Patrie,8577
+St-Dominique / St-Viateur Nord,Le Plateau-Mont-Royal,8572
+Parc St-Gabriel (Grand Trunk / Ropery),Le Sud-Ouest,8545
+Bourget / St-Jacques,Le Sud-Ouest,8534
+Sherbrooke / Frontenac,Ville-Marie,8534
+Parc J.-Arthur-Champagne (de Chambly / du Mont-Royal),Rosemont - La Petite-Patrie,8473
+8e avenue / Beaubien,Rosemont - La Petite-Patrie,8431
+Parc Benny (Benny / de Monkland),Côte-des-Neiges - Notre-Dame-de-Grâce,8421
+du Marché Central / Crémazie,Ahuntsic-Cartierville,8337
+Pratt / Bates,Outremont,8327
+de la Roche / Laurier,Le Plateau-Mont-Royal,8320
+Harvard / de Monkland,Côte-des-Neiges - Notre-Dame-de-Grâce,8317
+de Hampton / de Monkland,Côte-des-Neiges - Notre-Dame-de-Grâce,8311
+Atwater / Greene,Le Sud-Ouest,8231
+Chabot / Mont-Royal,Le Plateau-Mont-Royal,8227
+St-Germain / Hochelaga,Mercier - Hochelaga-Maisonneuve,8131
+Rousselot / Jarry,Villeray—Saint-Michel—Parc-Extension,8123
+des Carrières / Marquette,Rosemont - La Petite-Patrie,8109
+Métro Viau ( Pierre-de-Coubertin / Viau),Mercier - Hochelaga-Maisonneuve,8101
+Greene / Workman,Le Sud-Ouest,8064
+Letourneux / Hochelaga,Mercier - Hochelaga-Maisonneuve,7998
+26e avenue / Beaubien,Rosemont - La Petite-Patrie,7991
+Complexe sportif Claude-Robillard (Émile-Journault),Ahuntsic-Cartierville,7982
+des Érables / Bélanger,Rosemont - La Petite-Patrie,7961
+Louis-Hémon / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,7958
+Marché Maisonneuve (Ontario / Morgan),Mercier - Hochelaga-Maisonneuve,7934
+d'Outremont / Ogilvy,Villeray—Saint-Michel—Parc-Extension,7832
+Everett / Garnier,Villeray—Saint-Michel—Parc-Extension,7762
+Villeray / De Normanville,Villeray—Saint-Michel—Parc-Extension,7751
+Place Charles-Le Moyne (St-Charles),Longueuil,7742
+Argyle / Bannantyne,Verdun,7725
+Victoria Hall,Westmount,7724
+Parc de la Confédération (Fielding / West Hill),Côte-des-Neiges - Notre-Dame-de-Grâce,7720
+Waverly / Beaumont,Rosemont - La Petite-Patrie,7716
+Hochelaga / Chapleau,Ville-Marie,7706
+de Laprairie / Centre,Le Sud-Ouest,7691
+Métro Assomption (Chauveau / de l'Assomption),Mercier - Hochelaga-Maisonneuve,7666
+Rielle / Wellington,Verdun,7658
+Métro Verdun (Willibrord/ de Verdun),Verdun,7641
+Métro Plamondon (de Kent / Victoria),Côte-des-Neiges - Notre-Dame-de-Grâce,7632
+Hôpital Maisonneuve-Rosemont (Rosemont / Chatelain),Rosemont - La Petite-Patrie,7611
+d'Orléans / Hochelaga,Mercier - Hochelaga-Maisonneuve,7524
+Villeray / de Normanville,Villeray—Saint-Michel—Parc-Extension,7497
+Boyer / St-Joseph,Le Plateau-Mont-Royal,7459
+Guy / Barré,Le Sud-Ouest,7397
+de Gaspé / Jarry,Villeray—Saint-Michel—Parc-Extension,7326
+Parc Nicolas-Tillemont (des Érables / Villeray),Villeray—Saint-Michel—Parc-Extension,7305
+Parc Henri-Julien (Legendre / Henri-Julien),Ahuntsic-Cartierville,7293
+Prince-Arthur / Ste-Famille,Le Plateau-Mont-Royal,7259
+Émile-Journault / de Châteaubriand,Ahuntsic-Cartierville,7219
+Hickson / Wellington,Verdun,7167
+Monk / de Biencourt,Le Sud-Ouest,7156
+Hamilton / Jolicoeur,Le Sud-Ouest,7141
+Jean-Talon / de l'Épée,Villeray—Saint-Michel—Parc-Extension,7124
+Bloomfied / Elmwood,Outremont,7117
+Park Row O / Sherbrooke,Côte-des-Neiges - Notre-Dame-de-Grâce,7055
+McGill / des Récollets,Ville-Marie,7055
+Earnscliffe / Queen-Mary,Côte-des-Neiges - Notre-Dame-de-Grâce,7052
+Parc Joseph-Robin (18e avenue / Everett),Villeray—Saint-Michel—Parc-Extension,7048
+Hogan / Ontario,Ville-Marie,7007
+Le Royer / St-Laurent,Ville-Marie,7003
+Marie-Anne / de Lorimier,Le Plateau-Mont-Royal,6997
+Boyer / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,6992
+Métro Cadillac (Cadillac / Sherbrooke),Mercier - Hochelaga-Maisonneuve,6945
+5e avenue / Bannantyne,Verdun,6931
+Ottawa / Peel,Le Sud-Ouest,6925
+de la Côte St-Antoine / Argyle,Westmount,6889
+de Gaspé / Marmier,Rosemont - La Petite-Patrie,6865
+Louis-Hébert / Bélanger,Villeray—Saint-Michel—Parc-Extension,6849
+29e avenue / St-Zotique,Rosemont - La Petite-Patrie,6825
+Parc Georges St-Pierre (Oxford / Upper Lachine),Côte-des-Neiges - Notre-Dame-de-Grâce,6811
+Parc Émilie-Gamelin (St-Hubert / de Maisonneuve sud),Ville-Marie,6763
+Plessis / Logan,Ville-Marie,6759
+3e avenue / Wellington,Verdun,6755
+Métro Radisson (Sherbrooke / des Groseilliers),Mercier - Hochelaga-Maisonneuve,6717
+Grand Boulevard / de Terrebonne,Côte-des-Neiges - Notre-Dame-de-Grâce,6707
+1ère  avenue / St-Zotique,Rosemont - La Petite-Patrie,6699
+Parc Pratt (Dunlop / Van Horne),Outremont,6671
+Parc St-Henri (Laporte / Guay),Le Sud-Ouest,6664
+Métro Georges-Vanier (St-Antoine / Canning),Le Sud-Ouest,6597
+McCulloch / de la Côte Ste-Catherine,Outremont,6585
+9e avenue / Masson,Rosemont - La Petite-Patrie,6497
+Pontiac / Gilford,Le Plateau-Mont-Royal,6460
+Dubois / Eadie,Le Sud-Ouest,6454
+Graham / Brookfield,Mont-Royal,6452
+Mansfield / de la Gauchetière,Ville-Marie,6419
+Parc de Dieppe,Ville-Marie,6368
+1ere avenue / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,6355
+St-André / Laurier,Le Plateau-Mont-Royal,6340
+Bibliothèque de Verdun (Brown / Bannantyne),Verdun,6331
+Bibliothèque d'Ahuntsic (Lajeunesse / Fleury),Ahuntsic-Cartierville,6240
+Berri / de Maisonneuve,Ville-Marie,6222
+Lionel-Groulx / Georges-Vanier,Le Sud-Ouest,6080
+Parc Plage,Ville-Marie,6072
+de Melrose / Sherbrooke,Côte-des-Neiges - Notre-Dame-de-Grâce,6066
+Parc Howard (de l'Épée / de Liège),Villeray—Saint-Michel—Parc-Extension,6019
+Métro Longueuil - Université de Sherbrooke (du Terminus),Longueuil,5995
+Parc Beaubien Outremont (Stuart / St-Viateur),Outremont,5983
+St-Timothée / Robin,Ville-Marie,5971
+Marquette / des Carrières,Rosemont - La Petite-Patrie,5964
+St-Hubert / du Mont-Royal,Le Plateau-Mont-Royal,5941
+15e avenue / Dandurand,Rosemont - La Petite-Patrie,5939
+27e avenue / Rosemont,Rosemont - La Petite-Patrie,5929
+Parc du Pélican (1ère Ave / Masson),Rosemont - La Petite-Patrie,5903
+St-Jacques / Vinet,Le Sud-Ouest,5901
+Métro Fabre (Fabre / Jean-Talon),Rosemont - La Petite-Patrie,5894
+Métro Beaubien (de St-Vallier / Beaubien),Rosemont - La Petite-Patrie,5888
+Kirkfield / de Chambois,Côte-des-Neiges - Notre-Dame-de-Grâce,5855
+Tolhurst / Fleury,Ahuntsic-Cartierville,5851
+Métro Langelier (Langelier / Sherbrooke),Mercier - Hochelaga-Maisonneuve,5849
+Clark / Fleury,Ahuntsic-Cartierville,5830
+Marianne / de Lorimier,Le Plateau-Mont-Royal,5777
+Place Rodolphe-Rousseau (Gohier / Édouard-Laurin),Saint-Laurent,5758
+Davaar / de la Côte-Ste-Catherine,Outremont,5614
+LaSalle / Crawford,Verdun,5612
+Métro Monk (Allard / Beaulieu),Le Sud-Ouest,5606
+Beurling / Godin,Verdun,5597
+Berlioz / de l'Île des Soeurs,Verdun,5550
+Gagne / LaSalle,LaSalle,5529
+Hochelaga / de l'Assomption,Mercier - Hochelaga-Maisonneuve,5510
+St-Roch / Querbes,Villeray—Saint-Michel—Parc-Extension,5506
+Jean-Brillant / Decelles,Côte-des-Neiges - Notre-Dame-de-Grâce,5503
+Elgar / de l'Île-des-Sœurs,Verdun,5500
+Papineau / Émile-Journault,Villeray—Saint-Michel—Parc-Extension,5495
+Graham / Kindersley,Mont-Royal,5480
+Paré / Mountain Sights,Côte-des-Neiges - Notre-Dame-de-Grâce,5456
+Irwin / Allard,LaSalle,5442
+41e avenue / Rosemont,Rosemont - La Petite-Patrie,5412
+Christophe-Colomb / Gilford,Le Plateau-Mont-Royal,5401
+Notre-Dame-de-Grâce / Décarie,Côte-des-Neiges - Notre-Dame-de-Grâce,5400
+de Bordeaux / St-Joseph,Le Plateau-Mont-Royal,5397
+Parc Olympique (Pie-IX / Sherbrooke),Mercier - Hochelaga-Maisonneuve,5397
+St-Viateur / Casgrain,Le Plateau-Mont-Royal,5371
+6e avenue / Wellington,Verdun,5336
+Jacques-Le Ber / de la Pointe Nord,Verdun,5326
+Bel Air / St-Antoine,Le Sud-Ouest,5285
+Métro Préfontaine (Moreau / Hochelaga),Mercier - Hochelaga-Maisonneuve,5248
+St-Jacques / Richmond,Le Sud-Ouest,5234
+Pierce / Ste-Catherine,Ville-Marie,5206
+Lucien L'Allier / St-Jacques,Ville-Marie,5192
+Cégep André-Laurendeau (Lapierre),LaSalle,5190
+Redpath / Sherbrooke,Ville-Marie,5175
+Plessis / René-Lévesque,Ville-Marie,5156
+CCI Outremont (Dollard / Ducharme),Outremont,5085
+Préfontaine / Marcel-Pépin,Rosemont - La Petite-Patrie,5056
+Parc Honoré-Mercier (Notre-Dame / Liébert),Mercier - Hochelaga-Maisonneuve,5047
+Jean-Rivard / du Cirque,Villeray—Saint-Michel—Parc-Extension,5023
+Victoria Hall (Sherbrooke),Westmount,5007
+Francis / Fleury,Ahuntsic-Cartierville,4963
+de Chambly / de Rouen,Mercier - Hochelaga-Maisonneuve,4951
+Péloquin / Fleury,Ahuntsic-Cartierville,4924
+Quai de la navette fluviale,Ville-Marie,4918
+Hamel / Sauriol,Ahuntsic-Cartierville,4895
+Métro Côte-Ste-Catherine (Beaucourt / de la Côte-Ste-Catherine),Côte-des-Neiges - Notre-Dame-de-Grâce,4892
+du Havre / Hochelaga,Ville-Marie,4891
+Hillside / Ste-Catherine,Westmount,4881
+Parc Joyce (Rockland / Lajoie),Outremont,4853
+de la Cathédrale / Saint-Antoine,Ville-Marie,4846
+La Ronde,Ville-Marie,4840
+Parc nature de l'Île-de-la-Visitation (Gouin / de Bruchési),Ahuntsic-Cartierville,4833
+de Bordeaux / Gilford,Le Plateau-Mont-Royal,4794
+Christophe-Colomb / Beaubien,Rosemont - La Petite-Patrie,4784
+Adam / d'Orleans,Mercier - Hochelaga-Maisonneuve,4766
+6e avenue / Villeray,Villeray—Saint-Michel—Parc-Extension,4760
+Chabanel / Esplanade,Ahuntsic-Cartierville,4738
+St-Jacques / des Seigneurs,Le Sud-Ouest,4693
+de l'Esplanade  / Fairmount,Le Plateau-Mont-Royal,4689
+de Normanville / Everett,Villeray—Saint-Michel—Parc-Extension,4641
+Métro du Collège (Cartier / Décarie),Saint-Laurent,4637
+de Kent / Hudson,Côte-des-Neiges - Notre-Dame-de-Grâce,4636
+Marquette / Fleury,Ahuntsic-Cartierville,4541
+de St-Firmin / Fleury,Ahuntsic-Cartierville,4524
+Egan / Laurendeau,Le Sud-Ouest,4514
+de Bordeaux / Mont-Royal,Le Plateau-Mont-Royal,4504
+Bourbonnière / Ontario,Mercier - Hochelaga-Maisonneuve,4486
+Garnier / Mont-Royal,Le Plateau-Mont-Royal,4435
+Georges-Vanier / Notre-Dame,Le Sud-Ouest,4417
+Métro Charlevoix (Centre / Charlevoix),Le Sud-Ouest,4397
+Parc MacDonald (Clanranald / Isabella),Côte-des-Neiges - Notre-Dame-de-Grâce,4390
+Métro Monk (Allard / Briand),Le Sud-Ouest,4377
+St-Joseph / 8e avenue Lachine,Lachine,4369
+Parc Kent (de Kent / Hudson),Côte-des-Neiges - Notre-Dame-de-Grâce,4367
+Du Quesne / de Marseille,Mercier - Hochelaga-Maisonneuve,4359
+Graham / Wicksteed,Mont-Royal,4307
+Michelet / Jean-Talon,Saint-Léonard,4302
+Parc de la Louisiane (31e avenue / de Bellechasse),Rosemont - La Petite-Patrie,4283
+des Écores / Beaubien,Rosemont - La Petite-Patrie,4277
+Eadie / Galt,Le Sud-Ouest,4268
+Parc Hébert (Colbert / Provencher),Saint-Léonard,4231
+Lafontaine / Panet,Ville-Marie,4193
+St-Denis / de Maisonneuve,Ville-Marie,4182
+Jogues / Allard,Le Sud-Ouest,4169
+McLynn / Plamondon,Côte-des-Neiges - Notre-Dame-de-Grâce,4110
+Georges-Vanier /  Notre-Dame,Le Sud-Ouest,4051
+Larivière / de Lorimier,Ville-Marie,4043
+Bibliothèque du Vieux-St-Laurent (de l'Église / Filiatrault),Saint-Laurent,3969
+Beaubien / 8e avenue,Rosemont - La Petite-Patrie,3968
+Place d'Youville / McGill,Ville-Marie,3965
+Brittany / Ainsley,Mont-Royal,3954
+Bassin olympique (Chemin du Chenal le Moyne),Ville-Marie,3923
+des Écores / de Bellechasse,Rosemont - La Petite-Patrie,3918
+La Tour de Montréal (Pierre-de-Coubertin / Bennett),Mercier - Hochelaga-Maisonneuve,3917
+7e avenue / Masson,Rosemont - La Petite-Patrie,3916
+Van Horne / Dollard,Outremont,3880
+de la Peltrie / de la Côte-des-Neiges,Côte-des-Neiges - Notre-Dame-de-Grâce,3879
+Parc Loyola (Doherty / Somerled),Côte-des-Neiges - Notre-Dame-de-Grâce,3799
+Crescent / Ste-Catherine,Ville-Marie,3712
+Hudson / Goyer,Côte-des-Neiges - Notre-Dame-de-Grâce,3662
+University / Prince-Arthur,Le Plateau-Mont-Royal,3654
+Bélanger / des Galeries d'Anjou,Anjou,3642
+de Grosbois / Duchesneau,Mercier - Hochelaga-Maisonneuve,3630
+Robin / St-Timothée,Ville-Marie,3619
+Notre-Dame  / St-Martin,Le Sud-Ouest,3617
+Notre-Dame-de-Grâce / Westmount,Westmount,3608
+St-Joseph Lachine / 21e avenue,Lachine,3606
+Métro de la Savane (Décarie / de Sorel),Côte-des-Neiges - Notre-Dame-de-Grâce,3600
+Plymouth / Chem.Eden,Mont-Royal,3595
+de Bullion / du Mont-Royal,Le Plateau-Mont-Royal,3551
+26e avenue / Bélanger,Rosemont - La Petite-Patrie,3524
+LaSalle / 90e avenue,LaSalle,3497
+Newman / Senkus,LaSalle,3480
+LaSalle / 37e avenue,LaSalle,3464
+Boileau / Monsabré,Mercier - Hochelaga-Maisonneuve,3443
+Laird / Glencoe,Mont-Royal,3399
+Parc St-Louis (St-Joseph / 34e avenue),Lachine,3397
+St-Marc / Sherbrooke,Ville-Marie,3388
+Casgrain / St-Viateur,Le Plateau-Mont-Royal,3387
+Campus MIL (Thérèse-Lavoie Roux / Outremont),Outremont,3381
+Lanouette / de l'Église,Verdun,3346
+Carrefour Angrignon (Angrignon / Newman),LaSalle,3334
+de Lisieux / Jean-Talon,Saint-Léonard,3242
+Parc de Dieppe (Pierre-Dupuy),Ville-Marie,3209
+Pierre-de-Coubertin / Langelier,Mercier - Hochelaga-Maisonneuve,3199
+Parc du Père-Marquette (de Bellechasse / de Lanaudière),Rosemont - La Petite-Patrie,3198
+Parc Van Horne (de la Peltrie / de Westbury),Côte-des-Neiges - Notre-Dame-de-Grâce,3179
+Collège Bois-de-Boulogne (Bois-de-Boulogne),Ahuntsic-Cartierville,3179
+de la Peltrie /de la Cote-des-Neiges,Côte-des-Neiges - Notre-Dame-de-Grâce,3168
+Léonard-de-Vinci / Villeray,Villeray—Saint-Michel—Parc-Extension,3117
+Liébert / Hochelaga,Mercier - Hochelaga-Maisonneuve,3083
+Chambord / Fleury,Ahuntsic-Cartierville,3061
+St-Alexandre / Viger,Ville-Marie,3030
+de la Roche / Everett,Villeray—Saint-Michel—Parc-Extension,3011
+CHSLD St-Michel (8e avenue / Jarry),Villeray—Saint-Michel—Parc-Extension,3003
+Sherbrooke / Benny,Côte-des-Neiges - Notre-Dame-de-Grâce,3001
+Gare Centrale (de la Gauchetière / Mansfield),Ville-Marie,2958
+Hôpital Santa Cabrini (de Pontoise / d'Évreux),Rosemont - La Petite-Patrie,2883
+Drummond / de Maisonneuve,Ville-Marie,2859
+St-Jacques / Lucien L'Allier,Ville-Marie,2852
+St-Laurent / Joliette,Longueuil,2816
+d'Anvers / Wiseman,Villeray—Saint-Michel—Parc-Extension,2789
+de Côme / Jean-Talon,Saint-Léonard,2780
+BIXI K5,Rosemont - La Petite-Patrie,2778
+Stinson / Montpellier,Saint-Laurent,2768
+Vendôme / Sherbrooke,Côte-des-Neiges - Notre-Dame-de-Grâce,2763
+des Barges / des Bassins,Le Sud-Ouest,2752
+35e avenue / Beaubien,Rosemont - La Petite-Patrie,2747
+Clanranald / de la Côte-St-Luc,Côte-des-Neiges - Notre-Dame-de-Grâce,2745
+Louisbourg / O'Brien,Ahuntsic-Cartierville,2723
+1ère avenue / St-Zotique,Rosemont - La Petite-Patrie,2711
+Place Ville-Marie (Robert-Bourassa / René-Lévesque),Ville-Marie,2688
+2e avenue / Centrale,LaSalle,2631
+Champdoré / de Lorimier,Villeray—Saint-Michel—Parc-Extension,2606
+Logan / Lafayette,Longueuil,2605
+Métro Montmorency,Laval,2602
+Lapierre / Serge,LaSalle,2588
+Molson / Wiliam-Tremblay,Rosemont - La Petite-Patrie,2579
+de Mentana / Mont-Royal,Le Plateau-Mont-Royal,2576
+du Square Saint-Louis / Laval,Le Plateau-Mont-Royal,2555
+René-Lévesque / Panet,Ville-Marie,2550
+Parc Eusèbe-Ménard (Gouin / St-Vital),Montréal-Nord,2522
+de Champlain / Ste-Catherine,Ville-Marie,2518
+1ère avenue / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,2505
+Souligny / Desmarteau,Mercier - Hochelaga-Maisonneuve,2504
+Desaulniers / Marquette,Longueuil,2497
+Mozart / Drolet,Rosemont - La Petite-Patrie,2493
+Parc Kirkland (des Érables / Boyer),Lachine,2488
+Parc Garibaldi (Liénart / Bélanger),Saint-Léonard,2486
+Mont-Royal / St-Denis,Le Plateau-Mont-Royal,2456
+Parc Félix-Leclerc (François-Boivin / St-Zotique),Mercier - Hochelaga-Maisonneuve,2453
+Bordeaux / Marianne,Le Plateau-Mont-Royal,2439
+35e avenue/  Beaubien,Rosemont - La Petite-Patrie,2426
+Travaux publics LaSalle (Cordner / Léger),LaSalle,2419
+Parc Champdoré (Champdoré / de Lille),Villeray—Saint-Michel—Parc-Extension,2414
+du Mont-Royal / St-André,Le Plateau-Mont-Royal,2358
+IUSMM (Georges-Villeneuve),Mercier - Hochelaga-Maisonneuve,2357
+Redfern / Ste-Catherine,Westmount,2357
+Wilson / Sherbrooke,Côte-des-Neiges - Notre-Dame-de-Grâce,2355
+des Jockeys / Décarie,Côte-des-Neiges - Notre-Dame-de-Grâce,2323
+14e avenue / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,2265
+Parc Ottawa (de Belleville / Fleury),Montréal-Nord,2264
+Notre-Dame / Gauvin,Ville-Marie,2262
+Parc Wilfrid-Bastien (Lacordaire / des Galets),Saint-Léonard,2214
+Aréna Chaumont (Chaumont / des Ormeaux),Anjou,2204
+Métro Georges-Vanier (Georges-Vanier / Coursol),Le Sud-Ouest,2192
+Métro de la Concorde (Léo-Lacombe),Laval,2160
+Hutchison / Van Horne,Outremont,2150
+Collège Grasset (Crémazie / Christophe Colomb),Ahuntsic-Cartierville,2149
+Cartier / Beaubien,Rosemont - La Petite-Patrie,2133
+O'Brien / Poirier,Saint-Laurent,2122
+de Lanaudière / Mont-Royal,Le Plateau-Mont-Royal,2120
+Fabre / Bélanger,Rosemont - La Petite-Patrie,2118
+Ste-Claire / Pierre-Tétreault,Mercier - Hochelaga-Maisonneuve,2117
+Gare Montpellier (Muir / de la Côte-Vertu),Saint-Laurent,2093
+Métro Cartier,Laval,2086
+Gloria / Dollard,LaSalle,2082
+Wolfe / Ontario,Ville-Marie,2071
+Édouard-Montpetit / Victoria,Côte-des-Neiges - Notre-Dame-de-Grâce,2058
+d'Aragon / Springland,Le Sud-Ouest,2035
+Parc Courbertin (Valéry / Perrier),Saint-Léonard,2028
+Lacombe / Victoria,Côte-des-Neiges - Notre-Dame-de-Grâce,2020
+Melrose / de Verdun,Verdun,2013
+Legendre / André-Grasset,Ahuntsic-Cartierville,2002
+St-Hubert / Mont-Royal,Le Plateau-Mont-Royal,1965
+Métro Montmorency (de l'Avenir),Laval,1964
+Coffee / Elmhurst,Côte-des-Neiges - Notre-Dame-de-Grâce,1951
+Parc des Hirondelles (Fleury / André-Jobin),Ahuntsic-Cartierville,1941
+Parc Luigi-Pirandello (de Bretagne / Jean-Rivard),Saint-Léonard,1927
+des Récollets / Fleury,Montréal-Nord,1926
+St-Sylvestre / St-Charles,Longueuil,1925
+Cartier / Gilford,Le Plateau-Mont-Royal,1901
+Parc Reine-Élizabeth (Penniston / Crawford),Verdun,1863
+Parc Ferland (Belleherbe / Albanel),Saint-Léonard,1850
+de Gentilly / St-Jean,Longueuil,1814
+Thimens / Alexis-Nihon,Saint-Laurent,1810
+Grenet / Poirier,Saint-Laurent,1805
+Dunkirk / Laird,Mont-Royal,1804
+Chabanel / Tolhurst,Ahuntsic-Cartierville,1802
+Victoria / 18e avenue Lachine,Lachine,1787
+Hôpital Sacré-Coeur (Forbes),Ahuntsic-Cartierville,1786
+Parc Summerlea (53e avenue / St-Joseph),Lachine,1786
+de la Côte-des-Neiges / Remembrance,Côte-des-Neiges - Notre-Dame-de-Grâce,1740
+8e avenue / Notre-Dame Lachine,Lachine,1720
+Parc LaSalle (10e avenue / Victoria),Lachine,1714
+CHSLD Joseph-François-Perrault (St-Michel / Everett),Villeray—Saint-Michel—Parc-Extension,1714
+Curé-Poirier / Joliette,Longueuil,1702
+Parc Lacharité (Latour / Forget),LaSalle,1691
+Patricia / Sherbrooke,Côte-des-Neiges - Notre-Dame-de-Grâce,1679
+Mountain Sights / Édouard-Montpetit,Côte-des-Neiges - Notre-Dame-de-Grâce,1679
+Collège de Maisonneuve (Sherbrooke / Bourbonnière),Mercier - Hochelaga-Maisonneuve,1673
+Parc du Bois-Franc (de l'Équateur / des Andes),Saint-Laurent,1640
+Ste-Catherine / de Bullion,Ville-Marie,1633
+des Carrières /  Marquette,Rosemont - La Petite-Patrie,1630
+16e avenue / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,1629
+Logan / Tiffin,Longueuil,1612
+Louvain / d'Iberville,Villeray—Saint-Michel—Parc-Extension,1590
+Duchesneau / de Marseille,Mercier - Hochelaga-Maisonneuve,1579
+des Ormeaux / de Grosbois,Mercier - Hochelaga-Maisonneuve,1573
+Wellington / Queen,Ville-Marie,1566
+Ste-Croix / Tassé,Saint-Laurent,1541
+de la Vérendrye / 75e avenue,LaSalle,1516
+Parc Delorme (Malouin / Laferté),Saint-Léonard,1510
+St-Jean / Guillaume,Longueuil,1501
+Parc d'Antioche (Place d'Antioche / St-Zotique),Anjou,1501
+Hodge / Laperrière,Saint-Laurent,1501
+Parc Maurice-Bélanger (Hébert / Denommée),Montréal-Nord,1476
+Mairie d'arrondissement St-Laurent (Beaudet / Marcel-Laurin),Saint-Laurent,1457
+Parc Stoney-Point (St-Joseph / 47e avenue),Lachine,1455
+Métro Georges-Vanier (Terrasse Coursol / Canning),Le Sud-Ouest,1455
+Parc Chenier (de l'Aréna / Chenier),Anjou,1450
+Crescent / René-Lévesque,Ville-Marie,1450
+La Fontaine / Cadillac,Mercier - Hochelaga-Maisonneuve,1438
+Georges-Baril / Sauriol,Ahuntsic-Cartierville,1437
+Centre des loisirs (Tassé / Grenet),Saint-Laurent,1435
+des Pins / Hutchison,Ville-Marie,1425
+Beauregard / La Salle,Longueuil,1392
+Cégep Édouard-Montpetit (de Normandie),Longueuil,1390
+des Ormeaux / Notre-Dame,Mercier - Hochelaga-Maisonneuve,1386
+Parc Aimé-Léonard (Gouin / Ste-Gertrude),Montréal-Nord,1386
+Bourbonnière / Hochelaga,Mercier - Hochelaga-Maisonneuve,1373
+de Courcelles / Acorn,Le Sud-Ouest,1370
+Parc Chamberland (Dorais / de l'Église),Saint-Laurent,1368
+St-Mathieu / Sherbrooke,Ville-Marie,1363
+Métro Cartier (des Laurentides),Laval,1347
+Boyer / Laurier,Le Plateau-Mont-Royal,1346
+Parc Ernest-Rouleau (Gouin),Rivière-des-Prairies - Pointe-aux-Trembles,1333
+Langelier / Marie-Victorin,Montréal-Nord,1330
+Fabre / Jean-Talon,Rosemont - La Petite-Patrie,1303
+Lamarre / Lavallée,Longueuil,1290
+Bibliothèque Jean-Corbeil (Goncourt / Place Montrichard),Anjou,1289
+Waverly / Henri-Bourassa,Ahuntsic-Cartierville,1286
+Parc de Beauséjour (Gouin / Henri-d'Arles),Ahuntsic-Cartierville,1273
+Marquette / du Coteau-Rouge,Longueuil,1249
+Square Nelligan (des Appalaches / Alexis-Nihon),Saint-Laurent,1238
+35e avenue/Beaubien,Rosemont - La Petite-Patrie,1228
+Émery / St-Denis,Ville-Marie,1218
+des Récollets / Martial,Montréal-Nord,1209
+Métro Place-d'Armes (St-Urbain / Viger),Ville-Marie,1205
+Brébeuf / Curé-Poirier,Longueuil,1190
+Strathmore / Evelyn,Verdun,1189
+Parc Henri-Dunant (Léger / Henri-Dunant),Laval,1179
+Mairie d'arrondissement LaSalle (Dupras / Jeannette),LaSalle,1176
+d'Iberville / Fleury,Ahuntsic-Cartierville,1166
+de Marseille / de la Pépinière,Mercier - Hochelaga-Maisonneuve,1161
+Labonté / du Coteau-Rouge,Longueuil,1158
+Galt / de Verdun,Verdun,1145
+St-Charles / Montarville,Longueuil,1137
+de Gentilly / Roland-Therrien,Longueuil,1107
+Métro Champ-de-Mars (Viger / Sanguinet),Ville-Marie,1102
+Collège Ahuntsic (St-Hubert / Émile-Journault),Ahuntsic-Cartierville,1069
+René-Philippe / André-Charpentier,Longueuil,1065
+Lucien-L'Allier / St-Jacques,Ville-Marie,1047
+Place du Village (St-Jean-Baptiste / Notre-Dame),Rivière-des-Prairies - Pointe-aux-Trembles,1046
+St-Laurent / de Chambly,Longueuil,1036
+de la Cathédrale / St-Jacques,Ville-Marie,1036
+St-Jean-Baptiste / René-Lévesque,Rivière-des-Prairies - Pointe-aux-Trembles,1029
+Pierre-Péladeau / du Centropolis,Laval,1006
+St-Antoine / 19e avenue,Lachine,991
+Gare St-Michel / Montréal-Nord (Pie-IX / 56e),Montréal-Nord,975
+de Monaco / du Souvenir,Laval,972
+Ouimet / Goineau,Laval,970
+Sauriol / Cartier O,Laval,969
+Ateliers municipaux de St-Laurent (Cavendish / Poirier),Saint-Laurent,967
+Kent / Hudson,Côte-des-Neiges - Notre-Dame-de-Grâce,961
+Parc du Mail (Bois de Coulonges / du Mail),Anjou,954
+Monsabré / Boileau,Mercier - Hochelaga-Maisonneuve,951
+Hudson / de Kent,Côte-des-Neiges - Notre-Dame-de-Grâce,916
+Gare LaSalle (Highlands),LaSalle,912
+Alton-Goldbloom / Notre-Dame,Laval,909
+Fernand-Lafontaine / Adoncour,Longueuil,904
+Parc St-Claude (7e Avenue / 8e rue),Laval,899
+22e avenue / Everett,Villeray—Saint-Michel—Parc-Extension,890
+Keller / Cousineau,Saint-Laurent,890
+Hôpital Pierre-Boucher (Jacques-Cartier / Bourdon),Longueuil,884
+Parc Noel-Nord (Toupin / Keller),Saint-Laurent,880
+Parc St-Laurent (Salk / Thomas-Chapais),Montréal-Nord,880
+Quai Yvon-Julien (Marie-Victorin / de Montarville),Boucherville,876
+Terminus Le Carrefour (Terry-Fox / Le Carrefour),Laval,875
+Collège André-Grasset (Crémazie / Christophe-Colomb),Ahuntsic-Cartierville,869
+Parc St-Laurent (Dutrisac),Saint-Laurent,868
+Le Corbusier / St-Martin O,Laval,862
+des Ormeaux /  Notre-Dame,Mercier - Hochelaga-Maisonneuve,853
+Ste-Catherine / St-Marc,Ville-Marie,852
+Alfred Laliberté / de Poutrincourt,Ahuntsic-Cartierville,851
+Parc Gabriel-Sagard (Louis-Hémon / Jean-Talon),Villeray—Saint-Michel—Parc-Extension,847
+Dudemaine / James-Morrice,Ahuntsic-Cartierville,832
+Parc Laurier (Laurier / Dubuc),Longueuil,814
+De la Commune / Autoroute Bonaventure,Ville-Marie,807
+Dixie / 54e avenue,Lachine,800
+Place Longueuil,Longueuil,799
+Parc Grovehill (St-Antoine / Ivan-Franko),Lachine,798
+Parc de Montréal-Est (Notre-Dame / David),Montréal-Est,795
+Parc de l'Hôtel-de-Ville (Ste-Julie / Laurendeau),Montréal-Est,755
+Parc Armand-Bombardier (Perras / Armand-Bombardier),Rivière-des-Prairies - Pointe-aux-Trembles,753
+Esplanade / Rachel,Le Plateau-Mont-Royal,749
+Graham / Laird,Mont-Royal,745
+s Émile-Duployé / Rachel,Le Plateau-Mont-Royal,743
+Bloomfield / Elmwood,Outremont,737
+du Tricentenaire / Prince-Albert,Rivière-des-Prairies - Pointe-aux-Trembles,736
+Churchill / Empire,Longueuil,734
+Aréna Rodrigue-Gilbert (du Tricentenaire / de Montigny),Rivière-des-Prairies - Pointe-aux-Trembles,720
+Roy/St-André,Le Plateau-Mont-Royal,717
+des Écores / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,713
+Louis-Hebert / Jean-Talon,Villeray—Saint-Michel—Parc-Extension,710
+Robin / 15e Rue,Laval,708
+Calixa-Lavallée/Rachel,Le Plateau-Mont-Royal,694
+Parc D.-E.-Joyal (Édouard / Windsor),Longueuil,692
+Parc Marlborough (Beauzèle / Robichaud),Saint-Laurent,676
+Cégep Marie-Victorin,Rivière-des-Prairies - Pointe-aux-Trembles,660
+Panet / de Maisonneuve,Ville-Marie,657
+La Fontaine / Lyall,Mercier - Hochelaga-Maisonneuve,656
+Montmorency / du bon Pasteur,Laval,655
+Parc Beaulac (rue Élizabeth),Saint-Laurent,653
+Lebrun / Bédard,Longueuil,653
+de Mortagne / Jean-Neveu,Boucherville,650
+Parc Charleroi (Alfred / Louis-Francoeur),Montréal-Nord,644
+Mairie d'arrondissement Montréal-Nord (Hébert / de Charleroi),Montréal-Nord,629
+McNamara / St-Martin O,Laval,629
+Parc Bariteau (Saint-Georges),Longueuil,625
+Daniel-Johnson / Cartier O,Laval,624
+Mayfield / St-Martin O,Laval,619
+Victoria / 39e avenue,Lachine,607
+Gare Bois-de-Boulogne,Ahuntsic-Cartierville,605
+de la Roche /  de Bellechasse,Rosemont - La Petite-Patrie,600
+du Cirque / Jean-Rivard,Villeray—Saint-Michel—Parc-Extension,592
+De Callières / d'Auvergne,Laval,589
+90e Avenue / Boulevard Lévesque O,Laval,578
+Jean-Paul-Vincent / Adoncour,Longueuil,572
+Montmorency / Legrand,Laval,560
+du Square Dorchester / Peel,Ville-Marie,556
+de la Sorbonne / du Rousillon,Laval,549
+Gare du Ruisseau (Dutrisac / Henri-Bourassa),Saint-Laurent,545
+Parc Chopin (Dumouchel / Tessier),Laval,535
+Hôpital Santa Cabrini (de Pontoise / d'Évreux),Saint-Léonard,535
+de Grenoble / de Cassis,Laval,533
+Marie / de Mont-Royal,Longueuil,531
+Jeanne-Mance / St-Martin O,Laval,528
+du Parc / François-Foucault,Laval,518
+Mc Gill / Place d'Youville,Ville-Marie,512
+15e Rue / Robin,Laval,509
+3e avenue / Bannantyne,Verdun,506
+Gare Lachine (Sir George Simpson / 48e avenue),Lachine,503
+du Fort Saint-Louis / de la Perrière,Boucherville,501
+Théâtre du Vieux-Terrebonne (St-Pierre / des Braves),Terrebonne,499
+Christophe-Colomb/Gilford,Le Plateau-Mont-Royal,492
+Marché St-Jacques (Atateken),Ville-Marie,490
+du  Séminaire / de la Montagne,Le Sud-Ouest,486
+Parc Sauvé (Balzac / de Bayonne),Montréal-Nord,480
+de la Côte-Ste-Catherine / Davaar,Outremont,472
+Beaconsfield / Sherbrooke,Côte-des-Neiges - Notre-Dame-de-Grâce,465
+Elmwood / Mcdougall,Outremont,453
+Saint-Rémi / Valois,Laval,445
+de Mortagne / de Montarville,Boucherville,437
+de Chenonceau / Chomedey,Laval,403
+Terminus de bus EXO (Côte de Terrebonne),Terrebonne,392
+Ste-Catherine / Sanguinet ouest,Ville-Marie,390
+D'Iberville/Fleury,Ahuntsic-Cartierville,378
+11e avenue / du Souvenir,Laval,364
+Laforest / Dudemaine,Ahuntsic-Cartierville,350
+Terminus Newman (Airlie / Lafleur),LaSalle,338
+Parc Beaulac (Élizabeth),Saint-Laurent,329
+30e avenue / de Bellechasse,Rosemont - La Petite-Patrie,322
+Wellington / Hickson,Verdun,319
+Louvain/D'Iberville,Villeray—Saint-Michel—Parc-Extension,317
+Stationnement incitatif de Montarville (de Montarville),Boucherville,297
+Parc St-Sacrement (des Seigneurs / St-Sacrement),Terrebonne,286
+Stationnement incitatif de Mortagne (Ampère),Boucherville,278
+Elmwood / Mc Dougall,Outremont,268
+Centre récréatif Édouard-Rivet (Notre-Dame / Lesage),Montréal-Est,246
+Ste-catherine / de Bullion,Ville-Marie,223
+Morin / du Parc,Laval,213
+Industriel / Louis-J.-Lafortune,Boucherville,201
+Clanranard / de la Côte-St-Luc,Côte-des-Neiges - Notre-Dame-de-Grâce,197
+Victoria / 41e avenue,Lachine,193
+Parc des Vétérans (des Vétérans / Broadway),Montréal-Est,192
+Marcil / de la Côte-Saint-Luc,Côte-des-Neiges - Notre-Dame-de-Grâce,188
+Waverly / St-Zotique,Rosemont - La Petite-Patrie,180
+de la Gauchetière / Mansfield,Ville-Marie,177
+de Bordeaux/St-Joseph,Le Plateau-Mont-Royal,167
+Lionel-Groulx / George-Vanier,Le Sud-Ouest,162
+10e avenue / Shaughnessy,Villeray—Saint-Michel—Parc-Extension,161
+Principale / Jean-Duceppe,Sainte-Julie,154
+N.-P. Lapierre / Armand-Frappier,Sainte-Julie,146
+de Courcelle / Acorn,Le Sud-Ouest,126
+K5 Test Station,Le Plateau-Mont-Royal,125
+Ste-Marie / St-Laurent,Longueuil,124
+du Fer-à-Cheval / des Hauts-Bois,Sainte-Julie,119
+Terminus Ste-Julie (Armand-Frappier),Sainte-Julie,110
+Square-Victoria (Viger/du Square-Victoria),Ville-Marie,106
+Ste-Émilie/Sir-Georges-Etienne-Cartier,Le Sud-Ouest,106
+des Prairies / du Pacifique,Laval,100
+Parc Henri-Julien (Legendre/Henri-Julien),Ahuntsic-Cartierville,91
+Parc Jeanne-Mance (du Mont-Royal/du Parc),Le Plateau-Mont-Royal,91
+Edouard-Montpetit / de Stirling,Côte-des-Neiges - Notre-Dame-de-Grâce,83
+St-Joseph / Lamoureux,Sainte-Julie,83
+Armand-Frappier / Louis-R.-Renaud,Laval,77
+St-Antoine/Jean-Paul Riopelle,Ville-Marie,73
+Newman / Léger,LaSalle,71
+Léon / Donck,Laval,70
+Métro Place Saint-Henri ( Charlebois / Saint-Ferdinand),Le Sud-Ouest,68
+St-Charles / Labonté,Longueuil,68
+Lahaie / Meunier,Laval,58
+du Mans / des Alouettes,Laval,58
+de Maisonneuve / de Bleury_SWAP ECO 5,Ville-Marie,55
+Ste-Famille/Sherbrooke,Le Plateau-Mont-Royal,52
+Molson/Beaubien,Rosemont - La Petite-Patrie,52
+St-Jacques / Guy,Le Sud-Ouest,51
+Champlain / Ste-Catherine,Ville-Marie,49
+de la Roche/ Laurier,Le Plateau-Mont-Royal,48
+Henri-Julien / Mont-Royal,Le Plateau-Mont-Royal,46
+Porte de Québec / St-André,Ville-Marie,45
+Villeray/De Normanville,Villeray—Saint-Michel—Parc-Extension,44
+Fullum / de Rouen_SWAP ECO 5,Ville-Marie,42
+BIXI K5,Le Plateau-Mont-Royal,38
+Seymour / René-Lévesque,Ville-Marie,38
+8e Avenue / 15e rue,Laval,37
+Thomas-Chaplais / Notre-Dame,Laval,34
+Square Saint-Louis,Le Plateau-Mont-Royal,32
+des Carrières / Marquette,Outremont,31
+Métro Fabre ( Fabre / Bélanger ),Rosemont - La Petite-Patrie,31
+77e Avenue / 2e Rue,Laval,25
+Sherbrooke / Frontenac_SWAP ECO 5,Côte-des-Neiges - Notre-Dame-de-Grâce,25
+St-André / Cherrier_SWAP ECO 5,Le Plateau-Mont-Royal,23
+Quinn / St-Laurent,Longueuil,21
+Marcil / de la Côte Saint Luc,Côte-des-Neiges - Notre-Dame-de-Grâce,20
+Préfontaine/Hochelaga,Mercier - Hochelaga-Maisonneuve,18
+Labonté / Coteau-Rouge,Longueuil,17
+Jean-d’Estrées/Notre-Dame,Ville-Marie,17
+Place Youville,Ville-Marie,16
+Hutchison / Fairmount,Le Plateau-Mont-Royal,15
+de Batiscan / Hameury,Laval,13
+Métro Verdun (Willibrord / de Verdun ),Verdun,13
+Pierre-de-Coubertin/Viau,Mercier - Hochelaga-Maisonneuve,13
+de Normandville / Everett,Villeray—Saint-Michel—Parc-Extension,11
+Paul-Boutet/Des Regratiers,Villeray—Saint-Michel—Parc-Extension,11
+des Ormeaux / Notre-Dame SWAP ECO 5,Ville-Marie,11
+Richer / de Blois,Laval,10
+Parc Plage_Swap eco5,Le Plateau-Mont-Royal,8
+Edouard-Montpetit/de Stirling,Côte-des-Neiges - Notre-Dame-de-Grâce,7
+de Bastogne / de Sillery,Laval,6
+16e avenue / Jean-talon,Villeray—Saint-Michel—Parc-Extension,6
+des Érables/Dandurand,Rosemont - La Petite-Patrie,6
+Métro Fabre (Garnier / Jean-Talon),Rosemont - La Petite-Patrie,5
+Paré / Mountain Sights_SWAP ECO 5,Ville-Marie,5
+Cartier / Gillford,Le Plateau-Mont-Royal,4
+22e avenue / Everett),Villeray—Saint-Michel—Parc-Extension,4
+de la Porte de Québec/St-André,Ville-Marie,4
+Papineau/Émile-Journault,Villeray—Saint-Michel—Parc-Extension,2
+Parc Howard,Villeray—Saint-Michel—Parc-Extension,2
+Métro Édouard-Montpetit (du Mont-Royal / Vincent-d'Indy)_SWAP ECO 5,Outremont,2
+de la Sorbonne/ du Rousillon,Laval,2
+Georges-Vanier / Notre-Dame,Verdun,1
