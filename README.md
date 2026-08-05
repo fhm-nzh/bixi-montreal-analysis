@@ -19,7 +19,7 @@ dashboard and a Power BI-ready star-schema dataset.
 
 | | |
 |---|---|
-| 🔗 **Live dashboard** | Interactive Plotly dashboard with month filtering, KPI tiles, and data tables — deployed to both [GitHub Pages](https://fhm-nzh.github.io/bixi-montreal-analysis/) and [Vercel](https://bixi-montreal-analysis.vercel.app) |
+| 🔗 **Live dashboard** | 11 interactive Plotly charts — heatmap, geographic map, weekday/weekend comparison, duration distribution, and more — deployed to both [GitHub Pages](https://fhm-nzh.github.io/bixi-montreal-analysis/) and [Vercel](https://bixi-montreal-analysis.vercel.app) |
 | 📊 **Power BI** | Star-schema CSVs + DAX measures + a step-by-step build guide in [`powerbi/`](powerbi/) |
 | 🐍 **Data pipeline** | [`src/build_dataset.py`](src/build_dataset.py) — chunked, unit-tested cleaning & aggregation of the 13M-row raw export |
 | ✅ **Tests & CI** | [`tests/`](tests/) (pytest) + [`.github/workflows/ci.yml`](.github/workflows/ci.yml) — lint and test run on every push, across two Python versions |
@@ -46,25 +46,91 @@ dashboard and a Power BI-ready star-schema dataset.
 - **Most popular routes are short loops** in the Plateau (5–7 min, station-to-nearby-station),
   plus one clear outlier: round trips from Parc Jean-Drapeau (~38 min avg) — recreational
   riding on the island park's paths rather than point-to-point transit.
+- **The duration distribution is right-skewed**: median trip length is **10.6 min**, well
+  below the **13.9 min** mean — most rides are short hops, but a longer tail of leisure
+  trips pulls the average up. (Median estimated from a 5-minute-bucket histogram;
+  see [`duration_histogram.csv`](data/processed/duration_histogram.csv).)
+- **72% of trips happen on weekdays**, and the weekday hourly profile is more sharply
+  peaked in the evening than the weekend's — normalizing each group to "% of that
+  group's daily trips" (so the comparison isn't just "weekdays have 5 days, weekends
+  have 2") shows weekday riding concentrates around the evening commute window, while
+  weekend riding spreads flatter across the afternoon, consistent with leisure use.
 
 > Note: the original exploratory pass claimed Plateau-Mont-Royal had the *highest*
 > average duration — re-running the aggregation found the opposite (it has the
 > shortest). The finding above reflects the verified numbers in
 > [`data/processed/duration_by_borough.csv`](data/processed/duration_by_borough.csv).
 
+## Methodology & KPI glossary
+
+### Is it OK to publish this on GitHub?
+
+Yes. A few reasons this is a straightforward case, not a judgment call:
+
+- **The license explicitly allows it.** BIXI publishes this data under a Creative
+  Commons Attribution license specifically so it can be reused, analyzed, and
+  redistributed — see [bixi.com/en/open-data](https://bixi.com/en/open-data/).
+- **It's fully anonymized and station-level.** Every row is a trip: a start
+  station, an end station, a start/end timestamp, and derived duration. There is no
+  rider ID, membership type, payment information, or anything else that could tie a
+  trip back to a person. It's the same category of data transit agencies publish for
+  GTFS ridership dashboards.
+- **Nothing in this repo adds risk beyond the source data.** The pipeline only
+  aggregates further (by hour, station, borough, etc.) — the published outputs are
+  *less* granular than the raw export, not more.
+
+The one thing worth being deliberate about: **don't republish the raw 2.4GB file
+itself** (this repo doesn't — `data/raw/` is gitignored, with instructions to fetch
+it directly from BIXI). Linking to the source and publishing your own *derived,
+aggregated* analysis is the normal, expected way to use open data — publishing a
+mirror of someone else's raw export is a separate question this project avoids
+by construction.
+
+### Data cleaning rule
+
+A trip is kept when `1 ≤ duration_min ≤ 180`. Below 1 minute is almost always a
+false start or docking error, not a real ride; above 180 minutes is far more likely
+a forgotten checkout than someone actually riding for 3+ hours. This is the one
+judgment call in the pipeline — it's applied identically everywhere (pipeline,
+dashboard, Power BI) via `MIN_DURATION_MIN` / `MAX_DURATION_MIN` in
+[`src/build_dataset.py`](src/build_dataset.py), and its impact is reported
+transparently (2.27% of rows removed) rather than hidden.
+
+### KPI definitions
+
+| KPI | Definition | Computed in |
+|---|---|---|
+| **Total trips (cleaned)** | Count of trips passing the duration filter | `summary.csv` |
+| **Removed %** | `(raw_rows − kept_rows) / raw_rows` | `summary.csv` |
+| **Avg trip duration** | Trip-count-weighted mean of `duration_min` across all trips | `duration_by_borough.csv`, weighted |
+| **Median trip duration** | Linear interpolation within the 5-minute bucket containing the 50th-percentile trip | `duration_histogram.csv` |
+| **Busiest station** | Start station with the highest lifetime trip count | `trips_by_station.csv` |
+| **Peak hour** | Hour-of-day (0–23) with the highest total trip count across the year | `trips_by_hour.csv` |
+| **Busiest month** | Calendar month with the highest trip count | `trips_by_month.csv` |
+| **Weekday / weekend share** | % of trips whose start date falls on Sat/Sun vs. Mon–Fri | `trips_by_weekend_hour.csv` |
+| **Avg duration by borough** | Trip-count-weighted mean `duration_min`, grouped by the *start* station's borough | `duration_by_borough.csv` |
+
+The weighting matters: naively averaging a set of already-averaged numbers (e.g. one
+avg-duration figure per processing chunk, or per station) silently mis-weights groups
+of different sizes. Every "avg duration" figure above is reconstructed as
+`Σ(count × avg) / Σ(count)`, not a plain mean — see `weighted_regroup()` in
+[`src/build_dataset.py`](src/build_dataset.py), which is unit-tested specifically
+against this failure mode.
+
 ## Architecture
 
 ```mermaid
 flowchart LR
     A["Raw export\n13.3M rows / 2.4GB\n(BIXI Open Data)"] -->|"chunked read\npandas"| B["src/build_dataset.py"]
-    B -->|"clean_chunk()\n1–180 min filter"| C["summarize_chunk()\n6 partial aggregates"]
+    B -->|"clean_chunk()\n1–180 min filter"| C["summarize_chunk()\n9 partial aggregates"]
     C -->|"weighted_regroup()\ncorrect cross-chunk averaging"| D["data/processed/*.csv\n(small, committed)"]
-    D --> E["docs/data.js\nJSON bundle"]
+    D --> E["src/build_dashboard_data.py"]
     D --> F["powerbi/data/*.csv\nstar schema"]
-    E --> G["docs/index.html\nPlotly dashboard"]
-    G -->|deploy| H1["GitHub Pages"]
-    G -->|deploy| H2["Vercel"]
-    F --> I["Power BI Desktop\n+ measures.dax"]
+    E --> G["docs/data.js\nJSON bundle + KPIs"]
+    G --> H["docs/index.html\nPlotly dashboard"]
+    H -->|deploy| I1["GitHub Pages"]
+    H -->|deploy| I2["Vercel"]
+    F --> J["Power BI Desktop\n+ measures.dax"]
     B -.->|"pytest"| T["tests/test_build_dataset.py"]
     T -.->|"on every push"| CI["GitHub Actions CI"]
 ```
@@ -77,7 +143,7 @@ the same processed data.
 ## Testing & CI
 
 ```bash
-pytest tests/ -v      # 6 tests: cleaning filter, weighted re-aggregation, end-to-end run
+pytest tests/ -v        # 8 tests: cleaning filter, weighted re-aggregation, bucketing, end-to-end run
 ruff check src/ tests/  # lint
 ```
 
@@ -93,13 +159,36 @@ instead of shipping a blank page.
 ## Dashboard
 
 The live dashboard ([source](docs/index.html)) is a single self-contained HTML page —
-no backend, just Plotly.js reading a small pre-aggregated JSON bundle. It includes:
+no backend, just Plotly.js reading a small pre-aggregated JSON bundle
+([`src/build_dashboard_data.py`](src/build_dashboard_data.py)). It's organized into four
+sections with sticky navigation (**Overview · Time patterns · Stations & map · Boroughs**),
+11 charts total:
 
-- KPI tiles (total trips, avg duration, busiest station/hour/month)
+**Time patterns**
+- KPI tiles: total trips, mean/median duration, busiest station/hour/month, weekday share
 - A month filter that drives the hour-of-day and day-of-week charts
 - Trips by hour, day of week, and month
+- **Hour × day-of-week heatmap** — the full weekly rhythm at a glance, toggle between
+  trip volume and average duration as the color metric
+- **Weekday vs. weekend hourly profile** — each line normalized to % of that group's
+  daily trips, so the *shape* of commute vs. leisure use is comparable regardless of
+  the different underlying totals (5 weekdays vs. 2 weekend days)
+- **Trip duration distribution** — a histogram with mean/median reference lines,
+  visualizing the right-skew directly
+
+**Stations & map**
 - Top 10 stations and top 10 routes
+- **Interactive station map** (1,097 stations, Plotly `scattermapbox` with a
+  token-free basemap that switches with light/dark mode) — size and color both
+  encode trip volume, filterable by borough
+
+**Boroughs**
 - Average trip duration by borough (all 25 boroughs, sequential color scale)
+- **Volume vs. duration scatter** — quantifies the inverse relationship between how
+  busy a borough is and how long its average ride runs, with the busiest/longest
+  boroughs directly labeled
+
+**Throughout**
 - Sortable data tables for accessibility / non-chart reference
 - Light and dark mode (follows system preference)
 - A visible error state (not a blank page) if the data bundle ever fails to load
@@ -108,11 +197,13 @@ no backend, just Plotly.js reading a small pre-aggregated JSON bundle. It includ
 ## Power BI
 
 Power BI Desktop is Windows-only, so it can't be authored directly in this repo — but
-everything needed to build it yourself in ~15 minutes is in [`powerbi/`](powerbi/):
-a 5-table star schema (`Fact_DailyStation`, `Fact_Hourly`, `Fact_Routes`, `Dim_Station`,
-`Dim_Date`), 11 ready-to-paste DAX measures, and a page-by-page
-[build guide](powerbi/BUILD_GUIDE.md) covering relationships, measures, report layout,
-and publishing.
+everything needed to build it yourself in ~15–20 minutes is in [`powerbi/`](powerbi/):
+an 8-table star schema (`Fact_DailyStation`, `Fact_Hourly`, `Fact_Routes`,
+`Fact_HourDayOfWeek`, `Fact_WeekendHour`, `Fact_DurationHistogram`, `Dim_Station`,
+`Dim_Date`), 11 ready-to-paste DAX measures, and a 4-page build guide covering
+relationships, measures, report layout (including the heatmap matrix, weekday/weekend
+comparison, duration histogram, and station map), and publishing — see
+[`powerbi/BUILD_GUIDE.md`](powerbi/BUILD_GUIDE.md).
 
 ## Project structure
 
@@ -120,11 +211,12 @@ and publishing.
 bixi-montreal-analysis/
 ├── .github/workflows/ci.yml # lint + test on every push (2 Python versions)
 ├── docs/                     # live dashboard (GitHub Pages / Vercel source)
-│   ├── index.html
-│   ├── data.js               # pre-aggregated data bundle, generated from data/processed/
+│   ├── index.html            # 11 charts, 4 sections, sticky nav
+│   ├── data.js               # pre-aggregated data bundle, generated by build_dashboard_data.py
 │   └── og-image.png          # social preview card
 ├── src/
-│   └── build_dataset.py      # chunked cleaning + aggregation pipeline (13M rows -> small CSVs)
+│   ├── build_dataset.py      # chunked cleaning + aggregation pipeline (13M rows -> small CSVs)
+│   └── build_dashboard_data.py # bundles data/processed/*.csv -> docs/data.js
 ├── tests/
 │   └── test_build_dataset.py # pytest — cleaning filter, weighted re-aggregation, end-to-end
 ├── data/
@@ -158,11 +250,14 @@ python src/build_dataset.py --raw "data/raw/DonneesOuvertes (2).csv"
 # — or —
 make pipeline
 
-# 4. Run the test suite / lint
+# 4. Rebuild the dashboard's data bundle from the processed CSVs
+python src/build_dashboard_data.py
+
+# 5. Run the test suite / lint
 make test
 make lint
 
-# 5. Open the dashboard directly (no server needed)
+# 6. Open the dashboard directly (no server needed)
 make dashboard
 
 # — or explore interactively —
@@ -189,6 +284,12 @@ jupyter notebook notebooks/bixi_analysis.ipynb
   interactive dashboard, a BI tool, a notebook) from one source of truth.
 - Catching and correcting a wrong claim in the original analysis by re-deriving
   it from the data rather than taking a prior finding on faith.
+- Reaching for the right chart for the question: a heatmap for a two-dimensional
+  pattern (hour × day), a normalized overlay when raw magnitude would be misleading
+  (weekday vs. weekend), mean *and* median together when a distribution is skewed,
+  and a geographic map when the story is spatial.
+- Documenting methodology and KPI definitions precisely enough that someone else
+  could audit or reproduce every number on the dashboard.
 - End-to-end ownership: sourcing the data, building the pipeline, designing the
   dashboard, and deploying it — twice, to two different platforms.
 

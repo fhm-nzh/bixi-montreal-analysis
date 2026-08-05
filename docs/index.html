@@ -81,25 +81,48 @@
   }
 
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   html, body {
     margin: 0; padding: 0;
     background: var(--page-plane);
     color: var(--text-primary);
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   }
-  body { padding: 24px 20px 64px; }
-  .wrap { max-width: 1180px; margin: 0 auto; }
+  body { padding: 0 0 64px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  section[id] { scroll-margin-top: 60px; }
 
-  header.hero { margin-bottom: 28px; }
+  .pagenav {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--page-plane) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .pagenav-inner {
+    max-width: 1180px; margin: 0 auto; padding: 10px 20px;
+    display: flex; gap: 4px; overflow-x: auto; align-items: center;
+  }
+  .pagenav a {
+    font-size: 0.82rem; color: var(--text-secondary); text-decoration: none;
+    padding: 6px 12px; border-radius: 999px; white-space: nowrap;
+  }
+  .pagenav a:hover { background: var(--surface-1); color: var(--text-primary); }
+  .pagenav .brand { font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-right: 8px; white-space: nowrap; }
+
+  header.hero { padding-top: 20px; margin-bottom: 28px; }
   header.hero h1 { font-size: 1.6rem; font-weight: 700; margin: 0 0 6px; }
-  header.hero p { margin: 0; color: var(--text-secondary); font-size: 0.95rem; max-width: 720px; line-height: 1.5; }
+  header.hero p { margin: 0; color: var(--text-secondary); font-size: 0.95rem; max-width: 760px; line-height: 1.5; }
   header.hero .meta-links { margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.85rem; }
   header.hero .meta-links a { color: var(--series-1); text-decoration: none; }
   header.hero .meta-links a:hover { text-decoration: underline; }
 
+  h2.section-title { font-size: 1.15rem; font-weight: 700; margin: 0 0 4px; padding-top: 8px; }
+  p.section-sub { color: var(--text-secondary); font-size: 0.88rem; margin: 0 0 16px; max-width: 760px; }
+
   .kpi-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
     gap: 12px;
     margin-bottom: 28px;
   }
@@ -131,6 +154,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
+    margin-bottom: 36px;
   }
   .grid .full { grid-column: 1 / -1; }
   @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
@@ -142,12 +166,27 @@
     padding: 16px 16px 8px;
     box-shadow: var(--card-shadow);
   }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
   .card h2 { font-size: 0.95rem; font-weight: 650; margin: 0 0 2px; }
   .card .card-sub { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 4px; }
   .plot { width: 100%; height: 320px; }
-  .plot.tall { height: 620px; }
+  .plot.tall { height: 560px; }
+  .plot.map { width: 100%; height: 480px; border-radius: 8px; overflow: hidden; }
 
-  section.tables { margin-top: 32px; }
+  .seg { display: inline-flex; gap: 2px; background: var(--page-plane); border: 1px solid var(--border); border-radius: 999px; padding: 2px; flex-shrink: 0; }
+  .seg-btn {
+    font: inherit; font-size: 0.74rem; padding: 4px 10px; border: none; background: transparent;
+    color: var(--text-secondary); border-radius: 999px; cursor: pointer;
+  }
+  .seg-btn[aria-selected="true"] { background: var(--series-1); color: #fff; }
+
+  .inline-select {
+    font: inherit; font-size: 0.78rem;
+    background: var(--page-plane); color: var(--text-primary);
+    border: 1px solid var(--border); border-radius: 6px; padding: 3px 8px;
+  }
+
+  section.tables { margin-top: 8px; }
   section.tables h2 { font-size: 1.05rem; margin-bottom: 4px; }
   section.tables > p { color: var(--text-secondary); font-size: 0.85rem; margin-top: 0; }
   .tab-row { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
@@ -165,6 +204,7 @@
   .table-wrap { overflow-x: auto; }
 
   footer { margin-top: 40px; color: var(--text-muted); font-size: 0.8rem; text-align: center; }
+  footer a { color: var(--text-secondary); }
 
   .error-banner {
     background: color-mix(in srgb, #d03b3b 10%, var(--surface-1));
@@ -178,19 +218,30 @@
   }
   .error-banner strong { display: block; color: #d03b3b; margin-bottom: 2px; }
   .error-banner a { color: var(--series-1); }
-  footer a { color: var(--text-secondary); }
 </style>
 </head>
 <body>
+
+<nav class="pagenav" aria-label="Section navigation">
+  <div class="pagenav-inner">
+    <span class="brand">🚲 BIXI 2024</span>
+    <a href="#overview">Overview</a>
+    <a href="#time">Time patterns</a>
+    <a href="#stations">Stations &amp; map</a>
+    <a href="#boroughs">Boroughs</a>
+    <a href="#data">Data</a>
+  </div>
+</nav>
+
 <div class="wrap">
 
-  <header class="hero">
+  <header class="hero" id="overview">
     <h1>BIXI Montreal 2024 — Bike Share Analysis</h1>
     <p>
       An analysis of <strong>12.97 million</strong> cleaned bike-share trips (13.28M raw, 2.27% removed as
-      data-quality outliers) from Montreal's BIXI network across the 2024 season. Explore usage patterns by
-      hour, day, month, station, and borough below — filter by month to see how the rhythm of the city changes
-      with the seasons.
+      data-quality outliers) from Montreal's BIXI network across the 2024 season — hourly and seasonal rhythms,
+      a weekday-vs-weekend commute comparison, station-level geography, and borough duration patterns, all
+      explorable below.
     </p>
     <div class="meta-links">
       <a href="https://github.com/fhm-nzh/bixi-montreal-analysis" target="_blank" rel="noopener">Source code &amp; pipeline on GitHub ↗</a>
@@ -208,46 +259,113 @@
 
   <div class="kpi-row" id="kpiRow"></div>
 
-  <div class="filter-row">
-    <label for="monthFilter">Month</label>
-    <select id="monthFilter"></select>
-    <span class="hint">Filters the hour-of-day and day-of-week charts below</span>
-  </div>
+  <section id="time">
+    <h2 class="section-title">Time patterns</h2>
+    <p class="section-sub">When Montrealers ride: by hour, day, month, and the weekday/weekend split that explains the evening peak.</p>
 
-  <div class="grid">
-    <div class="card">
-      <h2>Trips by hour of day</h2>
-      <div class="card-sub">Peak usage is in the evening, not the morning commute</div>
-      <div id="chartHour" class="plot"></div>
+    <div class="filter-row">
+      <label for="monthFilter">Month</label>
+      <select id="monthFilter"></select>
+      <span class="hint">Filters the hour-of-day and day-of-week charts below</span>
     </div>
-    <div class="card">
-      <h2>Trips by day of week</h2>
-      <div class="card-sub">Friday is busiest; weekday/weekend gap is modest</div>
-      <div id="chartDow" class="plot"></div>
-    </div>
-    <div class="card full">
-      <h2>Trips by month</h2>
-      <div class="card-sub">Montreal winters shut the network down almost completely</div>
-      <div id="chartMonth" class="plot"></div>
-    </div>
-    <div class="card">
-      <h2>Top 10 busiest start stations</h2>
-      <div class="card-sub">Metro-adjacent stations dominate — last-mile transit use</div>
-      <div id="chartStations" class="plot"></div>
-    </div>
-    <div class="card">
-      <h2>Top 10 most popular routes</h2>
-      <div class="card-sub">Short loops around the Plateau, plus one recreational outlier</div>
-      <div id="chartRoutes" class="plot"></div>
-    </div>
-    <div class="card full">
-      <h2>Average trip duration by borough</h2>
-      <div class="card-sub">Peripheral/leisure boroughs run long; the dense core runs short (last-mile trips)</div>
-      <div id="chartBorough" class="plot tall"></div>
-    </div>
-  </div>
 
-  <section class="tables">
+    <div class="grid">
+      <div class="card">
+        <h2>Trips by hour of day</h2>
+        <div class="card-sub">Peak usage is in the evening, not the morning commute</div>
+        <div id="chartHour" class="plot"></div>
+      </div>
+      <div class="card">
+        <h2>Trips by day of week</h2>
+        <div class="card-sub">Friday is busiest; weekday/weekend gap is modest</div>
+        <div id="chartDow" class="plot"></div>
+      </div>
+      <div class="card full">
+        <h2>Trips by month</h2>
+        <div class="card-sub">Montreal winters shut the network down almost completely</div>
+        <div id="chartMonth" class="plot"></div>
+      </div>
+
+      <div class="card full">
+        <div class="card-head">
+          <div>
+            <h2>Hour × day-of-week heatmap</h2>
+            <div class="card-sub">The full weekly rhythm at a glance — hover any cell</div>
+          </div>
+          <div class="seg" id="heatmapSeg" role="group" aria-label="Heatmap metric">
+            <button class="seg-btn" data-metric="trip_count" aria-selected="true">Trip volume</button>
+            <button class="seg-btn" data-metric="avg_duration_min">Avg duration</button>
+          </div>
+        </div>
+        <div id="chartHeatmap" class="plot tall"></div>
+      </div>
+
+      <div class="card full">
+        <h2>Weekday vs. weekend hourly profile</h2>
+        <div class="card-sub">Each line normalized to % of that group's daily trips, so shape (not volume) is comparable — weekdays show a sharper evening spike; weekends are flatter and shift later</div>
+        <div id="chartWeekendProfile" class="plot"></div>
+      </div>
+
+      <div class="card full">
+        <h2>Trip duration distribution</h2>
+        <div class="card-sub">Right-skewed: the median (10.6 min) sits well below the mean (13.9 min) — a handful of long rides pull the average up</div>
+        <div id="chartDurationHist" class="plot"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stations">
+    <h2 class="section-title">Stations &amp; routes</h2>
+    <p class="section-sub">Where the network is busiest, the most popular point-to-point routes, and every station plotted geographically.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Top 10 busiest start stations</h2>
+        <div class="card-sub">Metro-adjacent stations dominate — last-mile transit use</div>
+        <div id="chartStations" class="plot"></div>
+      </div>
+      <div class="card">
+        <h2>Top 10 most popular routes</h2>
+        <div class="card-sub">Short loops around the Plateau, plus one recreational outlier</div>
+        <div id="chartRoutes" class="plot"></div>
+      </div>
+
+      <div class="card full">
+        <div class="card-head">
+          <div>
+            <h2>Station map</h2>
+            <div class="card-sub">Size and color both encode trip volume · 1,097 stations with 20+ trips</div>
+          </div>
+          <div>
+            <label for="boroughFilter" style="font-size:0.78rem;color:var(--text-secondary);margin-right:6px;">Borough</label>
+            <select id="boroughFilter" class="inline-select"></select>
+          </div>
+        </div>
+        <div id="chartMap" class="plot map"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="boroughs">
+    <h2 class="section-title">Boroughs</h2>
+    <p class="section-sub">Average trip duration by borough, and how duration relates to how busy a borough is.</p>
+
+    <div class="grid">
+      <div class="card full">
+        <h2>Average trip duration by borough</h2>
+        <div class="card-sub">Peripheral/leisure boroughs run long; the dense core runs short (last-mile trips)</div>
+        <div id="chartBorough" class="plot tall"></div>
+      </div>
+
+      <div class="card full">
+        <h2>Trip volume vs. average duration</h2>
+        <div class="card-sub">Busier boroughs skew toward shorter trips — consistent with dense-core last-mile use vs. peripheral leisure riding. Dotted line = citywide average duration.</div>
+        <div id="chartBoroughScatter" class="plot"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tables" id="data">
     <h2>Data tables</h2>
     <p>The same figures behind the charts above, for reference or screen readers.</p>
     <div class="tab-row" id="tabRow">
@@ -289,17 +407,24 @@ function baseLayout(extra) {
   return out;
 }
 const cfg = { displayModeBar: false, responsive: true };
+const mapCfg = { displayModeBar: false, responsive: true, scrollZoom: true };
 const fmt = (n) => n.toLocaleString('en-US');
 const fmt1 = (n) => n.toLocaleString('en-US', { maximumFractionDigits: 1 });
+const seqScale = () => [
+  [0, cssVar('--seq-100')], [0.15, cssVar('--seq-200')], [0.3, cssVar('--seq-300')],
+  [0.45, cssVar('--seq-400')], [0.6, cssVar('--seq-450')], [0.72, cssVar('--seq-500')],
+  [0.84, cssVar('--seq-550')], [0.92, cssVar('--seq-600')], [1, cssVar('--seq-700')],
+];
 
 // ---------- KPI tiles ----------
 const kpi = BIXI_DATA.kpi;
 const kpiHtml = `
   <div class="kpi-tile"><div class="label">Total trips (cleaned)</div><div class="value">${fmt1(kpi.total_trips/1e6)}M</div><div class="sub">${kpi.removed_pct}% removed as outliers</div></div>
-  <div class="kpi-tile"><div class="label">Avg trip duration</div><div class="value">${kpi.avg_duration_min} min</div><div class="sub">across all boroughs</div></div>
+  <div class="kpi-tile"><div class="label">Avg / median duration</div><div class="value">${kpi.avg_duration_min} / ${kpi.median_duration_min} min</div><div class="sub">right-skewed distribution</div></div>
   <div class="kpi-tile"><div class="label">Busiest station</div><div class="value" style="font-size:1.05rem">${kpi.busiest_station.split(' (')[0]}</div><div class="sub">${fmt(kpi.busiest_station_trips)} trips</div></div>
   <div class="kpi-tile"><div class="label">Peak hour</div><div class="value">${kpi.peak_hour}:00</div><div class="sub">${fmt(kpi.peak_hour_trips)} trips</div></div>
   <div class="kpi-tile"><div class="label">Busiest month</div><div class="value">${kpi.busiest_month}</div><div class="sub">${fmt(kpi.busiest_month_trips)} trips</div></div>
+  <div class="kpi-tile"><div class="label">Weekday share</div><div class="value">${(100-kpi.weekend_share_pct).toFixed(0)}%</div><div class="sub">${kpi.weekend_share_pct}% on weekends</div></div>
 `;
 document.getElementById('kpiRow').innerHTML = kpiHtml;
 
@@ -402,19 +527,185 @@ function renderBoroughChart() {
   }], baseLayout({ margin: { l: 230, r: 40, t: 8, b: 32 }, xaxis: { title: 'Avg duration (min)', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } } }), cfg);
 }
 
-renderHourChart(0);
-renderDowChart(0);
-renderMonthChart();
-renderStationsChart();
-renderRoutesChart();
-renderBoroughChart();
+// ---------- Heatmap: hour x day-of-week ----------
+function renderHeatmap(metric) {
+  const rows = BIXI_DATA.hour_dow;
+  const hours = [...Array(24).keys()];
+  const days = [...DAY_ORDER].reverse(); // Monday on top
+  const z = days.map(day => hours.map(h => {
+    const cell = rows.find(r => r.day_of_week === day && r.hour === h);
+    return cell ? cell[metric] : 0;
+  }));
+  const isDuration = metric === 'avg_duration_min';
+  Plotly.react('chartHeatmap', [{
+    type: 'heatmap',
+    x: hours.map(h => `${h}:00`),
+    y: days.map(d => DAY_SHORT[d]),
+    z: z,
+    colorscale: seqScale(),
+    showscale: true,
+    colorbar: { thickness: 12, outlinewidth: 0, tickfont: { color: cssVar('--text-muted'), size: 10 } },
+    hovertemplate: '%{y} %{x}<br>' + (isDuration ? '%{z:.1f} min avg<extra></extra>' : '%{z:,} trips<extra></extra>'),
+  }], baseLayout({
+    margin: { l: 40, r: 16, t: 8, b: 32 },
+    yaxis: { gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } },
+    xaxis: { gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } },
+  }), cfg);
+}
 
-// re-render on theme change so Plotly picks up new CSS var colors
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-  const m = parseInt(monthSel.value, 10);
-  renderHourChart(m); renderDowChart(m); renderMonthChart();
-  renderStationsChart(); renderRoutesChart(); renderBoroughChart();
+document.getElementById('heatmapSeg').addEventListener('click', (e) => {
+  const btn = e.target.closest('.seg-btn');
+  if (!btn) return;
+  document.querySelectorAll('#heatmapSeg .seg-btn').forEach(b => b.setAttribute('aria-selected', 'false'));
+  btn.setAttribute('aria-selected', 'true');
+  renderHeatmap(btn.dataset.metric);
 });
+
+// ---------- Weekday vs weekend normalized hourly profile ----------
+function renderWeekendProfile() {
+  const forGroup = (isWeekend) => {
+    const rows = BIXI_DATA.weekend_hour.filter(r => r.is_weekend === isWeekend).sort((a,b) => a.hour - b.hour);
+    const total = rows.reduce((s,r) => s + r.trip_count, 0);
+    return rows.map(r => r.trip_count / total * 100);
+  };
+  const hours = [...Array(24).keys()].map(h => `${h}:00`);
+  Plotly.react('chartWeekendProfile', [
+    {
+      x: hours, y: forGroup(false), name: 'Weekday', mode: 'lines+markers', type: 'scatter',
+      line: { color: cssVar('--series-1'), width: 2 }, marker: { size: 6, color: cssVar('--series-1') },
+      hovertemplate: 'Weekday %{x}<br>%{y:.1f}% of daily trips<extra></extra>',
+    },
+    {
+      x: hours, y: forGroup(true), name: 'Weekend', mode: 'lines+markers', type: 'scatter',
+      line: { color: cssVar('--series-2'), width: 2 }, marker: { size: 6, color: cssVar('--series-2') },
+      hovertemplate: 'Weekend %{x}<br>%{y:.1f}% of daily trips<extra></extra>',
+    },
+  ], baseLayout({
+    showlegend: true,
+    legend: { orientation: 'h', y: 1.12, x: 0, font: { color: cssVar('--text-secondary'), size: 11 } },
+    yaxis: { title: '% of that group\'s daily trips', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } },
+    margin: { l: 50, r: 16, t: 28, b: 40 },
+  }), cfg);
+}
+
+// ---------- Trip duration distribution ----------
+function renderDurationHist() {
+  const rows = [...BIXI_DATA.duration_hist].sort((a,b) => a.duration_bucket_min - b.duration_bucket_min);
+  const mean = kpi.avg_duration_min;
+  const median = kpi.median_duration_min;
+  Plotly.react('chartDurationHist', [{
+    x: rows.map(r => r.duration_bucket_min + 2.5),
+    y: rows.map(r => r.trip_count),
+    type: 'bar',
+    width: 4.6,
+    marker: { color: cssVar('--series-1') },
+    customdata: rows.map(r => `${r.duration_bucket_min}–${r.duration_bucket_min + 4} min`),
+    hovertemplate: '%{customdata}<br>%{y:,} trips<extra></extra>',
+  }], baseLayout({
+    xaxis: { title: 'Trip duration (minutes)', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } },
+    yaxis: { title: 'Trips', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } },
+    margin: { l: 55, r: 16, t: 30, b: 40 },
+    shapes: [
+      { type: 'line', x0: mean, x1: mean, yref: 'paper', y0: 0, y1: 1, line: { color: cssVar('--series-2'), width: 2, dash: 'dash' } },
+      { type: 'line', x0: median, x1: median, yref: 'paper', y0: 0, y1: 1, line: { color: cssVar('--series-3'), width: 2, dash: 'dash' } },
+    ],
+    annotations: [
+      { x: mean, y: 1, yref: 'paper', yanchor: 'bottom', text: `Mean ${mean}`, showarrow: false, font: { color: cssVar('--series-2'), size: 11 } },
+      { x: median, y: 1, yref: 'paper', yanchor: 'bottom', text: `Median ${median}`, showarrow: false, font: { color: cssVar('--series-3'), size: 11 } },
+    ],
+  }), cfg);
+}
+
+// ---------- Station map ----------
+const boroughSel = document.getElementById('boroughFilter');
+const boroughs = ['All boroughs', ...new Set(BIXI_DATA.station_map.map(r => r.borough))].sort((a,b) => {
+  if (a === 'All boroughs') return -1;
+  if (b === 'All boroughs') return 1;
+  return a.localeCompare(b);
+});
+boroughs.forEach(b => {
+  const opt = document.createElement('option');
+  opt.value = b; opt.textContent = b;
+  boroughSel.appendChild(opt);
+});
+
+function renderStationMap(borough) {
+  const all = BIXI_DATA.station_map;
+  const rows = (!borough || borough === 'All boroughs') ? all : all.filter(r => r.borough === borough);
+  const maxTrips = Math.max(...all.map(r => r.trip_count));
+  const seq = [cssVar('--seq-200'), cssVar('--seq-400'), cssVar('--seq-500'), cssVar('--seq-600'), cssVar('--seq-700')];
+  Plotly.react('chartMap', [{
+    type: 'scattermapbox',
+    lat: rows.map(r => r.latitude),
+    lon: rows.map(r => r.longitude),
+    mode: 'markers',
+    marker: {
+      size: rows.map(r => 4 + Math.sqrt(r.trip_count / maxTrips) * 28),
+      color: rows.map(r => r.trip_count),
+      colorscale: [[0, seq[0]], [0.25, seq[1]], [0.5, seq[2]], [0.75, seq[3]], [1, seq[4]]],
+      opacity: 0.78,
+    },
+    text: rows.map(r => `${r.station}<br>${r.borough}<br>${r.trip_count.toLocaleString()} trips`),
+    hovertemplate: '%{text}<extra></extra>',
+  }], {
+    mapbox: {
+      style: isDark() ? 'carto-darkmatter' : 'carto-positron',
+      center: { lat: 45.53, lon: -73.62 },
+      zoom: 10.2,
+    },
+    margin: { l: 0, r: 0, t: 0, b: 0 },
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    showlegend: false,
+  }, mapCfg);
+}
+
+boroughSel.addEventListener('change', () => renderStationMap(boroughSel.value));
+
+// ---------- Borough scatter: volume vs duration ----------
+function renderBoroughScatter() {
+  const rows = BIXI_DATA.borough;
+  const avgAll = kpi.avg_duration_min;
+  const byVolume = [...rows].sort((a,b) => b.trip_count - a.trip_count).slice(0,2).map(r => r.borough);
+  const byDuration = [...rows].sort((a,b) => b.avg_duration_min - a.avg_duration_min).slice(0,2).map(r => r.borough);
+  const labeled = new Set([...byVolume, ...byDuration]);
+  Plotly.react('chartBoroughScatter', [{
+    x: rows.map(r => r.trip_count),
+    y: rows.map(r => r.avg_duration_min),
+    mode: 'markers+text',
+    type: 'scatter',
+    text: rows.map(r => labeled.has(r.borough) ? r.borough : ''),
+    textposition: 'top center',
+    textfont: { size: 10, color: cssVar('--text-secondary') },
+    marker: { size: 10, color: cssVar('--series-1'), line: { width: 2, color: cssVar('--surface-1') } },
+    hovertemplate: rows.map(r => `${r.borough}<br>%{x:,} trips, %{y:.1f} min avg<extra></extra>`),
+  }], baseLayout({
+    xaxis: { title: 'Total trips (log scale)', type: 'log', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } },
+    yaxis: { title: 'Avg duration (min)', gridcolor: cssVar('--gridline'), tickfont: { color: cssVar('--text-muted') } },
+    margin: { l: 55, r: 20, t: 16, b: 40 },
+    shapes: [{ type: 'line', x0: 0, x1: 1, xref: 'paper', y0: avgAll, y1: avgAll, line: { color: cssVar('--text-muted'), width: 1, dash: 'dot' } }],
+  }), cfg);
+}
+
+function renderAll() {
+  const m = parseInt(monthSel.value, 10) || 0;
+  renderHourChart(m);
+  renderDowChart(m);
+  renderMonthChart();
+  renderStationsChart();
+  renderRoutesChart();
+  renderBoroughChart();
+  const activeMetric = document.querySelector('#heatmapSeg .seg-btn[aria-selected="true"]').dataset.metric;
+  renderHeatmap(activeMetric);
+  renderWeekendProfile();
+  renderDurationHist();
+  renderStationMap(boroughSel.value);
+  renderBoroughScatter();
+}
+
+renderAll();
+
+// re-render on theme change so Plotly picks up new CSS var colors (and the map basemap)
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', renderAll);
 
 // ---------- Data tables ----------
 const tableDefs = {
@@ -458,7 +749,7 @@ renderTable('stations');
   document.getElementById('errorBannerDetail').textContent = ' (' + err.message + ') ';
   banner.hidden = false;
   // hide whatever partially rendered so the page doesn't look broken instead of erroring clearly
-  document.querySelectorAll('.kpi-row, .filter-row, .grid, section.tables').forEach(el => { el.style.display = 'none'; });
+  document.querySelectorAll('.kpi-row, .filter-row, .grid, section.tables, .pagenav').forEach(el => { el.style.display = 'none'; });
 }
 </script>
 </body>

@@ -31,7 +31,9 @@ import pandas as pd
 CHUNK_SIZE = 1_000_000
 MIN_DURATION_MIN = 1
 MAX_DURATION_MIN = 180
+DURATION_BUCKET_WIDTH = 5  # minutes, for the trip-duration histogram
 DAY_ORDER = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+WEEKEND_DAYS = {"Saturday", "Sunday"}
 MONTH_NAMES = {
     1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
     7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December",
@@ -58,6 +60,9 @@ class ChunkAggregates:
     routes: pd.DataFrame              # start_station, end_station -> trip_count, avg_duration_min
     borough_duration: pd.DataFrame    # borough -> trip_count, total_duration_min
     station_dim: pd.DataFrame         # station -> borough, latitude, longitude
+    hour_dow: pd.DataFrame            # day_of_week, hour -> trip_count, avg_duration_min (heatmap)
+    weekend_hour: pd.DataFrame        # is_weekend, hour -> trip_count, avg_duration_min (commute vs. leisure)
+    duration_hist: pd.DataFrame       # duration_bucket_min -> trip_count (distribution)
 
 
 def clean_chunk(chunk: pd.DataFrame) -> pd.DataFrame:
@@ -81,6 +86,7 @@ def clean_chunk(chunk: pd.DataFrame) -> pd.DataFrame:
     clean["hour"] = clean["start_time"].dt.hour
     clean["day_of_week"] = clean["start_time"].dt.day_name()
     clean["month"] = clean["start_time"].dt.month
+    clean["is_weekend"] = clean["day_of_week"].isin(WEEKEND_DAYS)
     return clean
 
 
@@ -151,6 +157,28 @@ def summarize_chunk(clean: pd.DataFrame) -> ChunkAggregates:
         })
     )
 
+    hour_dow = (
+        clean.groupby(["day_of_week", "hour"])
+        .agg(trip_count=("start_time", "size"), avg_duration_min=("duration_min", "mean"))
+        .reset_index()
+    )
+
+    weekend_hour = (
+        clean.groupby(["is_weekend", "hour"])
+        .agg(trip_count=("start_time", "size"), avg_duration_min=("duration_min", "mean"))
+        .reset_index()
+    )
+
+    duration_bucket = (
+        ((clean["duration_min"] - MIN_DURATION_MIN) // DURATION_BUCKET_WIDTH) * DURATION_BUCKET_WIDTH
+        + MIN_DURATION_MIN
+    ).astype(int)
+    duration_hist = (
+        duration_bucket.value_counts()
+        .rename_axis("duration_bucket_min")
+        .reset_index(name="trip_count")
+    )
+
     return ChunkAggregates(
         hourly=hourly,
         daily_station=daily_station,
@@ -158,6 +186,9 @@ def summarize_chunk(clean: pd.DataFrame) -> ChunkAggregates:
         routes=routes,
         borough_duration=borough_duration,
         station_dim=station_dim,
+        hour_dow=hour_dow,
+        weekend_hour=weekend_hour,
+        duration_hist=duration_hist,
     )
 
 
@@ -228,6 +259,23 @@ def combine_and_write(parts: list[ChunkAggregates], out_dir: Path, total_rows: i
         .reset_index(drop=True)
     )
     station_dim.to_csv(out_dir / "dim_station.csv", index=False)
+
+    hour_dow_df = weighted_regroup(pd.concat([p.hour_dow for p in parts]), ["day_of_week", "hour"])
+    hour_dow_df["day_of_week"] = pd.Categorical(hour_dow_df["day_of_week"], categories=DAY_ORDER, ordered=True)
+    hour_dow_df = hour_dow_df.sort_values(["day_of_week", "hour"])
+    hour_dow_df.to_csv(out_dir / "trips_by_hour_dow.csv", index=False)
+
+    weekend_hour_df = weighted_regroup(pd.concat([p.weekend_hour for p in parts]), ["is_weekend", "hour"])
+    weekend_hour_df = weekend_hour_df.sort_values(["is_weekend", "hour"])
+    weekend_hour_df.to_csv(out_dir / "trips_by_weekend_hour.csv", index=False)
+
+    duration_hist_df = (
+        pd.concat([p.duration_hist for p in parts])
+        .groupby("duration_bucket_min")["trip_count"].sum()
+        .reset_index()
+        .sort_values("duration_bucket_min")
+    )
+    duration_hist_df.to_csv(out_dir / "duration_histogram.csv", index=False)
 
     summary = pd.DataFrame([{
         "total_rows": total_rows,

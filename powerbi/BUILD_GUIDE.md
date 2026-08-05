@@ -19,18 +19,22 @@ of step 1 below — the modeling and report steps are the same either way.
 | `Fact_DailyStation.csv` | date × start station | ~218K | station rankings, borough rollups, trends over time |
 | `Fact_Hourly.csv` | date × hour | ~8.8K | time-of-day / seasonality patterns |
 | `Fact_Routes.csv` | start station × end station (top 500) | 500 | most popular routes |
+| `Fact_HourDayOfWeek.csv` | day of week × hour | 168 | the weekly rhythm heatmap (matrix visual) |
+| `Fact_WeekendHour.csv` | is_weekend × hour | 48 | weekday-vs-weekend commute comparison |
+| `Fact_DurationHistogram.csv` | 5-minute duration bucket | 36 | trip-duration distribution (mean vs. median) |
 | `Dim_Station.csv` | one row per station | ~1.1K | station name, borough, lat/lon |
 | `Dim_Date.csv` | one row per calendar day, Jan–Dec 2024 | 366 | month/weekday/quarter filtering |
 
-All five are already cleaned (trip duration 1–180 min, same rule as the notebook) and
+All eight are already cleaned (trip duration 1–180 min, same rule as the notebook) and
 small enough to load instantly — no need to touch the raw 13M-row export.
 
 ## 1. Import the data
 
 1. Open Power BI Desktop → **Get Data → Text/CSV**.
-2. Import all five files from `powerbi/data/`. Power BI will infer types automatically —
-   double check `date` columns come in as **Date**, not text.
-3. **Load** all five (not "Transform" — no cleanup needed).
+2. Import all eight files from `powerbi/data/`. Power BI will infer types automatically —
+   double check `date` columns come in as **Date**, not text, and `is_weekend` comes in as
+   **True/False** (Boolean).
+3. **Load** all eight (not "Transform" — no cleanup needed).
 
 ## 2. Build the model
 
@@ -86,22 +90,38 @@ the pipeline, so it isn't visible in the CSVs. Give it a home in the model:
   trip count on Y — the hour-of-day pattern.
 - Add a **slicer** on `Dim_Date[month_name]` so the whole page filters by season.
 
-**Page 2 — Stations & Routes**
+**Page 2 — Weekly rhythm & duration**
+- **Matrix visual**: `Fact_HourDayOfWeek[day_of_week]` on rows, `[hour]` on columns,
+  `trip_count` as the value, with **conditional formatting → background color** applied
+  (a blue scale) — this reproduces the hour × day-of-week heatmap from the web dashboard.
+- **Line chart**: `Fact_WeekendHour[hour]` on X, `trip_count` on Y, `is_weekend` as
+  **Legend** — two lines, weekday vs. weekend. For a fair shape comparison (not just
+  "weekdays have more trips"), add a quick measure normalizing each line to % of that
+  group's daily total, matching the web dashboard's approach.
+- **Column chart**: `Fact_DurationHistogram[duration_bucket_min]` on X, `trip_count` on
+  Y — the trip-duration distribution. Add two **constant lines** (Format pane → Analytics)
+  at the mean (13.9 min) and median (10.6 min) to show the right-skew.
+
+**Page 3 — Stations & Routes**
 - **Bar chart**: `Dim_Station[station]` on Y, `[Total Trips]` on X, top-N filter set
   to 10, sorted descending — busiest stations.
 - **Table or bar chart**: `Fact_Routes[start_station]` + `Fact_Routes[end_station]`
   concatenated (or two columns), `[Route Trips]` — most popular routes.
-- **Map visual** (if you enable it): plot `Dim_Station[latitude]`/`[longitude]` sized
-  by `[Total Trips]` — a nice geographic view Power BI can do that the web dashboard
-  doesn't.
+- **Map visual**: plot `Dim_Station[latitude]`/`[longitude]` sized and colored by
+  `[Total Trips]`, with a **Borough** slicer — the same station map as the web
+  dashboard, built natively in Power BI.
 
-**Page 3 — Boroughs & Duration**
+**Page 4 — Boroughs & Duration**
 - **Bar chart**: `Dim_Station[borough]` on Y, `[Avg Trip Duration (min)]` on X,
   sorted descending. This is the "which boroughs have longer rides" story — Lachine
   and the eastern boroughs run long (leisure rides), the dense Plateau core runs
   short (last-mile transit trips).
 - **Slicer** on `Dim_Date[is_weekend]` to compare weekday vs. weekend duration
   patterns by borough.
+- **Scatter chart**: `[Total Trips]` on X (log scale, Format pane → X-axis → Type →
+  Log), `[Avg Trip Duration (min)]` on Y, `Dim_Station[borough]` as **Details** —
+  quantifies the inverse relationship between how busy a borough is and how long its
+  average ride runs.
 
 Match the report theme to the web dashboard for a consistent portfolio look:
 **View → Themes → Browse for themes**, and use these colors (same palette as

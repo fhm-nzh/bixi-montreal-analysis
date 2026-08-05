@@ -100,8 +100,33 @@ class TestSummarizeChunk:
         assert agg.daily_station["trip_count"].sum() == 3
         assert agg.routes["trip_count"].sum() == 3
         assert agg.borough_duration["trip_count"].sum() == 3
+        assert agg.hour_dow["trip_count"].sum() == 3
+        assert agg.weekend_hour["trip_count"].sum() == 3
+        assert agg.duration_hist["trip_count"].sum() == 3
         # two distinct start stations -> two dimension rows, no duplicates
         assert sorted(agg.station_dim["station"]) == ["Metro A", "Station B"]
+
+    def test_duration_buckets_group_into_five_minute_windows(self):
+        # 5.0 -> bucket 1 (1-5), 6.0 -> bucket 6 (6-10), 30.0 -> bucket 26 (26-30)
+        rows = [
+            _raw_row("2024-07-01 08:00:00", 5.0),
+            _raw_row("2024-07-01 08:00:00", 6.0),
+            _raw_row("2024-07-01 08:00:00", 30.0),
+        ]
+        clean = clean_chunk(pd.DataFrame(rows))
+        agg = summarize_chunk(clean)
+        buckets = dict(zip(agg.duration_hist["duration_bucket_min"], agg.duration_hist["trip_count"], strict=False))
+        assert buckets == {1: 1, 6: 1, 26: 1}
+
+    def test_weekend_hour_separates_weekday_from_weekend(self):
+        rows = [
+            _raw_row("2024-07-01 08:00:00", 5.0),   # Monday -> weekday
+            _raw_row("2024-07-06 08:00:00", 5.0),   # Saturday -> weekend
+        ]
+        clean = clean_chunk(pd.DataFrame(rows))
+        agg = summarize_chunk(clean)
+        by_weekend = dict(zip(agg.weekend_hour["is_weekend"], agg.weekend_hour["trip_count"], strict=False))
+        assert by_weekend == {False: 1, True: 1}
 
 
 class TestProcessEndToEnd:
@@ -122,7 +147,8 @@ class TestProcessEndToEnd:
             "trips_by_hour.csv", "trips_by_date_hour.csv", "trips_by_date_station.csv",
             "trips_by_month.csv", "trips_by_station.csv", "trips_by_day_of_week.csv",
             "trips_by_month_day_of_week.csv", "top_routes.csv", "duration_by_borough.csv",
-            "dim_station.csv", "summary.csv",
+            "dim_station.csv", "summary.csv", "trips_by_hour_dow.csv",
+            "trips_by_weekend_hour.csv", "duration_histogram.csv",
         ]
         for name in expected_files:
             assert (out_dir / name).exists(), f"missing output file: {name}"
