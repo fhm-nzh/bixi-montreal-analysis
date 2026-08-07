@@ -6,7 +6,8 @@
 
 **[Live dashboard →](https://fhm-nzh.github.io/bixi-montreal-analysis/)** ·
 **[Mirror on Vercel →](https://bixi-montreal-analysis.vercel.app)** ·
-**[Power BI build guide →](powerbi/BUILD_GUIDE.md)**
+**[Power BI build guide →](powerbi/BUILD_GUIDE.md)** (Desktop) ·
+**[or fully in-browser →](powerbi/WEB_BUILD_GUIDE.md)** (no Windows needed)
 
 End-to-end analysis of **12.97 million cleaned bike-share trips** (13.28M raw records)
 from Montreal's BIXI network across the full 2024 season — from a tested, chunked
@@ -202,8 +203,16 @@ an 8-table star schema (`Fact_DailyStation`, `Fact_Hourly`, `Fact_Routes`,
 `Fact_HourDayOfWeek`, `Fact_WeekendHour`, `Fact_DurationHistogram`, `Dim_Station`,
 `Dim_Date`), 11 ready-to-paste DAX measures, and a 4-page build guide covering
 relationships, measures, report layout (including the heatmap matrix, weekday/weekend
-comparison, duration histogram, and station map), and publishing — see
-[`powerbi/BUILD_GUIDE.md`](powerbi/BUILD_GUIDE.md).
+comparison, duration histogram, and station map), and publishing.
+
+Two ways to build it, same dataset and DAX either way:
+
+- **[`BUILD_GUIDE.md`](powerbi/BUILD_GUIDE.md)** — Power BI Desktop (free, Windows-only).
+- **[`WEB_BUILD_GUIDE.md`](powerbi/WEB_BUILD_GUIDE.md)** — entirely in the browser at
+  app.powerbi.com, using Dataflows + a Datamart for the relationships and measures a
+  plain CSV upload can't give you. Requires a Premium/PPU/Fabric-licensed workspace
+  (a free Fabric trial covers this, but needs a work/school account — see the guide
+  for the exact gate and the fallback if you don't have one).
 
 ## Project structure
 
